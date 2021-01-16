@@ -7,6 +7,32 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="320*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="60*"/>
+            <ColumnDefinition Width="320*"/>
+        </Grid.ColumnDefinitions>
+        <Image Grid.Column="0" Grid.Row="0" x:Name="Photo"/>
+        <Grid Grid.Column="1" Grid.Row="0" Background="Beige">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.6*"/>
+                <ColumnDefinition Width="0.6*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="0" Grid.Row="0" x:Name="Rank"/>
+            <TextBlock Grid.Column="1" Grid.Row="0" x:Name="RankName" IsEnabled="False"/>
+            <TextBlock Grid.Row="0" Grid.Column="2" x:Name="Destination" IsEnabled="False"/>
+        </Grid>
+        <Frame Grid.Row="1" Grid.Column="1" x:Name="FormPage" NavigationUIVisibility="Hidden" />
+        <Grid Grid.Row="1" Grid.Column="0" Background="Beige">
+            
+        </Grid>
     </Grid>
 </Window>
