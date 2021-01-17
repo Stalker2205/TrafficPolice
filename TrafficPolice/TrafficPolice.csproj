@@ -80,6 +80,18 @@
       <DependentUpon>202101150852202_CreatPtc.cs</DependentUpon>
     </Compile>
     <Compile Include="DataBase\Ptc.cs" />
+    <Compile Include="Migrations\202101171528239_CreatStaff.cs" />
+    <Compile Include="Migrations\202101171528239_CreatStaff.designer.cs">
+      <DependentUpon>202101171528239_CreatStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\Staff.cs" />
+    <Compile Include="Migrations\202101171535032_CreatSertification.cs" />
+    <Compile Include="Migrations\202101171535032_CreatSertification.designer.cs">
+      <DependentUpon>202101171535032_CreatSertification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\Sertification.cs" />
+    <Compile Include="DataBase\Rank.cs" />
+    <Compile Include="DataBase\WorkSchedule.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -134,9 +146,18 @@
     <Compile Include="Migrations\202101150918320_UpdateDriverAndDocuments.designer.cs">
       <DependentUpon>202101150918320_UpdateDriverAndDocuments.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101171538353_CreatRank.cs" />
+    <Compile Include="Migrations\202101171538353_CreatRank.designer.cs">
+      <DependentUpon>202101171538353_CreatRank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101171552167_CreatPositionAndWork.cs" />
+    <Compile Include="Migrations\202101171552167_CreatPositionAndWork.designer.cs">
+      <DependentUpon>202101171552167_CreatPositionAndWork.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="DataBase\MyDBconnection.cs" />
     <Compile Include="DataBase\Passport.cs" />
+    <Compile Include="DataBase\Position.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -182,6 +203,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202101150918320_UpdateDriverAndDocuments.resx">
       <DependentUpon>202101150918320_UpdateDriverAndDocuments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101171528239_CreatStaff.resx">
+      <DependentUpon>202101171528239_CreatStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101171535032_CreatSertification.resx">
+      <DependentUpon>202101171535032_CreatSertification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101171538353_CreatRank.resx">
+      <DependentUpon>202101171538353_CreatRank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101171552167_CreatPositionAndWork.resx">
+      <DependentUpon>202101171552167_CreatPositionAndWork.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
