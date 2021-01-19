@@ -154,6 +154,26 @@
     <Compile Include="Migrations\202101171552167_CreatPositionAndWork.designer.cs">
       <DependentUpon>202101171552167_CreatPositionAndWork.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101191208386_UpdateDB1.cs" />
+    <Compile Include="Migrations\202101191208386_UpdateDB1.designer.cs">
+      <DependentUpon>202101191208386_UpdateDB1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101191214390_UpdateInsurance.cs" />
+    <Compile Include="Migrations\202101191214390_UpdateInsurance.designer.cs">
+      <DependentUpon>202101191214390_UpdateInsurance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101191226114_UpdateDriver11.cs" />
+    <Compile Include="Migrations\202101191226114_UpdateDriver11.designer.cs">
+      <DependentUpon>202101191226114_UpdateDriver11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101191227524_UpdateDriver12.cs" />
+    <Compile Include="Migrations\202101191227524_UpdateDriver12.designer.cs">
+      <DependentUpon>202101191227524_UpdateDriver12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101191230401_UpdateDocument1.cs" />
+    <Compile Include="Migrations\202101191230401_UpdateDocument1.designer.cs">
+      <DependentUpon>202101191230401_UpdateDocument1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="DataBase\MyDBconnection.cs" />
     <Compile Include="DataBase\Passport.cs" />
@@ -215,6 +235,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202101171552167_CreatPositionAndWork.resx">
       <DependentUpon>202101171552167_CreatPositionAndWork.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101191208386_UpdateDB1.resx">
+      <DependentUpon>202101191208386_UpdateDB1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101191214390_UpdateInsurance.resx">
+      <DependentUpon>202101191214390_UpdateInsurance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101191226114_UpdateDriver11.resx">
+      <DependentUpon>202101191226114_UpdateDriver11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101191227524_UpdateDriver12.resx">
+      <DependentUpon>202101191227524_UpdateDriver12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101191230401_UpdateDocument1.resx">
+      <DependentUpon>202101191230401_UpdateDocument1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

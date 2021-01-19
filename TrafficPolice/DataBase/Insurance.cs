@@ -10,7 +10,6 @@ namespace TrafficPolice
     public class Insurance
     {
         [Key]
-        [ForeignKey("Driver")]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int InsuranceID { get; set; }
         public int InsuranceNumber { get; set; }
@@ -18,7 +17,6 @@ namespace TrafficPolice
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public string Insurant { get; set; }
-        public List<Document> Document { get; set; }
-        public Driver Driver { get; set; }
+        public Document Document { get; set; }
     }
 }
