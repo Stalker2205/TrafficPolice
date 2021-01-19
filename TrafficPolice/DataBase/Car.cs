@@ -10,6 +10,7 @@ namespace TrafficPolice
 {
     public class Car
     {
+        [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int CarID { get; set; }
         public Document Document { get; set; }
@@ -20,6 +21,6 @@ namespace TrafficPolice
         public string Color { get; set; }
         public int MaxVeigh { get; set; }
         public string Vin { get; set; }
-        public Driver Driver { get; set; }
+
     }
 }

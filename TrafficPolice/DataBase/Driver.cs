@@ -12,7 +12,6 @@ namespace TrafficPolice
     {
 
         [Key]
-        [ForeignKey("Car")]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int DriverID { get; set; }
         public string Photo { get; set; }
@@ -21,6 +20,6 @@ namespace TrafficPolice
         public int? DriversLicenseID { get; set; }
         public List<DriversLicense> driversLicenses { get; set; } 
         public Passport Passport { get; set;}
-        public Car Car { get; set; }
+        public List<Car> Cars { get; set; }
     }
 }
