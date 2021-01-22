@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:TrafficPolice"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid Background="LightBlue">
         <Grid.RowDefinitions>
             <RowDefinition Height="100*"/>
             <RowDefinition Height="320*"/>
@@ -16,23 +16,39 @@
             <ColumnDefinition Width="320*"/>
         </Grid.ColumnDefinitions>
         <Image Grid.Column="0" Grid.Row="0" x:Name="Photo"/>
-        <Grid Grid.Column="1" Grid.Row="0" Background="Beige">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="1*"/>
-            </Grid.RowDefinitions>
+        <Grid Grid.Column="1" Grid.Row="0"><!--Верхний грид с информацией о сотруднике-->
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.6*"/>
-                <ColumnDefinition Width="0.6*"/>
-                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Image Grid.Column="0" Grid.Row="0" x:Name="Rank"/>
-            <TextBlock Grid.Column="1" Grid.Row="0" x:Name="RankName" IsEnabled="False"/>
-            <TextBlock Grid.Row="0" Grid.Column="2" x:Name="Destination" IsEnabled="False"/>
+            <Grid Grid.Column ="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.5*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Column="0" Grid.Row="0" x:Name="Rank"/>
+                    <TextBlock Grid.Column="1" Grid.Row="0" x:Name="RankName" IsEnabled="False"/>
+                </Grid>
+                <TextBlock Grid.Row="1"  x:Name="Destination" IsEnabled="False"/>
+            </Grid>
+            <Image Grid.Column="1" x:Name="LogoImg"/>
         </Grid>
-        <Frame Grid.Row="1" Grid.Column="1" x:Name="FormPage" NavigationUIVisibility="Hidden" />
-        <Grid Grid.Row="1" Grid.Column="0" Background="Beige">
-            
+        <Frame Grid.Row="1" Grid.Column="1" x:Name="FormPage" NavigationUIVisibility="Hidden" Background="Azure"/>
+        <Grid Grid.Column="0" Grid.Row="1"><!--Боковой грид с кнопками-->
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Button  Grid.Row="0" x:Name="Serchavto"  Content="Поиск авто" Margin="5"/>
+            <Button  Grid.Row="1" x:Name="SecondButton" Content="SecondButton" Margin="5"/>
         </Grid>
     </Grid>
 </Window>
