@@ -178,6 +178,14 @@
     <Compile Include="Migrations\202101191237056_UpdateDriverInCar.designer.cs">
       <DependentUpon>202101191237056_UpdateDriverInCar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101191259014_NoUpdate.cs" />
+    <Compile Include="Migrations\202101191259014_NoUpdate.designer.cs">
+      <DependentUpon>202101191259014_NoUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101191316418_UpdatePts.cs" />
+    <Compile Include="Migrations\202101191316418_UpdatePts.designer.cs">
+      <DependentUpon>202101191316418_UpdatePts.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="DataBase\MyDBconnection.cs" />
     <Compile Include="DataBase\Passport.cs" />
@@ -257,6 +265,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202101191237056_UpdateDriverInCar.resx">
       <DependentUpon>202101191237056_UpdateDriverInCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101191259014_NoUpdate.resx">
+      <DependentUpon>202101191259014_NoUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101191316418_UpdatePts.resx">
+      <DependentUpon>202101191316418_UpdatePts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

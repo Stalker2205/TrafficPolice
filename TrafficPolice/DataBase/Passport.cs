@@ -13,7 +13,7 @@ namespace TrafficPolice
     {
         [Key]
         [ForeignKey("Driver")]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int PassportID { get; set; }
         public int PassportNumber { get; set; }
         public int PassportSeries { get; set; }

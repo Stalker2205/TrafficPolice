@@ -11,7 +11,7 @@ namespace TrafficPolice
     public class Statement
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int StatementsID { get; set; }
         public string Applicant { get; set; }
         public string Cause { get; set; }

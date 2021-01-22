@@ -12,7 +12,7 @@ namespace TrafficPolice
     {
         [Key]
         [ForeignKey("Document")]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int PtcID { get; set; }
         public int PtcNumber { get; set; }
         public int PtcSeries { get; set; }

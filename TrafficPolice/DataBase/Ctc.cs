@@ -11,13 +11,13 @@ namespace TrafficPolice
     public class Ctc
     {
         [Key] 
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [ForeignKey("Document")]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int CtcID { get; set; }
         public int CtcNumber { get; set; }
         public int CtcSeries { get; set; }
         public int Owner { get; set; }
         public DateTime DateOfIssue { get; set; }
         public Document Document { get; set; }
+
     }
 }

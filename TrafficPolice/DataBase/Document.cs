@@ -19,21 +19,13 @@ namespace TrafficPolice
 
         [Key]
         [ForeignKey("Car")]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int DocumentID { get; set; }
-      
         public List<Statement> Statement { get; set; }
-        public int? StatementsID { get; set; }
-
-        public Ctc Ctc { get; set; }
+        public Ctc Ctcs { get; set; }
         public Ptc Ptc { get; set; }
-
         public List<Insurance> Insurances { get; set; } 
-        public int? InsuranceID { get; set; }
-
         public List<Inspection> inspections { get; set; }
-        public int? InspectionID { get; set; }
-
         public Car Car { get; set; }
     }
 }
