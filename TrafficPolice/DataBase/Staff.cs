@@ -23,6 +23,8 @@ namespace TrafficPolice
         public List<Rank> Ranks { get; set; }
         public int RankID { get; set; }
         public WorkSchedule WorkSchedule { get; set; }
+        public int WorkScheduleID { get; set; }
+
 
     }
 }

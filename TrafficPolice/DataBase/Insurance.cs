@@ -18,7 +18,6 @@ namespace TrafficPolice
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public string Insurant { get; set; }
-        public List<Document> Document { get; set; }
         public Driver Driver { get; set; }
     }
 }

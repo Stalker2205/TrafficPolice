@@ -24,11 +24,13 @@ namespace TrafficPolice
         public int? StatementsID { get; set; }
         public List<Statement> Statement { get; set; }
         public Ctc Ctc { get; set; }
+        public int CtcID { get; set; }
         public Ptc Ptc { get; set; }
-        public int? InsuranceID { get; set; }
+        public int PtcID { get; set; }
         public List<Insurance> Insurances { get; set; }
-        public int? InspectionID { get; set; }
+        public int? InsuranceID { get; set; }  
         public List<Inspection> inspections { get; set; }
+        public int? InspectionID { get; set; }
         public Car Car { get; set; }
     }
 }

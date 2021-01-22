@@ -13,6 +13,7 @@ namespace TrafficPolice
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int CarID { get; set; }
         public Document Document { get; set; }
+        public int DocumentID { get; set; }
         public string VenhicleType { get; set; }
         public int EngineNumber { get; set; }
         public int ChossisNumber { get; set; }
@@ -21,5 +22,6 @@ namespace TrafficPolice
         public int MaxVeigh { get; set; }
         public string Vin { get; set; }
         public Driver Driver { get; set; }
+        public int DriverID { get; set; }
     }
 }
