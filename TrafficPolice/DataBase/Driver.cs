@@ -23,6 +23,5 @@ namespace TrafficPolice
         
         public Passport Passport { get; set;}
         public Car Car { get; set; }
-        public Insurance Insurance { get; set; }
     }
 }
