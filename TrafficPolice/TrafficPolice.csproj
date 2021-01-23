@@ -162,6 +162,10 @@
     <Compile Include="Migrations\202101232118181_FixInsuranceAndDocument.designer.cs">
       <DependentUpon>202101232118181_FixInsuranceAndDocument.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101232131062_FixCarAndDriver.cs" />
+    <Compile Include="Migrations\202101232131062_FixCarAndDriver.designer.cs">
+      <DependentUpon>202101232131062_FixCarAndDriver.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="DataBase\MyDBconnection.cs" />
     <Compile Include="DataBase\Passport.cs" />
@@ -229,6 +233,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202101232118181_FixInsuranceAndDocument.resx">
       <DependentUpon>202101232118181_FixInsuranceAndDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101232131062_FixCarAndDriver.resx">
+      <DependentUpon>202101232131062_FixCarAndDriver.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
