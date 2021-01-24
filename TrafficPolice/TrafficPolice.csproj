@@ -70,6 +70,10 @@
     <Compile Include="DataBase\Ctc.cs" />
     <Compile Include="DataBase\Insurance.cs" />
     <Compile Include="DataBase\Inspection.cs" />
+    <Compile Include="DifferentClasses\LoginClass.cs" />
+    <Compile Include="LoginF.xaml.cs">
+      <DependentUpon>LoginF.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\202101150824225_CreatStatement.cs" />
     <Compile Include="Migrations\202101150824225_CreatStatement.designer.cs">
       <DependentUpon>202101150824225_CreatStatement.cs</DependentUpon>
@@ -92,6 +96,10 @@
     <Compile Include="DataBase\Sertification.cs" />
     <Compile Include="DataBase\Rank.cs" />
     <Compile Include="DataBase\WorkSchedule.cs" />
+    <Page Include="LoginF.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

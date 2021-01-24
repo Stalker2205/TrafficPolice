@@ -10,25 +10,23 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace TrafficPolice
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для LoginF.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class LoginF : Window
     {
-        public MainWindow()
+        public LoginF()
         {
             InitializeComponent();
-            LoginF loginF = new LoginF();
-            loginF.ShowDialog();
-            #region Login
-            if (!LoginClass.key) { Close(); }
+        }
 
-            #endregion
+        private void LoginButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
