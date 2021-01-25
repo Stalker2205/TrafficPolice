@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,22 @@ namespace TrafficPolice
         public MainWindow()
         {
             InitializeComponent();
+            LoginF loginF = new LoginF();
+            loginF.ShowDialog();
+            #region Login
+            if (!LoginClass.key) { Close(); }
+
+            #endregion
+            using (MyDBconnection bconnection = new MyDBconnection())
+            {
+                bconnection.Staffs.Load();
+                bconnection.Ranks.Load();
+                int RID = 0;
+                var stf = bconnection.Staffs.Where(x => x.Login == "Nik" && x.Password == "123");
+                foreach (Staff staff in stf) RID = staff.RankID;
+                var rnk = bconnection.Ranks.Where(X => X.RankID == RID);
+                foreach (Rank rank in rnk) RankName.Text = rank.RankName;
+            }
         }
     }
 }
