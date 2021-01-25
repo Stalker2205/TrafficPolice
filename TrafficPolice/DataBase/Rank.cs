@@ -13,5 +13,6 @@ namespace TrafficPolice
         public int RankID { get; set; }
         public string RankName { get; set; }
         public string RankPhoto { get; set; }
+        public List<Staff> Staffs { get; set; }
     }
 }

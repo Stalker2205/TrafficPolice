@@ -21,7 +21,6 @@ namespace TrafficPolice
         public string Password { get; set; }
         public List<Sertification> Sertifications { get; set; }
         public int? SertificationID { get; set; }
-        public List<Rank> Ranks { get; set; }
         public int RankID { get; set; }
     }
 }

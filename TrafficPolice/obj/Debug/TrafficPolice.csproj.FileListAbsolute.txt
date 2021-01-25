@@ -82,3 +82,4 @@ C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\Tra
 C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\TrafficPolice.Migrations.DeliteWorkScheduleTable.resources
 C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\TrafficPolice.Migrations.AddLoginAndPasswordToStaff.resources
 C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\TrafficPolice.csprojAssemblyReference.cache
+C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\TrafficPolice.Migrations.UpdateRankAndStaff.resources

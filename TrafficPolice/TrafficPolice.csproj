@@ -193,6 +193,10 @@
     <Compile Include="Migrations\202101251732376_AddLoginAndPasswordToStaff.designer.cs">
       <DependentUpon>202101251732376_AddLoginAndPasswordToStaff.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101251931018_UpdateRankAndStaff.cs" />
+    <Compile Include="Migrations\202101251931018_UpdateRankAndStaff.designer.cs">
+      <DependentUpon>202101251931018_UpdateRankAndStaff.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="DataBase\MyDBconnection.cs" />
     <Compile Include="DataBase\Passport.cs" />
@@ -277,6 +281,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202101251732376_AddLoginAndPasswordToStaff.resx">
       <DependentUpon>202101251732376_AddLoginAndPasswordToStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101251931018_UpdateRankAndStaff.resx">
+      <DependentUpon>202101251931018_UpdateRankAndStaff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
