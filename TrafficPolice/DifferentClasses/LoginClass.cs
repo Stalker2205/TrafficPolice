@@ -8,6 +8,6 @@ namespace TrafficPolice
 {
     public class LoginClass
     {
-        public static bool key = false;
+        public static bool key = true;
     }
 }

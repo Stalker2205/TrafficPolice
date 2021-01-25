@@ -31,7 +31,7 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <TextBlock Text="Login:" FontSize="32" TextAlignment="Center" VerticalAlignment="Center" Grid.Column="0"/>
-                <TextBox Grid.Column="1" x:Name="LoginTbox"/>
+                <TextBox Grid.Column="1" x:Name="LoginTbox" FontSize="32" VerticalAlignment="Center"/>
             </Grid>
             <Grid Grid.Row="3">
                 <Grid.ColumnDefinitions>
@@ -39,7 +39,7 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <TextBlock Text="Password:" FontSize="32" TextAlignment="Center" VerticalAlignment="Center" Grid.Column="0"/>
-                <TextBox Grid.Column="1" x:Name="PasswordTbox"/>
+                <TextBox Grid.Column="1" x:Name="PasswordTbox" FontSize="32" VerticalAlignment="Center"/>
             </Grid>
             <Grid Grid.Row="5">
                 <Button Content="Login" x:Name="LoginButton" Click="LoginButton_Click" FontSize="32" Margin="100,0,100,0"/>

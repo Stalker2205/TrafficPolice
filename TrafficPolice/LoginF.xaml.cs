@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,7 +27,13 @@ namespace TrafficPolice
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-
+            using (MyDBconnection bconnection = new MyDBconnection())
+            {
+                bconnection.Staffs.Load();
+                var driver = bconnection.Staffs.Where(x => x.Login == LoginTbox.Text.ToString() && x.Password == PasswordTbox.Text.ToString()) ;
+                foreach (Staff staff in driver) ;
+                if (driver.Count() != 1) { MessageBox.Show("Такого пользователя не существует"); return; } else Close();
+            }
         }
     }
 }

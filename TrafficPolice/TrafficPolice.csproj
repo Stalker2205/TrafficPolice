@@ -95,7 +95,6 @@
     </Compile>
     <Compile Include="DataBase\Sertification.cs" />
     <Compile Include="DataBase\Rank.cs" />
-    <Compile Include="DataBase\WorkSchedule.cs" />
     <Page Include="LoginF.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -174,10 +173,29 @@
     <Compile Include="Migrations\202101232131062_FixCarAndDriver.designer.cs">
       <DependentUpon>202101232131062_FixCarAndDriver.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101251719316_DelitePosition.cs" />
+    <Compile Include="Migrations\202101251719316_DelitePosition.designer.cs">
+      <DependentUpon>202101251719316_DelitePosition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101251723472_DelitePositionTable.cs" />
+    <Compile Include="Migrations\202101251723472_DelitePositionTable.designer.cs">
+      <DependentUpon>202101251723472_DelitePositionTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101251724440_DeliteWorkSchedule.cs" />
+    <Compile Include="Migrations\202101251724440_DeliteWorkSchedule.designer.cs">
+      <DependentUpon>202101251724440_DeliteWorkSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101251725542_DeliteWorkScheduleTable.cs" />
+    <Compile Include="Migrations\202101251725542_DeliteWorkScheduleTable.designer.cs">
+      <DependentUpon>202101251725542_DeliteWorkScheduleTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101251732376_AddLoginAndPasswordToStaff.cs" />
+    <Compile Include="Migrations\202101251732376_AddLoginAndPasswordToStaff.designer.cs">
+      <DependentUpon>202101251732376_AddLoginAndPasswordToStaff.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="DataBase\MyDBconnection.cs" />
     <Compile Include="DataBase\Passport.cs" />
-    <Compile Include="DataBase\Position.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -244,6 +262,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202101232131062_FixCarAndDriver.resx">
       <DependentUpon>202101232131062_FixCarAndDriver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101251719316_DelitePosition.resx">
+      <DependentUpon>202101251719316_DelitePosition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101251723472_DelitePositionTable.resx">
+      <DependentUpon>202101251723472_DelitePositionTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101251724440_DeliteWorkSchedule.resx">
+      <DependentUpon>202101251724440_DeliteWorkSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101251725542_DeliteWorkScheduleTable.resx">
+      <DependentUpon>202101251725542_DeliteWorkScheduleTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101251732376_AddLoginAndPasswordToStaff.resx">
+      <DependentUpon>202101251732376_AddLoginAndPasswordToStaff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
