@@ -32,7 +32,7 @@ namespace TrafficPolice
                 bconnection.Staffs.Load();
                 var driver = bconnection.Staffs.Where(x => x.Login == LoginTbox.Text.ToString() && x.Password == PasswordTbox.Text.ToString()) ;
                 foreach (Staff staff in driver) ;
-                if (driver.Count() != 1) { MessageBox.Show("Такого пользователя не существует"); return; } else Close();
+                if (driver.Count() != 1) { MessageBox.Show("Такого пользователя не существует");  LoginClass.key = false;return; } else { LoginClass.key = true; LoginClass.LoginName = LoginTbox.Text.ToString(); LoginClass.LoginPassword = PasswordTbox.Text.ToString(); ; Close(); }
             }
         }
     }

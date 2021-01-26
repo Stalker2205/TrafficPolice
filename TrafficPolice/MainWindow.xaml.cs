@@ -35,7 +35,7 @@ namespace TrafficPolice
                 bconnection.Staffs.Load();
                 bconnection.Ranks.Load();
                 int RID = 0;
-                var stf = bconnection.Staffs.Where(x => x.Login == "Nik" && x.Password == "123");
+                var stf = bconnection.Staffs.Where(x => x.Login == LoginClass.LoginName && x.Password == LoginClass.LoginPassword);
                 foreach (Staff staff in stf) RID = staff.RankID;
                 var rnk = bconnection.Ranks.Where(X => X.RankID == RID);
                 foreach (Rank rank in rnk) RankName.Text = rank.RankName;

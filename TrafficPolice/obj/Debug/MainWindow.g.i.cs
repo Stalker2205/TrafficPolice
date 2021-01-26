@@ -104,14 +104,6 @@ namespace TrafficPolice {
         #line default
         #line hidden
         
-        
-        #line 55 "..\..\MainWindow.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.DataGrid Grid1;
-        
-        #line default
-        #line hidden
-        
         private bool _contentLoaded;
         
         /// <summary>
@@ -165,9 +157,6 @@ namespace TrafficPolice {
             return;
             case 8:
             this.SecondButton = ((System.Windows.Controls.Button)(target));
-            return;
-            case 9:
-            this.Grid1 = ((System.Windows.Controls.DataGrid)(target));
             return;
             }
             this._contentLoaded = true;
