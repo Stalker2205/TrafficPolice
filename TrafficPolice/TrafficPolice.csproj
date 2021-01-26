@@ -95,8 +95,27 @@
     </Compile>
     <Compile Include="DataBase\Sertification.cs" />
     <Compile Include="DataBase\Rank.cs" />
+    <Compile Include="Migrations\202101261029338_FixPtc.cs" />
+    <Compile Include="Migrations\202101261029338_FixPtc.designer.cs">
+      <DependentUpon>202101261029338_FixPtc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101261218491_fixCar.cs" />
+    <Compile Include="Migrations\202101261218491_fixCar.designer.cs">
+      <DependentUpon>202101261218491_fixCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101261221009_fixInspectionAndStatement.cs" />
+    <Compile Include="Migrations\202101261221009_fixInspectionAndStatement.designer.cs">
+      <DependentUpon>202101261221009_fixInspectionAndStatement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101261233366_fixDriver.cs" />
+    <Compile Include="Migrations\202101261233366_fixDriver.designer.cs">
+      <DependentUpon>202101261233366_fixDriver.cs</DependentUpon>
+    </Compile>
     <Compile Include="SerchAvto.xaml.cs">
       <DependentUpon>SerchAvto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SerchInCars.xaml.cs">
+      <DependentUpon>SerchInCars.xaml</DependentUpon>
     </Compile>
     <Page Include="LoginF.xaml">
       <SubType>Designer</SubType>
@@ -119,6 +138,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="SerchAvto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SerchInCars.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -291,6 +314,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202101251931018_UpdateRankAndStaff.resx">
       <DependentUpon>202101251931018_UpdateRankAndStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101261029338_FixPtc.resx">
+      <DependentUpon>202101261029338_FixPtc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101261218491_fixCar.resx">
+      <DependentUpon>202101261218491_fixCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101261221009_fixInspectionAndStatement.resx">
+      <DependentUpon>202101261221009_fixInspectionAndStatement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101261233366_fixDriver.resx">
+      <DependentUpon>202101261233366_fixDriver.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

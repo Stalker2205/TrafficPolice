@@ -17,7 +17,7 @@ namespace TrafficPolice
         public string Cause { get; set; }
         public string Act { get; set; }
         public Document Document { get; set; }
-
+        public int DocumentID { get; set; }
 
     }
 }

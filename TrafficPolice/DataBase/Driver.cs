@@ -17,7 +17,6 @@ namespace TrafficPolice
         public string Photo { get; set; }
         public string FirstName { get; set; }
         public string Patronymic { get; set; }
-        public int? DriversLicenseID { get; set; }
         public List<DriversLicense> driversLicenses { get; set; }
         public Passport Passport { get; set;}
         public List<Car> Cars { get; set; }

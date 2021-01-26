@@ -24,5 +24,10 @@ namespace TrafficPolice
         {
             InitializeComponent();
         }
+
+        private void SertcVinButton_Click(object sender, RoutedEventArgs e)
+        {
+            FrameForNavigation.Navigate(new SerchInCars());
+        }
     }
 }

@@ -30,6 +30,7 @@ namespace TrafficPolice
             if (!LoginClass.key) { Close(); }
 
             #endregion
+            #region DBSelect
             using (MyDBconnection bconnection = new MyDBconnection())
             {
                 bconnection.Staffs.Load();
@@ -40,6 +41,12 @@ namespace TrafficPolice
                 var rnk = bconnection.Ranks.Where(X => X.RankID == RID);
                 foreach (Rank rank in rnk) RankName.Text = rank.RankName;
             }
+            #endregion
+        }
+
+        private void Serchavto_Click(object sender, RoutedEventArgs e)
+        {
+            FormPage.Navigate(new SerchAvto());
         }
     }
 }

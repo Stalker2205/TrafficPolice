@@ -130,3 +130,11 @@ C:\Users\олимп\Desktop\RafikPolice\TrafficPolice\obj\Debug\TrafficPolice.cs
 C:\Users\олимп\Desktop\RafikPolice\TrafficPolice\obj\Debug\TrafficPolice.csproj.CopyComplete
 C:\Users\олимп\Desktop\RafikPolice\TrafficPolice\obj\Debug\TrafficPolice.exe
 C:\Users\олимп\Desktop\RafikPolice\TrafficPolice\obj\Debug\TrafficPolice.pdb
+C:\Users\олимп\Desktop\RafikPolice\TrafficPolice\obj\Debug\SerchAvto.g.cs
+C:\Users\олимп\Desktop\RafikPolice\TrafficPolice\obj\Debug\SerchAvto.baml
+C:\Users\олимп\Desktop\RafikPolice\TrafficPolice\obj\Debug\TrafficPolice.Migrations.FixPtc.resources
+C:\Users\олимп\Desktop\RafikPolice\TrafficPolice\obj\Debug\SerchInCars.g.cs
+C:\Users\олимп\Desktop\RafikPolice\TrafficPolice\obj\Debug\SerchInCars.baml
+C:\Users\олимп\Desktop\RafikPolice\TrafficPolice\obj\Debug\TrafficPolice.Migrations.fixCar.resources
+C:\Users\олимп\Desktop\RafikPolice\TrafficPolice\obj\Debug\TrafficPolice.Migrations.fixInspectionAndStatement.resources
+C:\Users\олимп\Desktop\RafikPolice\TrafficPolice\obj\Debug\TrafficPolice.Migrations.fixDriver.resources

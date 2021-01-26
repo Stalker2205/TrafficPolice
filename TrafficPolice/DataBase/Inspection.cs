@@ -23,5 +23,6 @@ namespace TrafficPolice
         public string Malfunctions { get; set; }
         public bool UsingCar { get; set; }
         public  Document Document { get; set; }
+        public int DocumentID { get; set; }
     }
 }

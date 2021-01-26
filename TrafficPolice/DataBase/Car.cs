@@ -20,5 +20,7 @@ namespace TrafficPolice
         public string Color { get; set; }
         public int MaxVeigh { get; set; }
         public string Vin { get; set; }
+        public Driver Driver { get; set; }
+        public int DriverID { get; set; }
     }
 }
