@@ -28,13 +28,14 @@ namespace TrafficPolice
         int PackageDocuments = 0;
         int Driver = 0;
         bool keySerch = false;
-        private void SerchVin_Click(object sender, RoutedEventArgs e)
+
+        private void CheckVIn()
         {
-            if(VinTbox.Text.Length != 17) { MessageBox.Show("Длина vin - 17 символов");return; }
+            if (VinTbox.Text.Length != 17) { MessageBox.Show("Длина vin - 17 символов"); return; }
             using (MyDBconnection db = new MyDBconnection())
             {
                 db.Cars.Load();
-                DatagridFirst.ItemsSource = db.Cars.Local.Where(x => x.Vin == VinTbox.Text.ToString());
+                db.Cars.Local.Where(x => x.Vin == VinTbox.Text.ToString());
                 var ur = db.Cars.Where(x => x.Vin == VinTbox.Text.ToString());
                 foreach (Car car in ur) { PackageDocuments = car.CarID; ; Driver = car.DriverID; }
             }
@@ -45,7 +46,7 @@ namespace TrafficPolice
         {
             if (!keySerch)
             {
-                SerchVin.RaiseEvent(new RoutedEventArgs(Button.ClickEvent)); return;
+               CheckVIn(); return;
             }
             using (MyDBconnection db = new MyDBconnection())
             {
@@ -58,7 +59,7 @@ namespace TrafficPolice
         {
             if(!keySerch)
             {
-                SerchVin.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));return;
+                CheckVIn(); return;
             }
             using (MyDBconnection db = new MyDBconnection())
             {
@@ -71,7 +72,7 @@ namespace TrafficPolice
         {
             if (!keySerch)
             {
-                SerchVin.RaiseEvent(new RoutedEventArgs(Button.ClickEvent)); return;
+                CheckVIn(); return;
             }
             using(MyDBconnection db = new MyDBconnection())
             {
@@ -84,13 +85,26 @@ namespace TrafficPolice
         {
             if (!keySerch)
             {
-                SerchVin.RaiseEvent(new RoutedEventArgs(Button.ClickEvent)); return;
+                CheckVIn(); return;
             }
             using (MyDBconnection db = new MyDBconnection())
             {
                 db.Drivers.Load();
                 DatagridFirst.ItemsSource = db.Drivers.Local.Where(x => x.DriverID == Driver);
             }
+        }
+
+        private void SerchAvto_Click(object sender, RoutedEventArgs e)
+        {
+            if (VinTbox.Text.Length != 17) { MessageBox.Show("Длина vin - 17 символов"); return; }
+            using (MyDBconnection db = new MyDBconnection())
+            {
+                db.Cars.Load();
+                DatagridFirst.ItemsSource = db.Cars.Local.Where(x => x.Vin == VinTbox.Text.ToString());
+                var ur = db.Cars.Where(x => x.Vin == VinTbox.Text.ToString());
+                foreach (Car car in ur) { PackageDocuments = car.CarID; ; Driver = car.DriverID; }
+            }
+            keySerch = true;
         }
     }
 }

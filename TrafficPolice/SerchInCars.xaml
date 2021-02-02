@@ -25,13 +25,20 @@
             </Grid.RowDefinitions>
             <Grid Grid.Row="0">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition />
-                    <ColumnDefinition />
-                    <ColumnDefinition />
+
+                    <ColumnDefinition Width="581*" />
+                    <ColumnDefinition Width="121*"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock Text="Vin:" Grid.Column="0" TextAlignment="Center" VerticalAlignment="Center" FontSize="25"/>
-                <TextBox Grid.Column="1" Margin="0,0,5,0" VerticalContentAlignment="Center" x:Name="VinTbox"/>
-                <Button Grid.Column="2" Content="Поиск" Margin="5,0,0,0" VerticalContentAlignment="Center" x:Name="SerchVin" Click="SerchVin_Click"/>
+                <Grid Grid.Column="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.3*"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="Vin:" Grid.Column="0" TextAlignment="Right" VerticalAlignment="Center" FontSize="30"/>
+                    <TextBox Grid.Column="1" Margin="5,0,50,0" VerticalContentAlignment="Center" x:Name="VinTbox"/>
+                </Grid>
+
+
             </Grid>
             <Grid Grid.Row="1">
                 <Grid.ColumnDefinitions>
@@ -48,6 +55,7 @@
                         <RowDefinition/>
                         <RowDefinition/>
                         <RowDefinition/>
+                        <RowDefinition/>
                         <RowDefinition Height="0.2*"/>
                     </Grid.RowDefinitions>
 
@@ -55,6 +63,7 @@
                     <Button Grid.Row="2" Margin="5,5,5,5" Content="Птс" x:Name="PtcSerch" Click="PtcSerch_Click"/>
                     <Button Grid.Row="3" Margin="5,5,5,5" Content="Страховка" x:Name="SetchInsurance" Click="SetchInsurance_Click"/>
                     <Button Grid.Row="4" Margin="5,5,5,5" Content="Водитель" x:Name="SerchDriver" Click="SerchDriver_Click"/>
+                    <Button Grid.Row="5" Margin="5,5,5,5" Content="Авто" x:Name="SerchAvto" Click="SerchAvto_Click"/>
                 </Grid>
                 <DataGrid Grid.Column="0" Margin="0,10,5,0" x:Name="DatagridFirst">
 
