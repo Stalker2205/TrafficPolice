@@ -119,8 +119,12 @@
     <Compile Include="Migrations\202102020752119_DeldeByteInRanks.designer.cs">
       <DependentUpon>202102020752119_DeldeByteInRanks.cs</DependentUpon>
     </Compile>
+    <Compile Include="DifferentClasses\RequestsClass.cs" />
     <Compile Include="SerchAvto.xaml.cs">
       <DependentUpon>SerchAvto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SerchDriverLicencePage.xaml.cs">
+      <DependentUpon>SerchDriverLicencePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="SerchInCars.xaml.cs">
       <DependentUpon>SerchInCars.xaml</DependentUpon>
@@ -148,6 +152,10 @@
     <Page Include="SerchAvto.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SerchDriverLicencePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="SerchInCars.xaml">
       <SubType>Designer</SubType>

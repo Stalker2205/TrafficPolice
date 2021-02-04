@@ -23,7 +23,7 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Button Grid.Column="0" Margin="5,5,5,5" Content="VIN" FontSize="19" x:Name="SertcVinButton" Click="SertcVinButton_Click" />
-            <Button Grid.Column="1" Margin="5,5,5,5" Content="Права" FontSize="19" x:Name="SerchDriverLicenseButton"/>
+            <Button Grid.Column="1" Margin="5,5,5,5" Content="Права" FontSize="19" x:Name="SerchDriverLicenseButton" Click="SerchDriverLicenseButton_Click"/>
             <Button Grid.Column="2" Margin="5,5,5,5" Content="Паспорт" FontSize="19" x:Name="SerchPassportButton"/>
             <Button Grid.Column="3" Margin="5,5,5,5" Content="Страховка" FontSize="19" x:Name="SertchInsuranceButton"/>
             <Button Grid.Column="4" Margin="5,5,5,5" Content="ПТС" FontSize="19" x:Name="SerchPtcButton"/>

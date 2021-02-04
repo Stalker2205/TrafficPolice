@@ -81,7 +81,6 @@ C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\Tra
 C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\TrafficPolice.Migrations.DeliteWorkSchedule.resources
 C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\TrafficPolice.Migrations.DeliteWorkScheduleTable.resources
 C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\TrafficPolice.Migrations.AddLoginAndPasswordToStaff.resources
-C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\TrafficPolice.csprojAssemblyReference.cache
 C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\TrafficPolice.Migrations.UpdateRankAndStaff.resources
 C:\Users\олимп\Desktop\RafikPolice\TrafficPolice\bin\Debug\TrafficPolice.exe.config
 C:\Users\олимп\Desktop\RafikPolice\TrafficPolice\bin\Debug\TrafficPolice.exe
@@ -148,3 +147,5 @@ C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\Tra
 C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\TrafficPolice.Migrations.fixDriver.resources
 C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\TrafficPolice.Migrations.TestBytePhotoInRank.resources
 C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\TrafficPolice.Migrations.DeldeByteInRanks.resources
+C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\SerchDriverLicencePage.g.cs
+C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\SerchDriverLicencePage.baml

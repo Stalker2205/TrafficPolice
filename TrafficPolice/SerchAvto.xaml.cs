@@ -29,5 +29,10 @@ namespace TrafficPolice
         {
             FrameForNavigation.Navigate(new SerchInCars());
         }
+
+        private void SerchDriverLicenseButton_Click(object sender, RoutedEventArgs e)
+        {
+            FrameForNavigation.Navigate(new SerchDriverLicencePage());
+        }
     }
 }
