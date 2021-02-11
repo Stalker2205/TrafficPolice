@@ -19,20 +19,22 @@ namespace TrafficPolice
     /// <summary>
     /// Логика взаимодействия для SerchInCars.xaml
     /// </summary>
-    public partial class SerchInCars : Page
+    public partial class SerchSTS : Page
     {
-        public SerchInCars()
+        public SerchSTS()
         {
             InitializeComponent();
+            RequestsClass.keySerch = false;
+            RequestsClass.Driver = null;
+            RequestsClass.PackageDocuments = null;
         }
-
 
 
         private void SerchDriverLicence_Click(object sender, RoutedEventArgs e)
         {
             if (!RequestsClass.keySerch)
             {
-               RequestsClass.CheckVIn(VinTbox.Text.ToString()); return;
+                RequestsClass.CheckSTS(StsSeriesTbox.Text.ToString(), StsNumberTbox.Text.ToString()); return;
             }
             if (RequestsClass.Driver == null) { MessageBox.Show("Нет такого водителя"); return; }
             using (MyDBconnection db = new MyDBconnection())
@@ -44,9 +46,10 @@ namespace TrafficPolice
 
         private void PtcSerch_Click(object sender, RoutedEventArgs e)
         {
+
             if (!RequestsClass.keySerch)
             {
-                RequestsClass.CheckVIn(VinTbox.Text.ToString()); return;
+                RequestsClass.CheckSTS(StsSeriesTbox.Text.ToString(), StsNumberTbox.Text.ToString()); return;
             }
             if (RequestsClass.PackageDocuments == null) { MessageBox.Show("Нет такого ТС"); return; }
             using (MyDBconnection db = new MyDBconnection())
@@ -58,9 +61,10 @@ namespace TrafficPolice
 
         private void SetchInsurance_Click(object sender, RoutedEventArgs e)
         {
+
             if (!RequestsClass.keySerch)
             {
-                RequestsClass.CheckVIn(VinTbox.Text.ToString()); return;
+                RequestsClass.CheckSTS(StsSeriesTbox.Text.ToString(), StsNumberTbox.Text.ToString()); return;
             }
             if (RequestsClass.PackageDocuments == null) { MessageBox.Show("Нет такого ТС"); return; }
             using (MyDBconnection db = new MyDBconnection())
@@ -72,9 +76,10 @@ namespace TrafficPolice
 
         private void SerchDriver_Click(object sender, RoutedEventArgs e)
         {
+
             if (!RequestsClass.keySerch)
             {
-                RequestsClass.CheckVIn(VinTbox.Text.ToString()); return;
+                RequestsClass.CheckSTS(StsSeriesTbox.Text.ToString(), StsNumberTbox.Text.ToString()); return;
             }
             if (RequestsClass.Driver == null) { MessageBox.Show("Нет такого водителя"); return; }
             using (MyDBconnection db = new MyDBconnection())
@@ -86,24 +91,24 @@ namespace TrafficPolice
 
         private void SerchAvto_Click(object sender, RoutedEventArgs e)
         {
+
             if (!RequestsClass.keySerch)
             {
-                RequestsClass.CheckVIn(VinTbox.Text.ToString()); return;
+                RequestsClass.CheckSTS(StsSeriesTbox.Text.ToString(), StsNumberTbox.Text.ToString()); return;
             }
             if (RequestsClass.PackageDocuments == null) { MessageBox.Show("Нет такого ТС"); return; }
             using (MyDBconnection db = new MyDBconnection())
             {
                 db.Cars.Load();
-                DatagridFirst.ItemsSource = db.Cars.Local.Where(x => x.Vin == VinTbox.Text.ToString()); ;
+                DatagridFirst.ItemsSource = db.Cars.Local.Where(x => x.DriverID == RequestsClass.Driver);
             }
         }
 
-        private void VinTbox_TextChanged(object sender, TextChangedEventArgs e)
+        private void DriverLicenceSeriesTbox_TextChanged(object sender, TextChangedEventArgs e)
         {
             RequestsClass.keySerch = false;
             RequestsClass.Driver = null;
-            RequestsClass.PackageDocuments = 0;
-            
+            RequestsClass.PackageDocuments = null;
         }
     }
 }

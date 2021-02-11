@@ -120,8 +120,36 @@
       <DependentUpon>202102020752119_DeldeByteInRanks.cs</DependentUpon>
     </Compile>
     <Compile Include="DifferentClasses\RequestsClass.cs" />
+    <Compile Include="Migrations\202102111906219_FixPAssport.cs" />
+    <Compile Include="Migrations\202102111906219_FixPAssport.designer.cs">
+      <DependentUpon>202102111906219_FixPAssport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102111927419_fixCTC.cs" />
+    <Compile Include="Migrations\202102111927419_fixCTC.designer.cs">
+      <DependentUpon>202102111927419_fixCTC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102111932373_fixCTCandPTC.cs" />
+    <Compile Include="Migrations\202102111932373_fixCTCandPTC.designer.cs">
+      <DependentUpon>202102111932373_fixCTCandPTC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102111947474_fixPtc1.cs" />
+    <Compile Include="Migrations\202102111947474_fixPtc1.designer.cs">
+      <DependentUpon>202102111947474_fixPtc1.cs</DependentUpon>
+    </Compile>
     <Compile Include="SerchAvto.xaml.cs">
       <DependentUpon>SerchAvto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SerchPTC.xaml.cs">
+      <DependentUpon>SerchPTC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SerchSTS.xaml.cs">
+      <DependentUpon>SerchSTS.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SerchIncurance.xaml.cs">
+      <DependentUpon>SerchIncurance.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SerchPassport.xaml.cs">
+      <DependentUpon>SerchPassport.xaml</DependentUpon>
     </Compile>
     <Compile Include="SerchDriverLicencePage.xaml.cs">
       <DependentUpon>SerchDriverLicencePage.xaml</DependentUpon>
@@ -152,6 +180,22 @@
     <Page Include="SerchAvto.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SerchPTC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SerchSTS.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SerchIncurance.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SerchPassport.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="SerchDriverLicencePage.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -348,6 +392,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202102020752119_DeldeByteInRanks.resx">
       <DependentUpon>202102020752119_DeldeByteInRanks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102111906219_FixPAssport.resx">
+      <DependentUpon>202102111906219_FixPAssport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102111927419_fixCTC.resx">
+      <DependentUpon>202102111927419_fixCTC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102111932373_fixCTCandPTC.resx">
+      <DependentUpon>202102111932373_fixCTCandPTC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102111947474_fixPtc1.resx">
+      <DependentUpon>202102111947474_fixPtc1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

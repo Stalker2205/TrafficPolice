@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:TrafficPolice"
         mc:Ignorable="d"
         Title="MainWindow" MinWidth="800" MinHeight="450" ResizeMode="NoResize">
-    <Grid Background="LightBlue">
+    <Grid Background="Gray">
         <Grid.RowDefinitions>
             <RowDefinition Height="100*"/>
             <RowDefinition Height="320*"/>
@@ -39,7 +39,7 @@
             </Grid>
             <Image Grid.Column="1" x:Name="LogoImg"/>
         </Grid>
-        <Frame Grid.Row="1" Grid.Column="1" x:Name="FormPage" NavigationUIVisibility="Hidden" Background="Azure"/>
+        <Frame Grid.Row="1" Grid.Column="1" x:Name="FormPage" NavigationUIVisibility="Hidden" Background="Gray"/>
         <Grid Grid.Column="0" Grid.Row="1">
             <!--Боковой грид с кнопками-->
             <Grid.RowDefinitions>

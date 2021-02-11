@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:TrafficPolice"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="SerchDriverLicencePage" Background="LightBlue">
+      Title="SerchDriverLicencePage" Background="Gray">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.07*"/>

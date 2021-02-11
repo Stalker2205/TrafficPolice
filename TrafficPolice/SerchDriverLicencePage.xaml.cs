@@ -31,12 +31,13 @@ namespace TrafficPolice
         {
             if (!RequestsClass.keySerch)
             {
-              RequestsClass.CheckDriverLicence(DriverLicenceSeriesTbox.Text.ToString(),DriverLicenceNumberTbox.Text.ToString()) ;  return;
+                RequestsClass.CheckDriverLicence(DriverLicenceSeriesTbox.Text.ToString(), DriverLicenceNumberTbox.Text.ToString()); return;
             }
+            if (RequestsClass.Driver == null) { MessageBox.Show("Нет такого водителя"); return; }
             using (MyDBconnection db = new MyDBconnection())
             {
-                db.DriversLicenses.Load();
-                DatagridFirst.ItemsSource = db.DriversLicenses.Local.Where(x => x.DriverID == RequestsClass.Driver);
+                db.Passport.Load();
+                DatagridFirst.ItemsSource = db.Passport.Local.Where(x => x.DriverID == RequestsClass.Driver);
             }
         }
 
@@ -47,6 +48,7 @@ namespace TrafficPolice
             {
                 RequestsClass.CheckDriverLicence(DriverLicenceSeriesTbox.Text.ToString(), DriverLicenceNumberTbox.Text.ToString()); return;
             }
+            if (RequestsClass.PackageDocuments == null) { MessageBox.Show("Нет такого ТС"); return; }
             using (MyDBconnection db = new MyDBconnection())
             {
                 db.Ptcs.Load();
@@ -61,6 +63,7 @@ namespace TrafficPolice
             {
                 RequestsClass.CheckDriverLicence(DriverLicenceSeriesTbox.Text.ToString(), DriverLicenceNumberTbox.Text.ToString()); return;
             }
+            if (RequestsClass.PackageDocuments == null) { MessageBox.Show("Нет такого ТС"); return; }
             using (MyDBconnection db = new MyDBconnection())
             {
                 db.Insurances.Load();
@@ -75,6 +78,7 @@ namespace TrafficPolice
             {
                 RequestsClass.CheckDriverLicence(DriverLicenceSeriesTbox.Text.ToString(), DriverLicenceNumberTbox.Text.ToString()); return;
             }
+            if (RequestsClass.Driver == null) { MessageBox.Show("Нет такого водителя"); return; }
             using (MyDBconnection db = new MyDBconnection())
             {
                 db.Drivers.Load();
@@ -89,16 +93,19 @@ namespace TrafficPolice
             {
                 RequestsClass.CheckDriverLicence(DriverLicenceSeriesTbox.Text.ToString(), DriverLicenceNumberTbox.Text.ToString()); return;
             }
+            if (RequestsClass.PackageDocuments == null) { MessageBox.Show("Нет такого ТС"); return; }
             using (MyDBconnection db = new MyDBconnection())
             {
                 db.Cars.Load();
-                DatagridFirst.ItemsSource = db.Cars.Local.Where(x => x.DriverID == RequestsClass.Driver) ;
+                DatagridFirst.ItemsSource = db.Cars.Local.Where(x => x.DriverID == RequestsClass.Driver);
             }
         }
 
         private void DriverLicenceSeriesTbox_TextChanged(object sender, TextChangedEventArgs e)
         {
             RequestsClass.keySerch = false;
+            RequestsClass.Driver = null;
+            RequestsClass.PackageDocuments = null;
         }
     }
 }

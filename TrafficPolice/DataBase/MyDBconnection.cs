@@ -18,7 +18,7 @@ namespace TrafficPolice
         }
         public virtual DbSet<Driver> Drivers { get; set; }
         public virtual DbSet<Passport> Passports { get; set; }
-        public virtual DbSet<DriversLicense> DriversLicenses { get; set; }
+        public virtual DbSet<DriversLicense> Passport { get; set; }
         public virtual DbSet<Car> Cars { get; set; }
         public virtual DbSet<Document> Documents { get; set; }
         public virtual DbSet<Statement> Statements { get; set; }
