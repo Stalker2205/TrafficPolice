@@ -28,7 +28,6 @@ namespace TrafficPolice
             loginF.ShowDialog();
             #region Login
             if (!LoginClass.key) { Close(); }
-
             #endregion
             #region DBSelect
             using (MyDBconnection bconnection = new MyDBconnection())
