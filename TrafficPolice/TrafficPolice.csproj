@@ -136,26 +136,32 @@
     <Compile Include="Migrations\202102111947474_fixPtc1.designer.cs">
       <DependentUpon>202102111947474_fixPtc1.cs</DependentUpon>
     </Compile>
-    <Compile Include="SerchAvto.xaml.cs">
+    <Compile Include="SerchavtoALL\SerchAvto.xaml.cs">
       <DependentUpon>SerchAvto.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SerchPTC.xaml.cs">
+    <Compile Include="SerchavtoALL\SerchPTC.xaml.cs">
       <DependentUpon>SerchPTC.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SerchSTS.xaml.cs">
+    <Compile Include="SerchavtoALL\SerchSTS.xaml.cs">
       <DependentUpon>SerchSTS.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SerchIncurance.xaml.cs">
+    <Compile Include="SerchavtoALL\SerchIncurance.xaml.cs">
       <DependentUpon>SerchIncurance.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SerchPassport.xaml.cs">
+    <Compile Include="SerchavtoALL\SerchPassport.xaml.cs">
       <DependentUpon>SerchPassport.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SerchDriverLicencePage.xaml.cs">
+    <Compile Include="SerchavtoALL\SerchDriverLicencePage.xaml.cs">
       <DependentUpon>SerchDriverLicencePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SerchInCars.xaml.cs">
+    <Compile Include="SerchavtoALL\SerchInCars.xaml.cs">
       <DependentUpon>SerchInCars.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SerchDriverOnly.xaml.cs">
+      <DependentUpon>SerchDriverOnly.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WorkWithTheDriver.xaml.cs">
+      <DependentUpon>WorkWithTheDriver.xaml</DependentUpon>
     </Compile>
     <Page Include="LoginF.xaml">
       <SubType>Designer</SubType>
@@ -177,31 +183,39 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="SerchAvto.xaml">
+    <Page Include="SerchavtoALL\SerchAvto.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="SerchPTC.xaml">
+    <Page Include="SerchavtoALL\SerchPTC.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="SerchSTS.xaml">
+    <Page Include="SerchavtoALL\SerchSTS.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="SerchIncurance.xaml">
+    <Page Include="SerchavtoALL\SerchIncurance.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="SerchPassport.xaml">
+    <Page Include="SerchavtoALL\SerchPassport.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="SerchDriverLicencePage.xaml">
+    <Page Include="SerchavtoALL\SerchDriverLicencePage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="SerchInCars.xaml">
+    <Page Include="SerchavtoALL\SerchInCars.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SerchDriverOnly.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WorkWithTheDriver.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
