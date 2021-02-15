@@ -70,6 +70,7 @@
     <Compile Include="DataBase\Ctc.cs" />
     <Compile Include="DataBase\Insurance.cs" />
     <Compile Include="DataBase\Inspection.cs" />
+    <Compile Include="DifferentClasses\DriverClass.cs" />
     <Compile Include="DifferentClasses\LoginClass.cs" />
     <Compile Include="LoginF.xaml.cs">
       <DependentUpon>LoginF.xaml</DependentUpon>
@@ -157,8 +158,8 @@
     <Compile Include="SerchavtoALL\SerchInCars.xaml.cs">
       <DependentUpon>SerchInCars.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SerchDriverOnly.xaml.cs">
-      <DependentUpon>SerchDriverOnly.xaml</DependentUpon>
+    <Compile Include="SerchDriverID.xaml.cs">
+      <DependentUpon>SerchDriverID.xaml</DependentUpon>
     </Compile>
     <Compile Include="WorkWithTheDriver.xaml.cs">
       <DependentUpon>WorkWithTheDriver.xaml</DependentUpon>
@@ -211,7 +212,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="SerchDriverOnly.xaml">
+    <Page Include="SerchDriverID.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

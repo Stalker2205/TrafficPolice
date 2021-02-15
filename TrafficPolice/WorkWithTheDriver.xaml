@@ -16,7 +16,31 @@
             <RowDefinition Height="0.14*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <DataGrid Grid.Row="1" Background="Gray" x:Name="DriverGrid" Visibility="Visible"/>
+        <DataGrid Grid.Row="1" Background="Gray" x:Name="DriverGrid" Visibility="Visible" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Header="DriverID">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding DriverID}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="FirstName">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding FirstName}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Patronymic">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Patronymic}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
         <Frame Grid.Row="1" Visibility="Hidden"/>
         <Grid Grid.Row="0">
             <Grid.ColumnDefinitions>
@@ -27,7 +51,7 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Button Grid.Column="1" Margin="5,5,5,5" Content="Просмотр"/>
-            <Button Grid.Column="3" Margin="5,5,5,5" Content="Добавить"/>
+            <Button Grid.Column="3" x:Name="CreateDriver" Click="CreateDriver_Click" Margin="5,5,5,5" Content="Добавить"/>
             <Button Grid.Column="2" Margin="5,5,5,5" Content="Изменить"/>
             <Grid Grid.Column="0">
                 <Grid.ColumnDefinitions>
@@ -35,11 +59,11 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <TextBlock Grid.Column="0" Text="ID:" TextAlignment="Left" VerticalAlignment="Center" FontSize="23"/>
-                <TextBox Grid.Column="1" Margin="5,5,5,5" x:Name="IdDriver"/>
+                <TextBox Grid.Column="1" Margin="5,5,5,5" x:Name="IdDriverTbox"/>
                 
 
             </Grid>
-            <Button Grid.Column="5" Margin="5,5,5,5" x:Name="SerchDriver" Content="Поиск водителя"/>
+            <Button Grid.Column="5" Margin="5,5,5,5" x:Name="SerchDriver" Content="Поиск водителя" Click="SerchDriver_Click"/>
         </Grid>
     </Grid>
 </Page>

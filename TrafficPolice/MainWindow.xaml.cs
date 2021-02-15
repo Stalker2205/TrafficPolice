@@ -38,7 +38,7 @@ namespace TrafficPolice
                 var stf = bconnection.Staffs.Where(x => x.Login == LoginClass.LoginName && x.Password == LoginClass.LoginPassword);
                 foreach (Staff staff in stf) RID = staff.RankID;
                 var rnk = bconnection.Ranks.Where(X => X.RankID == RID);
-                foreach (Rank rank in rnk) { RankName.Text = rank.RankName; Rank.Source = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + $"\\Image\\Pagon\\{rank.RankPhoto}",UriKind.Absolute)); }
+             //   foreach (Rank rank in rnk) { RankName.Text = rank.RankName; Rank.Source = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + $"\\Image\\Pagon\\{rank.RankPhoto}",UriKind.Absolute)); }
                
             }
             #endregion 
@@ -48,6 +48,11 @@ namespace TrafficPolice
         private void Serchavto_Click(object sender, RoutedEventArgs e)
         {
             FormPage.Navigate(new SerchAvto());
+        }
+
+        private void AllAboutTheDriver_Click(object sender, RoutedEventArgs e)
+        {
+            FormPage.Navigate(new WorkWithTheDriver());
         }
     }
 }
