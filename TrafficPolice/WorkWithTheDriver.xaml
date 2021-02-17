@@ -41,7 +41,7 @@
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <Frame Grid.Row="1" Visibility="Hidden"/>
+        <Frame Grid.Row="1" Visibility="Hidden" x:Name="FrameFromNavigation"/>
         <Grid Grid.Row="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
@@ -50,16 +50,16 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Button Grid.Column="1" Margin="5,5,5,5" Content="Просмотр"/>
+            <Button Grid.Column="1" Margin="5,5,5,5" Content="Просмотр" x:Name="OpenPeopleInfo" Click="OpenPeopleInfo_Click"/>
             <Button Grid.Column="3" x:Name="CreateDriver" Click="CreateDriver_Click" Margin="5,5,5,5" Content="Добавить"/>
-            <Button Grid.Column="2" Margin="5,5,5,5" Content="Изменить"/>
+            <Button Grid.Column="2" Margin="5,5,5,5" Content="Изменить" x:Name="UpdateDriverInfo" Click="UpdateDriverInfo_Click"/>
             <Grid Grid.Column="0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="0.2*"/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <TextBlock Grid.Column="0" Text="ID:" TextAlignment="Left" VerticalAlignment="Center" FontSize="23"/>
-                <TextBox Grid.Column="1" Margin="5,5,5,5" x:Name="IdDriverTbox"/>
+                <TextBox Grid.Column="1" Margin="5,5,5,5" x:Name="IdDriverTbox" HorizontalContentAlignment="Center" FontSize="20"/>
                 
 
             </Grid>

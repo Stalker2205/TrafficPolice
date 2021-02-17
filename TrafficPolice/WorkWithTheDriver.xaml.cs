@@ -34,11 +34,15 @@ namespace TrafficPolice
 
         private void CreateDriver_Click(object sender, RoutedEventArgs e)
         {
-
+            DriverGrid.Visibility = Visibility.Hidden;
+            FrameFromNavigation.Visibility = Visibility.Visible;
+            FrameFromNavigation.Navigate(new CreateDriver());
         }
 
         private void SerchDriver_Click(object sender, RoutedEventArgs e)
         {
+            DriverGrid.Visibility = Visibility.Visible;
+            FrameFromNavigation.Visibility = Visibility.Hidden;
             int DriverID;
 
             if (IdDriverTbox.Text.Length != 0)
@@ -64,7 +68,21 @@ namespace TrafficPolice
                     db.Drivers.Load();
                     DriverGrid.ItemsSource = db.Drivers.Local.Where(x => x.DriverID == RequestsClass.Driver);
                 }
+                IdDriverTbox.Text = RequestsClass.Driver.ToString();
             }
+        }
+
+        private void OpenPeopleInfo_Click(object sender, RoutedEventArgs e)
+        {
+            DriverGrid.Visibility = Visibility.Hidden;
+            FrameFromNavigation.Visibility = Visibility.Visible;
+        }
+
+        private void UpdateDriverInfo_Click(object sender, RoutedEventArgs e)
+        {
+            DriverGrid.Visibility = Visibility.Hidden;
+            FrameFromNavigation.Visibility = Visibility.Visible;
         }
     }
 }
+ 

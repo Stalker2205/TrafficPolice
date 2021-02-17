@@ -35,13 +35,14 @@ namespace TrafficPolice
             {
                 RequestsClass.CheckPassport(SeriesTbox.Text.ToString(), NumberTbox.Text.ToString());
                 if(RequestsClass.Driver == null) { MessageBox.Show("Нет такого паспорта");return; }
+                Close();
             }
             else
             {
                 RequestsClass.CheckDriverLicence(SeriesTbox.Text.ToString(), NumberTbox.Text.ToString());
                 if(RequestsClass.Driver == null) { MessageBox.Show("Нет таких прав"); return; }
+                Close();
             }
-            Close();
         }
     }
 }

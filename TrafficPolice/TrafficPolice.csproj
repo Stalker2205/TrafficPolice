@@ -67,6 +67,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="CreateDriver.xaml.cs">
+      <DependentUpon>CreateDriver.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DataBase\Ctc.cs" />
     <Compile Include="DataBase\Insurance.cs" />
     <Compile Include="DataBase\Inspection.cs" />
@@ -164,6 +167,10 @@
     <Compile Include="WorkWithTheDriver.xaml.cs">
       <DependentUpon>WorkWithTheDriver.xaml</DependentUpon>
     </Compile>
+    <Page Include="CreateDriver.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="LoginF.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
