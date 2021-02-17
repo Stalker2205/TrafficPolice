@@ -27,7 +27,7 @@ namespace TrafficPolice
             keySerch = true;
         }
 
-        public static void CheckDriverLicence (string series,string number)
+        public static void CheckDriverLicence(string series, string number)
         {
             keySerch = false;
             int num;
@@ -37,22 +37,19 @@ namespace TrafficPolice
                 num = Convert.ToInt32(number);
                 ser = Convert.ToInt32(series);
             }
-            catch { MessageBox.Show("Серия и номер должны быть числами");return; }
+            catch { MessageBox.Show("Серия и номер должны быть числами"); return; }
 
-            if(series.Length == 0||series.Length !=4 || number.Length == 0 || number.Length != 6)
+            if (series.Length == 0 || series.Length != 4 || number.Length == 0 || number.Length != 6)
             {
-                MessageBox.Show("Серия должна состоять из 4 цифр \n Номер должен состоять из 6 цифр");return;
+                MessageBox.Show("Серия должна состоять из 4 цифр \n Номер должен состоять из 6 цифр"); return;
             }
 
-            using ( MyDBconnection db = new MyDBconnection())
+            using (MyDBconnection db = new MyDBconnection())
             {
                 db.Passport.Load();
                 db.Drivers.Load();
-                db.Cars.Load();
                 var driveLicence = db.Passport.Local.Where(x => x.DriversLicenseSeries == ser && x.DriversLicenseNumber == num);
                 foreach (DriversLicense DLIcence in driveLicence) { Driver = DLIcence.DriverID; }
-                var car1 = db.Cars.Local.Where(x => x.DriverID == Driver);
-                foreach (Car car in car1) { PackageDocuments = car.CarID; }
             }
             keySerch = true;
         }
@@ -77,11 +74,8 @@ namespace TrafficPolice
             {
                 db.Passports.Load();
                 db.Drivers.Load();
-                db.Cars.Load();
                 var pass = db.Passports.Local.Where(x => x.PassportSeries == ser && x.PassportNumber == num);
                 foreach (Passport passport in pass) { Driver = passport.PassportID; }
-                var car1 = db.Cars.Local.Where(x => x.DriverID == Driver);
-                foreach (Car car in car1) { PackageDocuments = car.CarID; }
             }
             keySerch = true;
         }
@@ -110,7 +104,7 @@ namespace TrafficPolice
                 var ins = db.Insurances.Local.Where(x => x.InsuranceSeries == ser && x.InsuranceNumber == num);
                 foreach (Insurance insurance in ins) { PackageDocuments = insurance.InsuranceID; }
                 var car = db.Cars.Local.Where(x => x.CarID == PackageDocuments);
-                foreach(Car car1 in car) { Driver = car1.DriverID; }
+                foreach (Car car1 in car) { Driver = car1.DriverID; }
             }
             keySerch = true;
         }
@@ -133,7 +127,7 @@ namespace TrafficPolice
                 db.Drivers.Load();
                 db.Cars.Load();
                 var ins = db.Ctcs.Local.Where(x => x.CtcSeries == series && x.CtcNumber == num);
-                foreach (Ctc ctc in ins) { PackageDocuments = ctc.CtcID;Driver = ctc.Owner; }
+                foreach (Ctc ctc in ins) { PackageDocuments = ctc.CtcID; Driver = ctc.Owner; }
             }
             keySerch = true;
         }
@@ -156,9 +150,9 @@ namespace TrafficPolice
                 db.Drivers.Load();
                 db.Cars.Load();
                 var ins = db.Ptcs.Local.Where(x => x.PtcSeries == series && x.PtcNumber == num);
-                foreach (Ptc ptc in ins) { PackageDocuments = ptc.PtcID;}
+                foreach (Ptc ptc in ins) { PackageDocuments = ptc.PtcID; }
                 var car = db.Cars.Local.Where(x => x.CarID == PackageDocuments);
-                foreach(Car car1 in car) { Driver = car1.DriverID; }
+                foreach (Car car1 in car) { Driver = car1.DriverID; }
             }
             keySerch = true;
         }

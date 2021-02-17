@@ -29,7 +29,6 @@ namespace TrafficPolice
             RequestsClass.PackageDocuments = null;
         }
 
-
         private void SerchDriverLicence_Click(object sender, RoutedEventArgs e)
         {
             if (!RequestsClass.keySerch)
@@ -46,30 +45,54 @@ namespace TrafficPolice
 
         private void PtcSerch_Click(object sender, RoutedEventArgs e)
         {
-
+            int car;
+            if(CarID.Text.Length == 0) { MessageBox.Show("Введите ID машины");return; }
+            try
+            {
+                car = Convert.ToInt32(CarID.Text);
+            }
+            catch { MessageBox.Show("ID машины должно быть числом!");return; }
+           
+            
             if (!RequestsClass.keySerch)
             {
                 RequestsClass.CheckPassport(PassportSeriesTbox.Text.ToString(), PassportNumberTbox.Text.ToString()); return;
             }
-            if (RequestsClass.PackageDocuments == null) { MessageBox.Show("Нет такого ТС"); return; }
+           
             using (MyDBconnection db = new MyDBconnection())
             {
+                db.Cars.Load();
+                var cra = db.Cars.Local.Where(x => x.CarID == car);
+                foreach(Car car1 in cra) { RequestsClass.PackageDocuments = car1.CarID; }
+                if (RequestsClass.PackageDocuments == null) { MessageBox.Show("Нет такого ТС"); return; }
                 db.Ptcs.Load();
                 DatagridFirst.ItemsSource = db.Ptcs.Local.Where(x => x.PtcID == RequestsClass.PackageDocuments);
             }
+           
         }
 
         private void SetchInsurance_Click(object sender, RoutedEventArgs e)
         {
-
+            int car;
+            if (CarID.Text.Length == 0) { MessageBox.Show("Введите ID машины"); return; }
+            try
+            {
+                car = Convert.ToInt32(CarID.Text);
+            }
+            catch { MessageBox.Show("ID машины должно быть числом!"); return; }
             if (!RequestsClass.keySerch)
             {
                 RequestsClass.CheckPassport(PassportSeriesTbox.Text.ToString(), PassportNumberTbox.Text.ToString()); return;
             }
-            if (RequestsClass.PackageDocuments == null) { MessageBox.Show("Нет такого ТС"); return; }
             using (MyDBconnection db = new MyDBconnection())
             {
+                db.Cars.Load();
                 db.Insurances.Load();
+
+                var cra = db.Cars.Local.Where(x => x.CarID == car);
+                foreach (Car car1 in cra) { RequestsClass.PackageDocuments = car1.CarID; }
+                if (RequestsClass.PackageDocuments == null) { MessageBox.Show("Нет такого ТС"); return; }
+                
                 DatagridFirst.ItemsSource = db.Insurances.Local.Where(x => x.InsuranceID == RequestsClass.PackageDocuments);
             }
         }
@@ -96,11 +119,11 @@ namespace TrafficPolice
             {
                 RequestsClass.CheckPassport(PassportSeriesTbox.Text.ToString(), PassportNumberTbox.Text.ToString()); return;
             }
-            if (RequestsClass.PackageDocuments == null) { MessageBox.Show("Нет такого ТС"); return; }
+       
             using (MyDBconnection db = new MyDBconnection())
             {
                 db.Cars.Load();
-                DatagridFirst.ItemsSource = db.Cars.Local.Where(x => x.DriverID == RequestsClass.Driver);
+                DatagridFirst.ItemsSource = db.Cars.Local.Where(x => x.DriverID == RequestsClass.Driver);   
             }
         }
 
