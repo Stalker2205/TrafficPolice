@@ -26,22 +26,22 @@ namespace TrafficPolice
             InitializeComponent();
             LoginF loginF = new LoginF();
             loginF.ShowDialog();
-            #region Login
-            if (!LoginClass.key) { Close(); }
-            #endregion
-            #region DBSelect
-            using (MyDBconnection bconnection = new MyDBconnection())
-            {
-                bconnection.Staffs.Load();
-                bconnection.Ranks.Load();
-                int RID = 0;
-                var stf = bconnection.Staffs.Where(x => x.Login == LoginClass.LoginName && x.Password == LoginClass.LoginPassword);
-                foreach (Staff staff in stf) RID = staff.RankID;
-                var rnk = bconnection.Ranks.Where(X => X.RankID == RID);
-             //   foreach (Rank rank in rnk) { RankName.Text = rank.RankName; Rank.Source = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + $"\\Image\\Pagon\\{rank.RankPhoto}",UriKind.Absolute)); }
+            //#region Login
+            //if (!LoginClass.key) { Close(); }
+            //#endregion
+            //#region DBSelect
+            //using (MyDBconnection bconnection = new MyDBconnection())
+            //{
+            //    bconnection.Staffs.Load();
+            //    bconnection.Ranks.Load();
+            //    int RID = 0;
+            //    var stf = bconnection.Staffs.Where(x => x.Login == LoginClass.LoginName && x.Password == LoginClass.LoginPassword);
+            //    foreach (Staff staff in stf) RID = staff.RankID;
+            //    var rnk = bconnection.Ranks.Where(X => X.RankID == RID);
+            // //   foreach (Rank rank in rnk) { RankName.Text = rank.RankName; Rank.Source = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + $"\\Image\\Pagon\\{rank.RankPhoto}",UriKind.Absolute)); }
                
-            }
-            #endregion 
+            //}
+            //#endregion 
             LogoImg.Source = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + $"\\Image\\Logo\\TrafficPoliceLogo.svg"));
         }
 

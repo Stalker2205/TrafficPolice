@@ -10,7 +10,7 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0.03*"/>
+            <ColumnDefinition Width="0*"/>
             <ColumnDefinition/>
             <ColumnDefinition Width="0.03*"/>
         </Grid.ColumnDefinitions>
@@ -28,14 +28,96 @@
             <Grid Grid.Column="0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="1.5*"/>
-                    <RowDefinition Height="0.3*"/>
                     <RowDefinition Height="1*"/>
+                    <RowDefinition Height="0.3*"/>
+
                 </Grid.RowDefinitions>
-                <Image x:Name="Photo" Grid.Row="0"/>
-                <Button Grid.Row="1" Margin="5,5,5,5" Content="Выбрать изображекие"/>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition Height="0.14*"/>
+                    </Grid.RowDefinitions>
+                    <Image Grid.Row="0" x:Name="Photo" Margin="5,0,0,0"/>
+                    <Button Grid.Row="1" Content="Выбрать фото" Margin="15,5,15,0" x:Name="PhotoButton"/>
+                </Grid>
+
+                <Grid Grid.Row="2"/>
+                <Button Grid.Column="0" Grid.Row="3" Content="Создать" Margin="5" x:Name="CreateDriverButton"/>
+
             </Grid>
             <Grid Grid.Column="1">
-                
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1.2*"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.4*"/>
+                        <ColumnDefinition Width="0.6*"/>
+                        <ColumnDefinition Width="0.3*"/>
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Row="0" Grid.Column="0" Text="Имя:" TextAlignment="Right" FontSize="20"/>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="Отчество:" TextAlignment="Right" FontSize="20" />
+                    <TextBlock Grid.Row="2" Grid.Column="0" Text="Права:" TextAlignment="Right"  FontSize="20"/>
+                    <TextBlock Grid.Row="3" Grid.Column="0" Text="Паспорт:" TextAlignment="Right" FontSize="20"/>
+                    <TextBox Grid.Row="0" Grid.Column="1" Margin="5,5,5,5" x:Name="FirstNameTbox" HorizontalContentAlignment="Center"/>
+                    <TextBox Grid.Row="1" Grid.Column="1" Margin="5,5,5,5" x:Name="Patronymic" HorizontalContentAlignment="Center"/>
+                    <ComboBox Grid.Row="2" Grid.Column="1" Margin="5,5,5,5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" x:Name="DriverLicenseComboBox"/>
+                    <ComboBox Grid.Row="3" Grid.Column="1" Margin="5,5,5,5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" x:Name="PassportComboBox"/>
+                    <Button Grid.Row="2" Grid.Column="2" Margin="5" Content="Создать"/>
+                    <Button Grid.Row="3" Grid.Column="2"  Margin="5" Content="Создать"/>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <DataGrid Grid.Column="0" Visibility="Visible" Margin="0,0,5,0" x:Name="DriverLicenseDataGrid" AutoGenerateColumns="False">
+                        <DataGrid.Columns>
+                            <DataGridTemplateColumn Header="ID Водителя">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding DriverID}"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTemplateColumn Header="Номер прав">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding DriversLicenseNumber}"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTemplateColumn Header="Серия прав">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding DriversLicenseSeries}"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <DataGrid Grid.Column="1" Visibility="Visible" Margin="0,0,5,0" x:Name="PassportDatagrid" AutoGenerateColumns="False">
+                        <DataGrid.Columns>
+                            <DataGridTemplateColumn Header="">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
             </Grid>
         </Grid>
     </Grid>
