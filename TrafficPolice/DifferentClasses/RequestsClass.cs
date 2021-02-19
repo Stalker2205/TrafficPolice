@@ -46,9 +46,9 @@ namespace TrafficPolice
 
             using (MyDBconnection db = new MyDBconnection())
             {
-                db.Passport.Load();
+                db.DriversLicenses.Load();
                 db.Drivers.Load();
-                var driveLicence = db.Passport.Local.Where(x => x.DriversLicenseSeries == ser && x.DriversLicenseNumber == num);
+                var driveLicence = db.DriversLicenses.Local.Where(x => x.DriversLicenseSeries == ser && x.DriversLicenseNumber == num);
                 foreach (DriversLicense DLIcence in driveLicence) { Driver = DLIcence.DriverID; }
             }
             keySerch = true;

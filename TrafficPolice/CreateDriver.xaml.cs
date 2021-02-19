@@ -26,20 +26,13 @@ namespace TrafficPolice
             InitializeComponent();
             Photo.Source = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "\\Image\\Additionally\\Photo.png", UriKind.Absolute));
             PhotoButton.Width = Photo.Width;
-            using (MyDBconnection db = new MyDBconnection())
-            {
-                db.Passports.Load();
-                db.DriversLicenses.Load();
-                PassportComboBox.ItemsSource = db.Passport.Local;
-                DriverLicenseComboBox.ItemsSource = db.DriversLicenses.Local;
-                DriverLicenseDataGrid.ItemsSource = db.DriversLicenses.Local;
-                
-            }
+            CreatePassport Cp = new CreatePassport();
+            FrameFromPassport.Navigate(Cp);        
         }
 
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
-            
+
         }
     }
 }

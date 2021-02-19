@@ -70,6 +70,12 @@
     <Compile Include="CreateDriver.xaml.cs">
       <DependentUpon>CreateDriver.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CreateDriverLicence.xaml.cs">
+      <DependentUpon>CreateDriverLicence.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CreatePassport.xaml.cs">
+      <DependentUpon>CreatePassport.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DataBase\Ctc.cs" />
     <Compile Include="DataBase\Insurance.cs" />
     <Compile Include="DataBase\Inspection.cs" />
@@ -140,6 +146,18 @@
     <Compile Include="Migrations\202102111947474_fixPtc1.designer.cs">
       <DependentUpon>202102111947474_fixPtc1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202102191153051_fixBD12.cs" />
+    <Compile Include="Migrations\202102191153051_fixBD12.designer.cs">
+      <DependentUpon>202102191153051_fixBD12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102191156371_fixBD121.cs" />
+    <Compile Include="Migrations\202102191156371_fixBD121.designer.cs">
+      <DependentUpon>202102191156371_fixBD121.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102191216011_AddLastNameInDriver.cs" />
+    <Compile Include="Migrations\202102191216011_AddLastNameInDriver.designer.cs">
+      <DependentUpon>202102191216011_AddLastNameInDriver.cs</DependentUpon>
+    </Compile>
     <Compile Include="SerchavtoALL\SerchAvto.xaml.cs">
       <DependentUpon>SerchAvto.xaml</DependentUpon>
     </Compile>
@@ -168,6 +186,14 @@
       <DependentUpon>WorkWithTheDriver.xaml</DependentUpon>
     </Compile>
     <Page Include="CreateDriver.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CreateDriverLicence.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CreatePassport.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -426,6 +452,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202102111947474_fixPtc1.resx">
       <DependentUpon>202102111947474_fixPtc1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102191153051_fixBD12.resx">
+      <DependentUpon>202102191153051_fixBD12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102191156371_fixBD121.resx">
+      <DependentUpon>202102191156371_fixBD121.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102191216011_AddLastNameInDriver.resx">
+      <DependentUpon>202102191216011_AddLastNameInDriver.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -10,7 +10,7 @@ namespace TrafficPolice
 {
     public  class DriversLicense
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int DriversLicenseID { get; set;}
         public int DriversLicenseNumber { get; set; }
         public int DriversLicenseSeries { get; set; }

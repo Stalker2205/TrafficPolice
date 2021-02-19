@@ -1,0 +1,77 @@
+﻿<Page x:Class="TrafficPolice.CreatePassport"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TrafficPolice"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="CreatePassport" Background="Gray">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.06*"/>
+            <RowDefinition />
+            <RowDefinition Height="0.06*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.03*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0.03*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="0.17*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Viewbox Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right">
+                    <TextBlock  Text="Паспортные" />
+                </Viewbox>
+                <Viewbox Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left">
+                    <TextBlock  Text=" данные" />
+                </Viewbox>
+                <Viewbox Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right">
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="Номер:" />
+                </Viewbox>
+                <Viewbox  Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right">
+                    <TextBlock Text="Серия:" />
+                </Viewbox>
+                <Viewbox Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right">
+                    <TextBlock  Text="Адрес:" />
+                </Viewbox>
+                <Viewbox Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right">
+                    <TextBlock  Text="Дата выдачи:" />
+                </Viewbox>
+                <Viewbox Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left">
+                    <TextBox  x:Name="PassNumberTbox" Width="90"/>
+                </Viewbox>
+                <Viewbox Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Left">
+                    <TextBox x:Name="PassSeriesTbox" Width="90"/>
+                </Viewbox>
+                <Viewbox Grid.Row="3" Grid.Column="1"  VerticalAlignment="Center" HorizontalAlignment="Left">
+                    <TextBox Width="90" x:Name="PassAdresTbox"/>
+                </Viewbox>
+                <Viewbox Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left">
+                    <TextBox   Width="90" x:Name="PassDateTbox"/>
+                </Viewbox>
+
+            </Grid>
+            <Viewbox Grid.Row="1" >
+                <Button  Content="Создать" Width="200"/>
+            </Viewbox>
+        </Grid>
+
+    </Grid>
+</Page>

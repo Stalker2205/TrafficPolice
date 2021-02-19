@@ -39,8 +39,8 @@ namespace TrafficPolice
             if (RequestsClass.Driver == null) { MessageBox.Show("Нет такого водителя"); return; }
             using (MyDBconnection db = new MyDBconnection())
             {
-                db.Passport.Load();
-                DatagridFirst.ItemsSource = db.Passport.Local.Where(x => x.DriverID == RequestsClass.Driver);
+                db.DriversLicenses.Load();
+                DatagridFirst.ItemsSource = db.DriversLicenses.Local.Where(x => x.DriverID == RequestsClass.Driver);
             }
         }
 

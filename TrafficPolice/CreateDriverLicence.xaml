@@ -1,0 +1,44 @@
+﻿<Page x:Class="TrafficPolice.CreateDriverLicence"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TrafficPolice"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="CreateDriverLicence" Background="Gray">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.06*"/>
+            <RowDefinition/>
+            <RowDefinition Height="0.06*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.03*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0.03*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Viewbox Grid.Row="0" Grid.Column="0">
+                <TextBlock Text="Номер"/>
+            </Viewbox>
+            <Viewbox Grid.Row="1" Grid.Column="0">
+                <TextBlock Text="Серия"/>
+            </Viewbox>
+            <Viewbox Grid.Row="2" Grid.Column="0">
+                <TextBlock Text="Категории"/>
+            </Viewbox>
+            <Viewbox Grid.Row="2" Grid.Column="1">
+                <TextBox Width="40" x:Name="DLCategoryTbox"/>
+            </Viewbox>
+            <Viewbox Grid.Row="1" Grid.Column="1">
+                <TextBox Width="40" x:Name="DLSeriesTbox"/>
+            </Viewbox>
+            <Viewbox Grid.Row="0" Grid.Column="1">
+                <TextBox Width="40" x:Name="DLNumberTbox"/>
+            </Viewbox>
+
+        </Grid>
+    </Grid>
+</Page>

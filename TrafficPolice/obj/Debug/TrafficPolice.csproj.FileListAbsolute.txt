@@ -264,3 +264,12 @@ C:\Users\ис-41\Desktop\RafikPolice\TrafficPolice\obj\Debug\SerchavtoALL\SerchD
 C:\Users\ис-41\Desktop\RafikPolice\TrafficPolice\obj\Debug\SerchavtoALL\SerchInCars.baml
 C:\Users\ис-41\Desktop\RafikPolice\TrafficPolice\obj\Debug\SerchDriverID.baml
 C:\Users\ис-41\Desktop\RafikPolice\TrafficPolice\obj\Debug\WorkWithTheDriver.baml
+C:\Users\олимп\Desktop\RafikPolice\TrafficPolice\obj\Debug\CreateDriver.g.cs
+C:\Users\олимп\Desktop\RafikPolice\TrafficPolice\obj\Debug\CreateDriver.baml
+C:\Users\олимп\Desktop\RafikPolice\TrafficPolice\obj\Debug\TrafficPolice.Migrations.fixBD12.resources
+C:\Users\олимп\Desktop\RafikPolice\TrafficPolice\obj\Debug\TrafficPolice.Migrations.fixBD121.resources
+C:\Users\олимп\Desktop\RafikPolice\TrafficPolice\obj\Debug\CreatePassport.g.cs
+C:\Users\олимп\Desktop\RafikPolice\TrafficPolice\obj\Debug\CreatePassport.baml
+C:\Users\олимп\Desktop\RafikPolice\TrafficPolice\obj\Debug\TrafficPolice.Migrations.AddLastNameInDriver.resources
+C:\Users\олимп\Desktop\RafikPolice\TrafficPolice\obj\Debug\CreateDriverLicence.g.cs
+C:\Users\олимп\Desktop\RafikPolice\TrafficPolice\obj\Debug\CreateDriverLicence.baml
