@@ -142,7 +142,6 @@ C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\Tra
 C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\TrafficPolice.Migrations.fixCTC.resources
 C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\TrafficPolice.Migrations.fixCTCandPTC.resources
 C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\TrafficPolice.Migrations.fixPtc1.resources
-C:\Users\ис-41\Desktop\RafikPolice\TrafficPolice\obj\Debug\TrafficPolice.csprojAssemblyReference.cache
 C:\Users\ис-41\Desktop\RafikPolice\TrafficPolice\obj\Debug\MainWindow.g.cs
 C:\Users\ис-41\Desktop\RafikPolice\TrafficPolice\obj\Debug\App.g.cs
 C:\Users\ис-41\Desktop\RafikPolice\TrafficPolice\obj\Debug\TrafficPolice_MarkupCompile.cache
@@ -273,3 +272,7 @@ C:\Users\олимп\Desktop\RafikPolice\TrafficPolice\obj\Debug\CreatePassport.b
 C:\Users\олимп\Desktop\RafikPolice\TrafficPolice\obj\Debug\TrafficPolice.Migrations.AddLastNameInDriver.resources
 C:\Users\олимп\Desktop\RafikPolice\TrafficPolice\obj\Debug\CreateDriverLicence.g.cs
 C:\Users\олимп\Desktop\RafikPolice\TrafficPolice\obj\Debug\CreateDriverLicence.baml
+C:\Users\ис-41\Desktop\RafikPolice\TrafficPolice\obj\Debug\TrafficPolice.Migrations.fixBD12.resources
+C:\Users\ис-41\Desktop\RafikPolice\TrafficPolice\obj\Debug\TrafficPolice.Migrations.fixBD121.resources
+C:\Users\ис-41\Desktop\RafikPolice\TrafficPolice\obj\Debug\TrafficPolice.Migrations.AddLastNameInDriver.resources
+C:\Users\ис-41\Desktop\RafikPolice\TrafficPolice\obj\Debug\TrafficPolice.csprojAssemblyReference.cache

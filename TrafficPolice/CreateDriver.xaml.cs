@@ -24,10 +24,9 @@ namespace TrafficPolice
         public CreateDriver()
         {
             InitializeComponent();
-            Photo.Source = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "\\Image\\Additionally\\Photo.png", UriKind.Absolute));
-            PhotoButton.Width = Photo.Width;
-            CreatePassport Cp = new CreatePassport();
-            FrameFromPassport.Navigate(Cp);        
+            BitmapImage bitmapImage = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "\\Image\\Additionally\\Photo.png", UriKind.Absolute)); ;
+            Photo.Source = bitmapImage;
+            PhotoButton.Width = bitmapImage.Width;
         }
 
         private void ExitButton_Click(object sender, RoutedEventArgs e)

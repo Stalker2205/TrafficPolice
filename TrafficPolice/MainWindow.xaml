@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TrafficPolice"
         mc:Ignorable="d"
-        Title="MainWindow" MinWidth="800" MinHeight="450" ResizeMode="NoResize">
+        Title="MainWindow" MinWidth="600" MinHeight="450" ResizeMode="NoResize">
     <Grid Background="Gray">
         <Grid.RowDefinitions>
             <RowDefinition Height="100*"/>
