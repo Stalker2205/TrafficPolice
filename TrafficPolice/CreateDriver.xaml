@@ -72,13 +72,13 @@
                             <RowDefinition/>
                             <RowDefinition/>
                         </Grid.RowDefinitions>
-                        <TextBlock Grid.Row="0" Grid.Column="0" Text="Имя:" FontSize="30" VerticalAlignment="Center"/>
-                        <TextBlock Grid.Row="1" Grid.Column="0" Text="Фамилия:" FontSize="30" VerticalAlignment="Center"/>
-                        <TextBlock Grid.Row="2" Grid.Column="0" Text="Отчество:" FontSize="30" VerticalAlignment="Center"/>
-                        <TextBlock Grid.Row="3" Grid.Column="0" Text="Серия:" FontSize="30" VerticalAlignment="Center"/>
-                        <TextBlock Grid.Row="4" Grid.Column="0" Text="Номер:" FontSize="30" VerticalAlignment="Center"/>
-                        <TextBlock Grid.Row="5" Grid.Column="0" Text="Адрес:" FontSize="30" VerticalAlignment="Center"/>
-                        <TextBlock Grid.Row="6" Grid.Column="0" Text="Выдача:" FontSize="30" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Row="0" Grid.Column="0" Text="Имя:" FontSize="27" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Row="1" Grid.Column="0" Text="Фамилия:" FontSize="27" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Row="2" Grid.Column="0" Text="Отчество:" FontSize="27" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Row="3" Grid.Column="0" Text="Серия:" FontSize="27" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Row="4" Grid.Column="0" Text="Номер:" FontSize="27" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Row="5" Grid.Column="0" Text="Адрес:" FontSize="27" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Row="6" Grid.Column="0" Text="Выдача:" FontSize="27" VerticalAlignment="Center"/>
                         <TextBox Grid.Row="0" Grid.Column="1" Margin="5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Width="140"/>
                         <TextBox Grid.Row="1" Grid.Column="1" Margin="5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Width="140"/>
                         <TextBox Grid.Row="2" Grid.Column="1" Margin="5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Width="140"/>
@@ -104,7 +104,23 @@
                             <RowDefinition/>
                             <RowDefinition/>
                             <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
                         </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="Серия:" FontSize="27" HorizontalAlignment="Right" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"/>
+                        <TextBlock Text="Номер:" FontSize="27" HorizontalAlignment="Right" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center"/>
+                        <TextBlock Text="Категории:" FontSize="27" HorizontalAlignment="Right" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center"/>
+                        <TextBlock Text="Выдача:" FontSize="27" HorizontalAlignment="Right" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center"/>
+                        <TextBlock Text="Окончание:" FontSize="27" HorizontalAlignment="Right" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center"/>
+                        <TextBox Grid.Row="0" Grid.Column="1" Margin="5"/>
+                        <TextBox Grid.Row="1" Grid.Column="1" Margin="5"/>
+                        <TextBox Grid.Row="2" Grid.Column="1" Margin="5"/>
+                        <DatePicker Grid.Row="3" Grid.Column="1" VerticalAlignment="Center"/>
                     </Grid>
                 </Grid>
             </Grid>
