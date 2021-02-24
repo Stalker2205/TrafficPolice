@@ -29,8 +29,23 @@ namespace TrafficPolice
             PhotoButton.Width = bitmapImage.Width;
         }
 
-        private void ExitButton_Click(object sender, RoutedEventArgs e)
+        private void CreateDriverButton_Click(object sender, RoutedEventArgs e)
         {
+            #region Check number and Series
+            int PasSer, PasNum, LicSer, LicNum;
+            if (PassSeries.Text.Length == 0 || PassSeries.Text.Length != 4) { MessageBox.Show("Серия паспорта состоит из 4-х цифр"); return; }
+            else { try { PasSer = Convert.ToInt32(PassSeries.Text); } catch { MessageBox.Show("Серия паспорта состоит из 4-х цифр"); return; } }
+            
+            if (DriverLicenseSeries.Text.Length == 0 || DriverLicenseSeries.Text.Length != 4) { MessageBox.Show("Серия прав состоит из 4-х цифр"); return; }
+            else { try { LicSer = Convert.ToInt32(DriverLicenseSeries.Text); } catch { MessageBox.Show("Серия прав состоит из 4-х цифр"); return; } }
+           
+            if(PassNumber.Text.Length == 0 || PassNumber.Text.Length != 6) { MessageBox.Show("Номер паспорта состоит из 6 цифр");return; }
+            else { try { PasNum = Convert.ToInt32(PassNumber.Text); } catch { MessageBox.Show("Номер паспорта состоит из 6 цифр"); return; } }
+           
+            if (DriverLicenceNumber.Text.Length == 0 || DriverLicenceNumber.Text.Length != 6) { MessageBox.Show("Номер прав состоит из 6 цифр"); return; }
+            else { try { PasNum = Convert.ToInt32(DriverLicenceNumber.Text); } catch { MessageBox.Show("Номер прав состоит из 6 цифр"); return; } }
+            #endregion
+
 
         }
     }

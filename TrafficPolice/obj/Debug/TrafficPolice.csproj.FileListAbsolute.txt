@@ -356,3 +356,6 @@ C:\Users\олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\TrafficPolice.c
 C:\Users\олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\TrafficPolice.csproj.CopyComplete
 C:\Users\олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\TrafficPolice.exe
 C:\Users\олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\TrafficPolice.pdb
+C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\TrafficPolice.Migrations.fixBD12.resources
+C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\TrafficPolice.Migrations.fixBD121.resources
+C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\TrafficPolice.Migrations.AddLastNameInDriver.resources
