@@ -76,14 +76,53 @@ namespace TrafficPolice
 
         private void OpenPeopleInfo_Click(object sender, RoutedEventArgs e)
         {
-            DriverGrid.Visibility = Visibility.Hidden;
-            FrameFromNavigation.Visibility = Visibility.Visible;
+            DriverClass.DriverID = null;
+            if (IdDriverTbox.Text.Length == 0)
+            {
+                DriverGrid.Visibility = Visibility.Visible;
+                FrameFromNavigation.Visibility = Visibility.Hidden;
+                using (MyDBconnection db = new MyDBconnection())
+                {
+                    db.Drivers.Load();
+                    DriverGrid.ItemsSource = db.Drivers.Local;
+                }
+            }
+            else
+            {
+
+                using (MyDBconnection db = new MyDBconnection())
+                {
+                    db.Drivers.Load();
+                    var driv = db.Drivers.Local.Where(x => x.DriverID == Convert.ToInt32(IdDriverTbox.Text));
+                    foreach (Driver drive in driv) { DriverClass.DriverID = drive.DriverID; }
+                }
+                if (DriverClass.DriverID == null) { MessageBox.Show("Нет водителя с таким ID"); return; }
+                DriverGrid.Visibility = Visibility.Hidden;
+                FrameFromNavigation.Visibility = Visibility.Visible;
+                FrameFromNavigation.Navigate(new ViewDriver());
+            }
         }
 
         private void UpdateDriverInfo_Click(object sender, RoutedEventArgs e)
         {
-            DriverGrid.Visibility = Visibility.Hidden;
-            FrameFromNavigation.Visibility = Visibility.Visible;
+            DriverClass.DriverID = null;
+            if (IdDriverTbox.Text.Length == 0)
+            {
+                MessageBox.Show("Введите ID");return;
+            }
+            else
+            {
+                using (MyDBconnection db = new MyDBconnection())
+                {
+                    db.Drivers.Load();
+                    var driv = db.Drivers.Local.Where(x => x.DriverID == Convert.ToInt32(IdDriverTbox.Text));
+                    foreach (Driver drive in driv) { DriverClass.DriverID = drive.DriverID; }
+                }
+                if (DriverClass.DriverID == null) { MessageBox.Show("Нет водителя с таким ID"); return; }
+                DriverGrid.Visibility = Visibility.Hidden;
+                FrameFromNavigation.Visibility = Visibility.Visible;
+                FrameFromNavigation.Navigate(new UpdateDriver());
+            }
         }
     }
 }

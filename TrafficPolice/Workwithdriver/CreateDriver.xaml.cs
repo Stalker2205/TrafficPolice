@@ -68,8 +68,19 @@ namespace TrafficPolice
             #region add Driver,Passport,DriverLicence
             if (!key) { MessageBox.Show("Необходимо выбрать фото!"); return; }
             int driverId = 0;
+            int? passID = null;
+            int? LicenceID = null;
             using (MyDBconnection db = new MyDBconnection())
             {
+
+                db.Passports.Load();
+                db.DriversLicenses.Load();
+                var pas1 = db.Passports.Local.Where(x => x.PassportNumber == Convert.ToInt32(PassNumber.Text) && x.PassportSeries == Convert.ToInt32(PassSeries.Text));
+                foreach (Passport passport in pas1) { passID = passport.PassportID; }
+                if (passID != null) { MessageBox.Show("Такой паспорт уже есть в системе"); return; }
+                var drad = db.DriversLicenses.Local.Where(x => x.DriversLicenseNumber == Convert.ToInt32(DriverLicenceNumber.Text) && x.DriversLicenseSeries == Convert.ToInt32(DriverLicenseSeries.Text));
+                foreach (DriversLicense dl in drad) { LicenceID = dl.DriversLicenseID; }
+                if (LicenceID != null) { MessageBox.Show("Такие права уже существуют"); return; }
                 Driver driver = new Driver();
                 driver.FirstName = FirstName.Text;
                 driver.LastName = LastName.Text;
@@ -104,7 +115,7 @@ namespace TrafficPolice
         private void PhotoButton_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
-            dialog.Filter = "Image (*.png;*.jpeg;*.BMP)|*.png;*.jpeg;*.BMP";
+            dialog.Filter = "Image (*.png;*.jpg;*.BMP)|*.png;*.jpg;*.BMP";
             if (dialog.ShowDialog() == true)
             {
                 Photo.Source = new BitmapImage(new Uri(dialog.FileName));
