@@ -37,8 +37,8 @@
                         <RowDefinition/>
                         <RowDefinition Height="0.14*"/>
                     </Grid.RowDefinitions>
-                    <Image Grid.Row="0" x:Name="Photo" Margin="5,0,0,0" />
-                    <Button Grid.Row="1" Content="Выбрать фото" Margin="15,5,15,0" x:Name="PhotoButton"/>
+                    <Image Grid.Row="0" x:Name="Photo" Margin="5,0,10,0" />
+                    <Button Grid.Row="1" Content="Выбрать фото" Margin="15,5,15,0" x:Name="PhotoButton" Click="PhotoButton_Click"/>
                 </Grid>
 
                 <Grid Grid.Row="2"/>
@@ -79,13 +79,13 @@
                         <TextBlock Grid.Row="4" Grid.Column="0" Text="Номер:" FontSize="27" VerticalAlignment="Center"/>
                         <TextBlock Grid.Row="5" Grid.Column="0" Text="Адрес:" FontSize="27" VerticalAlignment="Center"/>
                         <TextBlock Grid.Row="6" Grid.Column="0" Text="Выдача:" FontSize="27" VerticalAlignment="Center"/>
-                        <TextBox Grid.Row="0" Grid.Column="1" Margin="5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Width="140"/>
-                        <TextBox Grid.Row="1" Grid.Column="1" Margin="5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Width="140"/>
-                        <TextBox Grid.Row="2" Grid.Column="1" Margin="5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Width="140"/>
+                        <TextBox x:Name="FirstName" Grid.Row="0" Grid.Column="1" Margin="5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Width="140"/>
+                        <TextBox x:Name="LastName" Grid.Row="1" Grid.Column="1" Margin="5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Width="140"/>
+                        <TextBox x:Name="Patronimic" Grid.Row="2" Grid.Column="1" Margin="5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Width="140"/>
                         <TextBox x:Name="PassSeries" Grid.Row="3" Grid.Column="1" Margin="5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Width="140"/>
                         <TextBox x:Name="PassNumber" Grid.Row="4" Grid.Column="1" Margin="5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Width="140"/>
-                        <TextBox Grid.Row="5" Grid.Column="1" Margin="5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Width="140"/>
-                        <TextBox Grid.Row="6" Grid.Column="1" Margin="5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Width="140"/>
+                        <TextBox x:Name="Adress" Grid.Row="5" Grid.Column="1" Margin="5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Width="140"/>
+                        <DatePicker Grid.Row="7" Grid.Column="1" VerticalAlignment="Center" x:Name="Vidali"/>
                     </Grid>
                 </Grid>
                 <Grid Grid.Column="1">
@@ -117,11 +117,11 @@
                         <TextBlock Text="Категории:" FontSize="27" HorizontalAlignment="Right" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center"/>
                         <TextBlock Text="Выдача:" FontSize="27" HorizontalAlignment="Right" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center"/>
                         <TextBlock Text="Окончание:" FontSize="27" HorizontalAlignment="Right" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center"/>
-                        <TextBox x:Name="DriverLicenseSeries" Grid.Row="0" Grid.Column="1" Margin="5"/>
-                        <TextBox x:Name="DriverLicenceNumber" Grid.Row="1" Grid.Column="1" Margin="5"/>
-                        <TextBox Grid.Row="2" Grid.Column="1" Margin="5"/>
-                        <DatePicker Grid.Row="3" Grid.Column="1" VerticalAlignment="Center"/>
-                        <DatePicker Grid.Column="1" Grid.Row="4" VerticalAlignment="Center"/>
+                        <TextBox x:Name="DriverLicenseSeries" Grid.Row="0" Grid.Column="1" Margin="5" VerticalContentAlignment="Center"/>
+                        <TextBox x:Name="DriverLicenceNumber" Grid.Row="1" Grid.Column="1" Margin="5" VerticalContentAlignment="Center"/>
+                        <TextBox x:Name="Kategory" Grid.Row="2" Grid.Column="1" Margin="5"/>
+                        <DatePicker x:Name="StartDate" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center"/>
+                        <DatePicker x:Name="FinishDate" Grid.Column="1" Grid.Row="4" VerticalAlignment="Center"/>
                     </Grid>
                 </Grid>
             </Grid>
