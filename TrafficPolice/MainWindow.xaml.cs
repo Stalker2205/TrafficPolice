@@ -54,5 +54,10 @@ namespace TrafficPolice
         {
             FormPage.Navigate(new WorkWithTheDriver());
         }
+
+        private void AllAboutTheAvto_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

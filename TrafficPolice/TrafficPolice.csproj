@@ -185,6 +185,9 @@
     <Compile Include="Workwithdriver\WorkWithTheDriver.xaml.cs">
       <DependentUpon>WorkWithTheDriver.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WorkWithTheAvto.xaml.cs">
+      <DependentUpon>WorkWithTheAvto.xaml</DependentUpon>
+    </Compile>
     <Page Include="Workwithdriver\UpdateDriver.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -252,6 +255,10 @@
     <Page Include="Workwithdriver\WorkWithTheDriver.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WorkWithTheAvto.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>
