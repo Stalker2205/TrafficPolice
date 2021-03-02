@@ -6,7 +6,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
 namespace TrafficPolice
 {
     public class Passport
@@ -20,6 +19,6 @@ namespace TrafficPolice
         public string PassportAdress { get; set; }
         public DateTime DateOfIssue { get; set; }
         public Driver Driver { get; set; }
-        
+
     }
 }

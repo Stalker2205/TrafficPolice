@@ -10,9 +10,9 @@ namespace TrafficPolice
 {
     public class Car
     {
+        [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int CarID { get; set; }
-        public Document Document { get; set; }
         public string VenhicleType { get; set; }
         public int EngineNumber { get; set; }
         public int ChossisNumber { get; set; }
@@ -22,5 +22,11 @@ namespace TrafficPolice
         public string Vin { get; set; }
         public Driver Driver { get; set; }
         public int DriverID { get; set; }
+        public Ptc Ptc { get; set; }
+        public Insurance Insurance { get; set; }
+        public Ctc Ctc { get; set; }
+        public List<Inspection> Inspections { get; set; }
+        public List<Statement> Statements { get; set; }
+
     }
 }

@@ -8,14 +8,15 @@ using System.Threading.Tasks;
 
 namespace TrafficPolice
 {
-    public class Rank
+    public class Statement
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int RankID { get; set; }
-        public string RankName { get; set; }
-        public string RankPhoto { get; set; }
-        public List<Staff> Staffs { get; set; }
-
+        public int StatementsID { get; set; }
+        public string Applicant { get; set; }
+        public string Cause { get; set; }
+        public string Act { get; set; }
+        public Car Car { get; set; }
+        public int CarID { get; set; }
     }
 }

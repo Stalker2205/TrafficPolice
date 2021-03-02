@@ -65,8 +65,8 @@ namespace TrafficPolice
                 var cra = db.Cars.Local.Where(x => x.CarID == car);
                 foreach(Car car1 in cra) { RequestsClass.PackageDocuments = car1.CarID; }
                 if (RequestsClass.PackageDocuments == null) { MessageBox.Show("Нет такого ТС"); return; }
-                db.Ptcs.Load();
-                DatagridFirst.ItemsSource = db.Ptcs.Local.Where(x => x.PtcID == RequestsClass.PackageDocuments);
+              //  db.Ptcs.Load();
+              //  DatagridFirst.ItemsSource = db.Ptcs.Local.Where(x => x.PtcID == RequestsClass.PackageDocuments);
             }
            
         }
@@ -87,13 +87,13 @@ namespace TrafficPolice
             using (MyDBconnection db = new MyDBconnection())
             {
                 db.Cars.Load();
-                db.Insurances.Load();
+               // db.Insurances.Load();
 
                 var cra = db.Cars.Local.Where(x => x.CarID == car);
                 foreach (Car car1 in cra) { RequestsClass.PackageDocuments = car1.CarID; }
                 if (RequestsClass.PackageDocuments == null) { MessageBox.Show("Нет такого ТС"); return; }
                 
-                DatagridFirst.ItemsSource = db.Insurances.Local.Where(x => x.InsuranceID == RequestsClass.PackageDocuments);
+                //DatagridFirst.ItemsSource = db.Insurances.Local.Where(x => x.InsuranceID == RequestsClass.PackageDocuments);
             }
         }
 

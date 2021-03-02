@@ -98,11 +98,11 @@ namespace TrafficPolice
 
             using (MyDBconnection db = new MyDBconnection())
             {
-                db.Insurances.Load();
+                //db.Insurances.Load();
                 db.Drivers.Load();
                 db.Cars.Load();
-                var ins = db.Insurances.Local.Where(x => x.InsuranceSeries == ser && x.InsuranceNumber == num);
-                foreach (Insurance insurance in ins) { PackageDocuments = insurance.InsuranceID; }
+                //var ins = db.Insurances.Local.Where(x => x.InsuranceSeries == ser && x.InsuranceNumber == num);
+                //foreach (Insurance insurance in ins) { PackageDocuments = insurance.InsuranceID; }
                 var car = db.Cars.Local.Where(x => x.CarID == PackageDocuments);
                 foreach (Car car1 in car) { Driver = car1.DriverID; }
             }
@@ -123,11 +123,11 @@ namespace TrafficPolice
             }
             using (MyDBconnection db = new MyDBconnection())
             {
-                db.Ctcs.Load();
+               // db.Ctcs.Load();
                 db.Drivers.Load();
                 db.Cars.Load();
-                var ins = db.Ctcs.Local.Where(x => x.CtcSeries == series && x.CtcNumber == num);
-                foreach (Ctc ctc in ins) { PackageDocuments = ctc.CtcID; Driver = ctc.Owner; }
+               // var ins = db.Ctcs.Local.Where(x => x.CtcSeries == series && x.CtcNumber == num);
+               // foreach (Ctc ctc in ins) { PackageDocuments = ctc.CtcID; Driver = ctc.Owner; }
             }
             keySerch = true;
         }
@@ -146,11 +146,11 @@ namespace TrafficPolice
             }
             using (MyDBconnection db = new MyDBconnection())
             {
-                db.Ptcs.Load();
+               // db.Ptcs.Load();
                 db.Drivers.Load();
                 db.Cars.Load();
-                var ins = db.Ptcs.Local.Where(x => x.PtcSeries == series && x.PtcNumber == num);
-                foreach (Ptc ptc in ins) { PackageDocuments = ptc.PtcID; }
+                //var ins = db.Ptcs.Local.Where(x => x.PtcSeries == series && x.PtcNumber == num);
+                //foreach (Ptc ptc in ins) { PackageDocuments = ptc.PtcID; }
                 var car = db.Cars.Local.Where(x => x.CarID == PackageDocuments);
                 foreach (Car car1 in car) { Driver = car1.DriverID; }
             }

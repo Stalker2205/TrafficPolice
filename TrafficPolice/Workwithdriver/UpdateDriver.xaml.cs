@@ -86,7 +86,7 @@ namespace TrafficPolice
                 driv.FirstName = FirstName.Text;
                 driv.LastName = LastName.Text;
                 driv.Patronymic = Patronimic.Text;
-                driv.Photo = photoName;
+               // driv.Photo = photoName;
                 db.SaveChanges();
                 Passport pass = db.Passports.Where(x => x.PassportID == DriverClass.DriverID).FirstOrDefault();
                 pass.PassportSeries =PasSer;

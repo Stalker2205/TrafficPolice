@@ -85,12 +85,12 @@ namespace TrafficPolice
                 driver.FirstName = FirstName.Text;
                 driver.LastName = LastName.Text;
                 driver.Patronymic = Patronimic.Text;
-                driver.Photo = photoName;
+               // driver.Photo = photoName;
                 db.Drivers.Add(driver);
                 db.SaveChanges();
                 db.Drivers.Load();
-                var driv = db.Drivers.Local.Where(x => x.Photo == photoName);
-                foreach (Driver dr in driv) { driverId = dr.DriverID; }
+               // var driv = db.Drivers.Local.Where(x => x.Photo == photoName);
+               // foreach (Driver dr in driv) { driverId = dr.DriverID; }
                 Passport pass = new Passport();
                 pass.PassportID = driverId;
                 pass.PassportNumber = Convert.ToInt32(PassNumber.Text);
