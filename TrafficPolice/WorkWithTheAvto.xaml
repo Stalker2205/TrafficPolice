@@ -13,53 +13,95 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="0.14*"/>
+            <RowDefinition Height="0.06*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <DataGrid Grid.Row="1" Background="Gray" IsReadOnly="True" x:Name="DriverGrid" Visibility="Visible" AutoGenerateColumns="False">
-            <DataGrid.Columns>
-                <DataGridTemplateColumn Header="DriverID">
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <TextBlock Text="{Binding DriverID}"/>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
-                <DataGridTemplateColumn Header="FirstName">
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <TextBlock Text="{Binding FirstName}"/>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
-                <DataGridTemplateColumn Header="Patronymic">
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <TextBlock Text="{Binding Patronymic}"/>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
-            </DataGrid.Columns>
-        </DataGrid>
-        <Frame Grid.Row="1" Visibility="Hidden" x:Name="FrameFromNavigation"/>
+        <Grid>
+
+        </Grid>
         <Grid Grid.Row="0">
-            <Menu>
-                <StackPanel Orientation="Horizontal">
-                    <MenuItem>
-                        <MenuItem.Header>
-                            FDSGDGDF
-                        </MenuItem.Header>
-                        <MenuItem.Icon>
-                            <Ellipse Fill="Gray"/>
-                        </MenuItem.Icon>
-                    </MenuItem>
-                    <MenuItem>
-                        <MenuItem.Header>
-                            HGFHFGHFG
-                        </MenuItem.Header>
-                    </MenuItem>
-                </StackPanel>
-            </Menu>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.04*"/>
+                    <ColumnDefinition Width="0.1*"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Text="ID:" FontSize="20"/>
+                <TextBox Grid.Column="1" Margin="1" VerticalContentAlignment="Center"/>
+                <Viewbox Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5,0,0,0">
+                    <Menu>
+                        <MenuItem Header="Авто" x:Name="Avto" Click="Avto_Click"/>
+                        <MenuItem Header="Документы |>">
+                            <MenuItem Header="ПТС" x:Name="SerchPTS" Click="SerchPTS_Click"/>
+                            <MenuItem Header="СТС"/>
+                            <MenuItem Header="Страховка"/>
+                            <MenuItem Header="ТО"/>
+                        </MenuItem>
+                    </Menu>
+                </Viewbox>
+            </Grid>
+
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Frame x:Name="FrameForNavigation" Visibility="Hidden"/>
+            <DataGrid AutoGenerateColumns="False" x:Name="CarGrid">
+                <DataGrid.Columns>
+                    <DataGridTemplateColumn Header="CarID">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding CarID}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+
+                    <DataGridTemplateColumn Header="Vin">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Vin}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+                    <DataGridTemplateColumn Header="VenhicleType">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding VenhicleType}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+                    <DataGridTemplateColumn Header="EngineNumber">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding EngineNumber}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+                    <DataGridTemplateColumn Header="ChossisNumber">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding ChossisNumber}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+
+                    <DataGridTemplateColumn Header="BodyNumber">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding BodyNumber}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+                </DataGrid.Columns>
+
+            </DataGrid>
         </Grid>
     </Grid>
 </Page>

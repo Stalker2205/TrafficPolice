@@ -67,6 +67,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Migrations\202103021015303_fixbd1.cs" />
+    <Compile Include="Migrations\202103021015303_fixbd1.designer.cs">
+      <DependentUpon>202103021015303_fixbd1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103021017051_fixbd1.1.cs" />
+    <Compile Include="Migrations\202103021017051_fixbd1.1.designer.cs">
+      <DependentUpon>202103021017051_fixbd1.1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103021022448_fixbd2.cs" />
+    <Compile Include="Migrations\202103021022448_fixbd2.designer.cs">
+      <DependentUpon>202103021022448_fixbd2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SerchWithPTS.xaml.cs">
+      <DependentUpon>SerchWithPTS.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Workwithdriver\UpdateDriver.xaml.cs">
       <DependentUpon>UpdateDriver.xaml</DependentUpon>
     </Compile>
@@ -188,6 +203,10 @@
     <Compile Include="WorkWithTheAvto.xaml.cs">
       <DependentUpon>WorkWithTheAvto.xaml</DependentUpon>
     </Compile>
+    <Page Include="SerchWithPTS.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Workwithdriver\UpdateDriver.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -215,7 +234,6 @@
     <Compile Include="DataBase\Car.cs" />
     <Compile Include="DataBase\Driver.cs" />
     <Compile Include="DataBase\DriversLicense.cs" />
-    <Compile Include="DataBase\Document.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -468,6 +486,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202102191216011_AddLastNameInDriver.resx">
       <DependentUpon>202102191216011_AddLastNameInDriver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103021015303_fixbd1.resx">
+      <DependentUpon>202103021015303_fixbd1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103021017051_fixbd1.1.resx">
+      <DependentUpon>202103021017051_fixbd1.1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103021022448_fixbd2.resx">
+      <DependentUpon>202103021022448_fixbd2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

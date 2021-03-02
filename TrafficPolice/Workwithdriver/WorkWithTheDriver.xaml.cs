@@ -24,14 +24,13 @@ namespace TrafficPolice
         public WorkWithTheDriver()
         {
             InitializeComponent();
-            //using (MyDBconnection db = new MyDBconnection())
-            //{
-            //    db.Drivers.Load();
-            //    db.Passports.Load();
-            //    DriverGrid.ItemsSource = db.Drivers.Local;
-            //    
-            //}
-            
+            using (MyDBconnection db = new MyDBconnection())
+            {
+                db.Drivers.Load();
+                db.Passports.Load();
+                DriverGrid.ItemsSource = db.Drivers.Local;
+            }
+
         }
 
         private void CreateDriver_Click(object sender, RoutedEventArgs e)

@@ -11,7 +11,6 @@ namespace TrafficPolice
     public class Ptc
     {
         [Key]
-        [ForeignKey("Document")]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int PtcID { get; set; }
         public int PtcNumber { get; set; }
@@ -23,6 +22,5 @@ namespace TrafficPolice
         public string Manufacture { get; set; }
         public string CustomsRestrictions { get; set; }
         public string DateOut { get; set; }
-        public Document Document { get; set; }
     }
 }

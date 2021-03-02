@@ -12,7 +12,6 @@ namespace TrafficPolice
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int CarID { get; set; }
-        public Document Document { get; set; }
         public string VenhicleType { get; set; }
         public int EngineNumber { get; set; }
         public int ChossisNumber { get; set; }
