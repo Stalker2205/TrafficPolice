@@ -11,9 +11,11 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Runtime.Serialization;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using System.IO;
 namespace TrafficPolice
 {
     /// <summary>
@@ -26,6 +28,7 @@ namespace TrafficPolice
             InitializeComponent();
             LoginF loginF = new LoginF();
             loginF.ShowDialog();
+
             //#region Login
             //if (!LoginClass.key) { Close(); }
             //#endregion
@@ -39,10 +42,23 @@ namespace TrafficPolice
             //    foreach (Staff staff in stf) RID = staff.RankID;
             //    var rnk = bconnection.Ranks.Where(X => X.RankID == RID);
             // //   foreach (Rank rank in rnk) { RankName.Text = rank.RankName; Rank.Source = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + $"\\Image\\Pagon\\{rank.RankPhoto}",UriKind.Absolute)); }
-               
+
             //}
             //#endregion 
-            LogoImg.Source = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + $"\\Image\\Logo\\TrafficPoliceLogo.svg"));
+            using (MyDBconnection db = new MyDBconnection())
+            {
+                db.Drivers.Load();
+                var df = db.Drivers.Local.Where(x => x.DriverID == 1);
+                foreach (var da in df)
+                {
+                    BitmapImage bitmap = new BitmapImage();
+                    bitmap.BeginInit() ;
+                    bitmap.StreamSource = new MemoryStream(da.Photo);
+                    bitmap.EndInit();
+                    LogoImg.Source = bitmap;
+                }
+
+            }
         }
 
         private void Serchavto_Click(object sender, RoutedEventArgs e)

@@ -337,3 +337,4 @@ C:\Users\олимп\Desktop\RafikPolice\TrafficPolice\obj\Debug\TrafficPolice.Mi
 C:\Users\олимп\Desktop\RafikPolice\TrafficPolice\obj\Debug\TrafficPolice.Migrations.CreateCTC.resources
 C:\Users\олимп\Desktop\RafikPolice\TrafficPolice\obj\Debug\TrafficPolice.Migrations.CreateInspectionStatments.resources
 C:\Users\олимп\Desktop\RafikPolice\TrafficPolice\obj\Debug\TrafficPolice.Migrations._byte.resources
+C:\Users\олимп\Desktop\RafikPolice\TrafficPolice\obj\Debug\TrafficPolice.csprojAssemblyReference.cache
