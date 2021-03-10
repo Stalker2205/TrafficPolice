@@ -24,12 +24,13 @@ namespace TrafficPolice
         public WorkWithTheDriver()
         {
             InitializeComponent();
-            using (MyDBconnection db = new MyDBconnection())
-            {
-                db.Drivers.Load();
-                db.Passports.Load();
-                DriverGrid.ItemsSource = db.Drivers.Local;
-            }
+            //using (MyDBconnection db = new MyDBconnection())
+            //{
+            //    db.Drivers.Load();
+            //    db.Passports.Load();
+            //    DriverGrid.ItemsSource = db.Drivers.Local;
+            //
+            //WiewImage.Source = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "\\actions32\\fileopen.png")); 
 
         }
 

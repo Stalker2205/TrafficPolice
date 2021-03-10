@@ -27,11 +27,11 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <TextBlock Grid.Column="0" Text="ID:" FontSize="20"/>
-                <TextBox Grid.Column="1" Margin="1" VerticalContentAlignment="Center"/>
+                <TextBox Grid.Column="1" Margin="1" VerticalContentAlignment="Center" x:Name="AvtoId"/>
                 <Viewbox Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5,0,0,0">
                     <Menu>
                         <MenuItem Header="Авто" x:Name="Avto" Click="Avto_Click"/>
-                        <MenuItem Header="Документы |>">
+                        <MenuItem Header="Документы">
                             <MenuItem Header="ПТС" x:Name="SerchPTS" Click="SerchPTS_Click"/>
                             <MenuItem Header="СТС"/>
                             <MenuItem Header="Страховка"/>

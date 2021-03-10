@@ -29,7 +29,7 @@ namespace TrafficPolice
             using (MyDBconnection db = new MyDBconnection())
             {
                 db.Ptcs.Load();
-                MainGrid.DataContext = db.Ptcs.Local.Where(x=>x.PtcID == 2);
+                MainGrid.DataContext = db.Ptcs.Local.Where(x=>x.PtcID == AvtoClass.AvtoID);
             }
 
         }

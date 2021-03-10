@@ -43,6 +43,11 @@ namespace TrafficPolice
         {
             CarGrid.Visibility = Visibility.Hidden;
             FrameForNavigation.Visibility = Visibility.Visible;
+            try
+            {
+                AvtoClass.AvtoID = Convert.ToInt32(AvtoId.Text);
+            }
+            catch { MessageBox.Show("Id должно быть числом!");return; }
             FrameForNavigation.Navigate(new SerchWithPTS());
         }
     }

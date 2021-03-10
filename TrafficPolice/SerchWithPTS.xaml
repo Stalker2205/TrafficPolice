@@ -35,22 +35,22 @@
                     <ColumnDefinition Width="1.1*"/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <TextBlock Grid.Column="0" Grid.Row="0" Text="Серия ПТС:" FontSize="25" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-                <TextBlock Grid.Column="0" Grid.Row="1" Text="Номер ПТС:" FontSize="25" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-                <TextBlock Grid.Column="0" Grid.Row="2" Text="Дата выпуска:" FontSize="25" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-                <TextBlock Grid.Column="0" Grid.Row="3" Text="Производитель:" FontSize="25" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-                <TextBlock Grid.Column="0" Grid.Row="4" Text="Эко класс:" FontSize="25" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-                <TextBlock Grid.Column="0" Grid.Row="5" Text="Тип двигателя:" FontSize="25" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-                <TextBlock Grid.Column="0" Grid.Row="6" Text="Объем двигателя:" FontSize="25" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-                <TextBlock Grid.Column="0" Grid.Row="7" Text="Год изготовления:" FontSize="25" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-                <TextBox Grid.Row="0" Grid.Column="1" Margin="5" x:Name="PtcSeriesTbox" Text="{Binding PtcSeries}" FontSize="20"/>
-                <TextBox Grid.Row="1" Grid.Column="1" Margin="5" x:Name="PtcNumber" FontSize="20" Text="{Binding PtcNumber}" />
-                <TextBox Grid.Row="2" Grid.Column="1" Margin="5" x:Name="DateOutTbox" FontSize="20" Text="{Binding DateOut}"/>
-                <TextBox Grid.Row="3" Grid.Column="1" Margin="5" x:Name="ManufactureTbox" FontSize="20" Text="{Binding Manufacture}"/>
-                <TextBox Grid.Row="4" Grid.Column="1" Margin="5" x:Name="EcoClassTbox" FontSize="20" Text="{Binding EcoClass}"/>
-                <TextBox Grid.Row="5" Grid.Column="1" Margin="5" x:Name="EngineTypeTbox" FontSize="20" Text="{Binding EngineType}"/>
-                <TextBox Grid.Row="6" Grid.Column="1" Margin="5" x:Name="EngineVolumeTbox" FontSize="20" Text="{Binding EngineVolume}"/>
-                <TextBox Grid.Row="7" Grid.Column="1" Margin="5" x:Name="YearOfManufacture" FontSize="20" Text="{Binding YearOfManufacture}"/>
+                <TextBlock Grid.Column="0" Grid.Row="1" Text="Серия ПТС:" FontSize="25" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                <TextBlock Grid.Column="0" Grid.Row="2" Text="Номер ПТС:" FontSize="25" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                <TextBlock Grid.Column="0" Grid.Row="3" Text="Дата выпуска:" FontSize="25" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                <TextBlock Grid.Column="0" Grid.Row="4" Text="Производитель:" FontSize="25" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                <TextBlock Grid.Column="0" Grid.Row="5" Text="Эко класс:" FontSize="25" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                <TextBlock Grid.Column="0" Grid.Row="6" Text="Тип двигателя:" FontSize="25" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                <TextBlock Grid.Column="0" Grid.Row="7" Text="Объем двигателя:" FontSize="25" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                <TextBlock Grid.Column="0" Grid.Row="8" Text="Год изготовления:" FontSize="25" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                <TextBox Grid.Row="1" Grid.Column="1" Margin="5" x:Name="PtcSeriesTbox" Text="{Binding PtcSeries}" FontSize="20"/>
+                <TextBox Grid.Row="2" Grid.Column="1" Margin="5" x:Name="PtcNumber" FontSize="20" Text="{Binding PtcNumber}" />
+                <TextBox Grid.Row="3" Grid.Column="1" Margin="5" x:Name="DateOutTbox" FontSize="20" Text="{Binding DateOut}"/>
+                <TextBox Grid.Row="4" Grid.Column="1" Margin="5" x:Name="ManufactureTbox" FontSize="20" Text="{Binding Manufacture}"/>
+                <TextBox Grid.Row="5" Grid.Column="1" Margin="5" x:Name="EcoClassTbox" FontSize="20" Text="{Binding EcoClass}"/>
+                <TextBox Grid.Row="6" Grid.Column="1" Margin="5" x:Name="EngineTypeTbox" FontSize="20" Text="{Binding EngineType}"/>
+                <TextBox Grid.Row="7" Grid.Column="1" Margin="5" x:Name="EngineVolumeTbox" FontSize="20" Text="{Binding EngineVolume}"/>
+                <TextBox Grid.Row="8" Grid.Column="1" Margin="5" x:Name="YearOfManufacture" FontSize="20" Text="{Binding YearOfManufacture}"/>
 
             </Grid>
             <Grid Grid.Column="1">
