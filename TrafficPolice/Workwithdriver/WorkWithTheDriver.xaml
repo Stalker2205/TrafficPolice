@@ -13,7 +13,7 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="0.14*"/>
+            <RowDefinition Height="0.07*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
         <DataGrid Grid.Row="1" Background="Gray" IsReadOnly="True" x:Name="DriverGrid" Visibility="Visible" AutoGenerateColumns="False">
@@ -43,27 +43,36 @@
         </DataGrid>
         <Frame Grid.Row="1" Visibility="Hidden" x:Name="FrameFromNavigation"/>
         <Grid Grid.Row="0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <Button Grid.Column="1" Margin="5,5,5,5" Content="Просмотр" x:Name="OpenPeopleInfo" Click="OpenPeopleInfo_Click"/>
-            <Button Grid.Column="3" x:Name="CreateDriver" Click="CreateDriver_Click" Margin="5,5,5,5" Content="Добавить"/>
-            <Button Grid.Column="2" Margin="5,5,5,5" Content="Изменить" x:Name="UpdateDriverInfo" Click="UpdateDriverInfo_Click"/>
-            <Grid Grid.Column="0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.2*"/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <TextBlock Grid.Column="0" Text="ID:" TextAlignment="Left" VerticalAlignment="Center" FontSize="23"/>
-                <TextBox Grid.Column="1" Margin="5,5,5,5" x:Name="IdDriverTbox" HorizontalContentAlignment="Center" FontSize="20"/>
-                
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
+                <TextBlock Text="ID:" FontSize="20" VerticalAlignment="Center"/>
+                <TextBox x:Name="IdDriverTbox" Width="30" Margin="3"/>
 
-            </Grid>
-            <Button Grid.Column="5" Margin="5,5,5,5" x:Name="SerchDriver" Content="Поиск водителя" Click="SerchDriver_Click"/>
+                <Menu Background="Transparent" >
+                    <MenuItem Header="Посмотр" Click="OpenPeopleInfo_Click">
+                        <MenuItem.Icon>
+                            <Image x:Name="Image_View"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="Создать" Click="CreateDriver_Click">
+
+                        <MenuItem.Icon>
+                            <Image x:Name="Image_Create"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+
+                    <MenuItem Header="Обновить" Click="UpdateDriverInfo_Click">
+                        <MenuItem.Icon>
+                            <Image x:Name="Image_Update"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="Поиск" Click="SerchDriver_Click">
+                        <MenuItem.Icon>
+                            <Image x:Name="Image_Serch"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </Menu>
+
+            </StackPanel>
         </Grid>
     </Grid>
 </Page>

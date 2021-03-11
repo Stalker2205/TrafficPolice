@@ -29,9 +29,12 @@ namespace TrafficPolice
             //    db.Drivers.Load();
             //    db.Passports.Load();
             //    DriverGrid.ItemsSource = db.Drivers.Local;
-            //    
-            //}
-            
+            //
+            Image_Create.Source = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "\\actions32\\filenew.ico"));
+            Image_View.Source = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "\\actions32\\fileopen.ico"));
+            Image_Update.Source = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "\\actions32\\fileUpdate.ico"));
+            Image_Serch.Source = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "\\actions32\\find.ico"));
+
         }
 
         private void CreateDriver_Click(object sender, RoutedEventArgs e)
@@ -108,7 +111,7 @@ namespace TrafficPolice
             DriverClass.DriverID = null;
             if (IdDriverTbox.Text.Length == 0)
             {
-                MessageBox.Show("Введите ID");return;
+                MessageBox.Show("Введите ID"); return;
             }
             else
             {
@@ -126,4 +129,4 @@ namespace TrafficPolice
         }
     }
 }
- 
+
