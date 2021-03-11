@@ -72,7 +72,8 @@
     <Compile Include="DataBase\Driver.cs" />
     <Compile Include="DataBase\DriversLicense.cs" />
     <Compile Include="DataBase\Insurance.cs" />
-    <Compile Include="Inspection.cs" />
+    <Compile Include="DataBase\DriverKategoryLicence.cs" />
+    <Compile Include="DataBase\Inspection.cs" />
     <Compile Include="Migrations\202103021054161_CreateCarDriverDriverLicencePassport.cs" />
     <Compile Include="Migrations\202103021054161_CreateCarDriverDriverLicencePassport.designer.cs">
       <DependentUpon>202103021054161_CreateCarDriverDriverLicencePassport.cs</DependentUpon>
@@ -106,7 +107,7 @@
     <Compile Include="Migrations\202103021126373_byte.designer.cs">
       <DependentUpon>202103021126373_byte.cs</DependentUpon>
     </Compile>
-    <Compile Include="Statement.cs" />
+    <Compile Include="DataBase\Statement.cs" />
     <Compile Include="Workwithdriver\UpdateDriver.xaml.cs">
       <DependentUpon>UpdateDriver.xaml</DependentUpon>
     </Compile>
