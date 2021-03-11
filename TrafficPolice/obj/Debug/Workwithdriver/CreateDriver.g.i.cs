@@ -41,7 +41,7 @@ namespace TrafficPolice {
     public partial class CreateDriver : System.Windows.Controls.Page, System.Windows.Markup.IComponentConnector {
         
         
-        #line 40 "..\..\..\Workwithdriver\CreateDriver.xaml"
+        #line 31 "..\..\..\Workwithdriver\CreateDriver.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Image Photo;
         
@@ -49,17 +49,49 @@ namespace TrafficPolice {
         #line hidden
         
         
-        #line 41 "..\..\..\Workwithdriver\CreateDriver.xaml"
+        #line 32 "..\..\..\Workwithdriver\CreateDriver.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Button PhotoButton;
+        internal System.Windows.Controls.Button Button_Photo;
         
         #line default
         #line hidden
         
         
-        #line 45 "..\..\..\Workwithdriver\CreateDriver.xaml"
+        #line 62 "..\..\..\Workwithdriver\CreateDriver.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Button CreateDriverButton;
+        internal System.Windows.Controls.TextBox TextBox_LastName;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 63 "..\..\..\Workwithdriver\CreateDriver.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.TextBox TextBox_FirstName;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 64 "..\..\..\Workwithdriver\CreateDriver.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.TextBox TextBox_Patronimic;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 65 "..\..\..\Workwithdriver\CreateDriver.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.TextBox TextBox_PassportSeries;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 66 "..\..\..\Workwithdriver\CreateDriver.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.TextBox TextBox_PassportNumber;
         
         #line default
         #line hidden
@@ -67,7 +99,7 @@ namespace TrafficPolice {
         
         #line 82 "..\..\..\Workwithdriver\CreateDriver.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.TextBox FirstName;
+        internal System.Windows.Controls.TextBox TextBox_Adress;
         
         #line default
         #line hidden
@@ -75,87 +107,39 @@ namespace TrafficPolice {
         
         #line 83 "..\..\..\Workwithdriver\CreateDriver.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.TextBox LastName;
+        internal System.Windows.Controls.DatePicker DatePicker_DateOfIssue;
         
         #line default
         #line hidden
         
         
-        #line 84 "..\..\..\Workwithdriver\CreateDriver.xaml"
+        #line 109 "..\..\..\Workwithdriver\CreateDriver.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.TextBox Patronimic;
+        internal System.Windows.Controls.TextBox TextBox_DriverLicenseSeries;
         
         #line default
         #line hidden
         
         
-        #line 85 "..\..\..\Workwithdriver\CreateDriver.xaml"
+        #line 110 "..\..\..\Workwithdriver\CreateDriver.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.TextBox PassSeries;
+        internal System.Windows.Controls.TextBox TextBox_DriverLicenseNumber;
         
         #line default
         #line hidden
         
         
-        #line 86 "..\..\..\Workwithdriver\CreateDriver.xaml"
+        #line 111 "..\..\..\Workwithdriver\CreateDriver.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.TextBox PassNumber;
+        internal System.Windows.Controls.DatePicker DatePicker_StartDate;
         
         #line default
         #line hidden
         
         
-        #line 87 "..\..\..\Workwithdriver\CreateDriver.xaml"
+        #line 112 "..\..\..\Workwithdriver\CreateDriver.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.TextBox Adress;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 88 "..\..\..\Workwithdriver\CreateDriver.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.DatePicker Vidali;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 120 "..\..\..\Workwithdriver\CreateDriver.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.TextBox DriverLicenseSeries;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 121 "..\..\..\Workwithdriver\CreateDriver.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.TextBox DriverLicenceNumber;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 122 "..\..\..\Workwithdriver\CreateDriver.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.TextBox Kategory;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 123 "..\..\..\Workwithdriver\CreateDriver.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.DatePicker StartDate;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 124 "..\..\..\Workwithdriver\CreateDriver.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.DatePicker FinishDate;
+        internal System.Windows.Controls.DatePicker DatePicker_FinishDate;
         
         #line default
         #line hidden
@@ -194,58 +178,40 @@ namespace TrafficPolice {
             this.Photo = ((System.Windows.Controls.Image)(target));
             return;
             case 2:
-            this.PhotoButton = ((System.Windows.Controls.Button)(target));
-            
-            #line 41 "..\..\..\Workwithdriver\CreateDriver.xaml"
-            this.PhotoButton.Click += new System.Windows.RoutedEventHandler(this.PhotoButton_Click);
-            
-            #line default
-            #line hidden
+            this.Button_Photo = ((System.Windows.Controls.Button)(target));
             return;
             case 3:
-            this.CreateDriverButton = ((System.Windows.Controls.Button)(target));
-            
-            #line 45 "..\..\..\Workwithdriver\CreateDriver.xaml"
-            this.CreateDriverButton.Click += new System.Windows.RoutedEventHandler(this.CreateDriverButton_Click);
-            
-            #line default
-            #line hidden
+            this.TextBox_LastName = ((System.Windows.Controls.TextBox)(target));
             return;
             case 4:
-            this.FirstName = ((System.Windows.Controls.TextBox)(target));
+            this.TextBox_FirstName = ((System.Windows.Controls.TextBox)(target));
             return;
             case 5:
-            this.LastName = ((System.Windows.Controls.TextBox)(target));
+            this.TextBox_Patronimic = ((System.Windows.Controls.TextBox)(target));
             return;
             case 6:
-            this.Patronimic = ((System.Windows.Controls.TextBox)(target));
+            this.TextBox_PassportSeries = ((System.Windows.Controls.TextBox)(target));
             return;
             case 7:
-            this.PassSeries = ((System.Windows.Controls.TextBox)(target));
+            this.TextBox_PassportNumber = ((System.Windows.Controls.TextBox)(target));
             return;
             case 8:
-            this.PassNumber = ((System.Windows.Controls.TextBox)(target));
+            this.TextBox_Adress = ((System.Windows.Controls.TextBox)(target));
             return;
             case 9:
-            this.Adress = ((System.Windows.Controls.TextBox)(target));
+            this.DatePicker_DateOfIssue = ((System.Windows.Controls.DatePicker)(target));
             return;
             case 10:
-            this.Vidali = ((System.Windows.Controls.DatePicker)(target));
+            this.TextBox_DriverLicenseSeries = ((System.Windows.Controls.TextBox)(target));
             return;
             case 11:
-            this.DriverLicenseSeries = ((System.Windows.Controls.TextBox)(target));
+            this.TextBox_DriverLicenseNumber = ((System.Windows.Controls.TextBox)(target));
             return;
             case 12:
-            this.DriverLicenceNumber = ((System.Windows.Controls.TextBox)(target));
+            this.DatePicker_StartDate = ((System.Windows.Controls.DatePicker)(target));
             return;
             case 13:
-            this.Kategory = ((System.Windows.Controls.TextBox)(target));
-            return;
-            case 14:
-            this.StartDate = ((System.Windows.Controls.DatePicker)(target));
-            return;
-            case 15:
-            this.FinishDate = ((System.Windows.Controls.DatePicker)(target));
+            this.DatePicker_FinishDate = ((System.Windows.Controls.DatePicker)(target));
             return;
             }
             this._contentLoaded = true;

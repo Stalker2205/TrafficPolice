@@ -10,7 +10,7 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="0.03*"/>
             <ColumnDefinition/>
             <ColumnDefinition Width="0.03*"/>
         </Grid.ColumnDefinitions>
@@ -19,111 +19,148 @@
             <RowDefinition/>
             <RowDefinition Height="0.05*"/>
         </Grid.RowDefinitions>
+        <Menu Grid.Column="1" Background="Transparent">
+            <MenuItem Header="Выход"/>
+        </Menu>
         <Grid Grid.Row="1" Grid.Column="1">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.3*"/>
                 <ColumnDefinition/>
+                <ColumnDefinition Width="0.6*"/>
             </Grid.ColumnDefinitions>
-
+            <StackPanel Grid.Column="1" Orientation="Vertical">
+                <Image x:Name="Photo" Height="300"/>
+                <Button x:Name="Button_Photo" Content="Выбрать фото"/>
+            </StackPanel>
             <Grid Grid.Column="0">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="1.5*"/>
-                    <RowDefinition Height="1*"/>
-                    <RowDefinition Height="0.3*"/>
-
+                    <RowDefinition/>
+                    <RowDefinition/>
                 </Grid.RowDefinitions>
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition/>
-                        <RowDefinition Height="0.14*"/>
-                    </Grid.RowDefinitions>
-                    <Image Grid.Row="0" x:Name="Photo" Margin="5,0,10,0" />
-                    <Button Grid.Row="1" Content="Выбрать фото" Margin="15,5,15,0" x:Name="PhotoButton" Click="PhotoButton_Click"/>
-                </Grid>
-
-                <Grid Grid.Row="2" Height="44" VerticalAlignment="Top"/>
-                <Button Grid.Column="0" Grid.Row="3" Content="Создать" Margin="5" x:Name="CreateDriverButton" Click="CreateDriverButton_Click"/>
-
-            </Grid>
-            <Grid Grid.Column="1">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Grid Grid.Column="0">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="0.1*"/>
-                        <RowDefinition/>
-                    </Grid.RowDefinitions>
-                    <Viewbox Grid.Row="0" >
-                        <TextBlock Text="Паспортные данные"/>
-                    </Viewbox>
-                    <Grid Grid.Row="1">
+                <GroupBox Header="Паспорт" Grid.Row="0">
+                    <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
-                        <Grid.RowDefinitions>
-                            <RowDefinition/>
-                            <RowDefinition/>
-                            <RowDefinition/>
-                            <RowDefinition/>
-                            <RowDefinition/>
-                            <RowDefinition/>
-                            <RowDefinition/>
-                        </Grid.RowDefinitions>
-                        <TextBlock Grid.Row="0" Grid.Column="0" Text="Имя:" FontSize="27" VerticalAlignment="Center"/>
-                        <TextBlock Grid.Row="1" Grid.Column="0" Text="Фамилия:" FontSize="27" VerticalAlignment="Center"/>
-                        <TextBlock Grid.Row="2" Grid.Column="0" Text="Отчество:" FontSize="27" VerticalAlignment="Center"/>
-                        <TextBlock Grid.Row="3" Grid.Column="0" Text="Серия:" FontSize="27" VerticalAlignment="Center"/>
-                        <TextBlock Grid.Row="4" Grid.Column="0" Text="Номер:" FontSize="27" VerticalAlignment="Center"/>
-                        <TextBlock Grid.Row="5" Grid.Column="0" Text="Адрес:" FontSize="27" VerticalAlignment="Center"/>
-                        <TextBlock Grid.Row="6" Grid.Column="0" Text="Выдача:" FontSize="27" VerticalAlignment="Center"/>
-                        <TextBox x:Name="FirstName" Grid.Row="0" Grid.Column="1" Margin="5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Width="140"/>
-                        <TextBox x:Name="LastName" Grid.Row="1" Grid.Column="1" Margin="5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Width="140"/>
-                        <TextBox x:Name="Patronimic" Grid.Row="2" Grid.Column="1" Margin="5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Width="140"/>
-                        <TextBox x:Name="PassSeries" Grid.Row="3" Grid.Column="1" Margin="5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Width="140"/>
-                        <TextBox x:Name="PassNumber" Grid.Row="4" Grid.Column="1" Margin="5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Width="140"/>
-                        <TextBox x:Name="Adress" Grid.Row="5" Grid.Column="1" Margin="5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Width="140"/>
-                        <DatePicker Grid.Row="7" Grid.Column="1" VerticalAlignment="Center" x:Name="Vidali"/>
+                        <Grid Grid.Column="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Row="0" Text="Фамилия:" Grid.Column="0" />
+                            <TextBlock Grid.Row="1" Text="Имя:" Grid.Column="0"/>
+                            <TextBlock Grid.Row="2" Text="Отчество:" Grid.Column="0"/>
+                            <TextBlock Grid.Row="3" Text="Серия:" Grid.Column="0"/>
+                            <TextBlock Grid.Row="4" Text="Номер:" Grid.Column="0"/>
+                            <TextBox x:Name="TextBox_LastName" Grid.Row="0" Grid.Column="1" Margin="3"/>
+                            <TextBox x:Name="TextBox_FirstName" Grid.Row="1" Grid.Column="1" Margin="3"/>
+                            <TextBox x:Name="TextBox_Patronimic" Grid.Row="2" Grid.Column="1" Margin="3"/>
+                            <TextBox x:Name="TextBox_PassportSeries" Grid.Row="3" VerticalContentAlignment="Bottom" Grid.Column="1" Margin="3"/>
+                            <TextBox x:Name="TextBox_PassportNumber" Grid.Row="4" Grid.Column="1" Margin="3"/>
+                        </Grid>
+                        <Grid Grid.Column="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Row="0" Text="Адрес:" Grid.Column="0"/>
+                            <TextBlock Grid.Row="1" Text="Дата выдачи:" Grid.Column="0"/>
+                            <TextBox x:Name="TextBox_Adress" Grid.Row="0" Grid.Column="1" Margin="3"/>
+                            <DatePicker x:Name="DatePicker_DateOfIssue" Grid.Row="1" Grid.Column="1"/>
+                        </Grid>
                     </Grid>
-                </Grid>
-                <Grid Grid.Column="1">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="0.1*"/>
-                        <RowDefinition/>
-                    </Grid.RowDefinitions>
-                    <Grid Grid.Row="0">
-                        <Viewbox>
-                            <TextBlock Text="Водительское удостоверение"/>
-                        </Viewbox>
-                    </Grid>
-                    <Grid Grid.Row="1">
-                        <Grid.RowDefinitions>
-                            <RowDefinition/>
-                            <RowDefinition/>
-                            <RowDefinition/>
-                            <RowDefinition/>
-                            <RowDefinition/>
-                            <RowDefinition/>
-                            <RowDefinition/>
-                        </Grid.RowDefinitions>
+                </GroupBox>
+                <GroupBox Grid.Row="1" Header="Водительское удостоверение">
+                    <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
-                        <TextBlock Text="Серия:" FontSize="27" HorizontalAlignment="Right" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"/>
-                        <TextBlock Text="Номер:" FontSize="27" HorizontalAlignment="Right" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center"/>
-                        <TextBlock Text="Категории:" FontSize="27" HorizontalAlignment="Right" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center"/>
-                        <TextBlock Text="Выдача:" FontSize="27" HorizontalAlignment="Right" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center"/>
-                        <TextBlock Text="Окончание:" FontSize="27" HorizontalAlignment="Right" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center"/>
-                        <TextBox x:Name="DriverLicenseSeries" Grid.Row="0" Grid.Column="1" Margin="5" VerticalContentAlignment="Center"/>
-                        <TextBox x:Name="DriverLicenceNumber" Grid.Row="1" Grid.Column="1" Margin="5" VerticalContentAlignment="Center"/>
-                        <TextBox x:Name="Kategory" Grid.Row="2" Grid.Column="1" Margin="5"/>
-                        <DatePicker x:Name="StartDate" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center"/>
-                        <DatePicker x:Name="FinishDate" Grid.Column="1" Grid.Row="4" VerticalAlignment="Center"/>
+                        <Grid Grid.Column="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="Серия:" Grid.Row="0" Grid.Column="0"/>
+                            <TextBlock Text="Номер:" Grid.Row="1" Grid.Column="0"/>
+                            <TextBlock Text="Дата выдачи:" Grid.Row="2" Grid.Column="0"/>
+                            <TextBlock Text="Дата окончания:" Grid.Row="3" Grid.Column="0"/>
+                            <TextBox x:Name="TextBox_DriverLicenseSeries" Grid.Row="0" Grid.Column="1" Margin="3"/>
+                            <TextBox x:Name="TextBox_DriverLicenseNumber" Grid.Row="1" Grid.Column="1" Margin="3"/>
+                            <DatePicker x:Name="DatePicker_StartDate" Grid.Row="2" Grid.Column="1"/>
+                            <DatePicker x:Name="DatePicker_FinishDate" Grid.Row="3" Grid.Column="1"/>
+                        </Grid>
+                        <GroupBox Grid.Column="1" Header="Категории">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Grid Grid.Column="0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.2*"/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <CheckBox Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"/>
+                                    <CheckBox Grid.Row="1" Grid.Column="0" VerticalAlignment="Center"/>
+                                    <CheckBox Grid.Row="2" Grid.Column="0" VerticalAlignment="Center"/>
+                                    <CheckBox Grid.Row="3" Grid.Column="0" VerticalAlignment="Center"/>
+                                    <CheckBox Grid.Row="4" Grid.Column="0" VerticalAlignment="Center"/>
+                                    <CheckBox Grid.Row="5" Grid.Column="0" VerticalAlignment="Center"/>
+                                    <CheckBox Grid.Row="6" Grid.Column="0" VerticalAlignment="Center"/>
+                                    <CheckBox Grid.Row="7" Grid.Column="0" VerticalAlignment="Center"/>
+                                </Grid>
+                                <Grid Grid.Column="1">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.2*"/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                </Grid>
+                            </Grid>
+                        </GroupBox>
                     </Grid>
-                </Grid>
+                </GroupBox>
             </Grid>
         </Grid>
     </Grid>
