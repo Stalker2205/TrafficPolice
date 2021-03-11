@@ -13,7 +13,7 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="0.07*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
         <DataGrid Grid.Row="1" Background="Gray" IsReadOnly="True" x:Name="DriverGrid" Visibility="Visible" AutoGenerateColumns="False">
@@ -43,22 +43,35 @@
         </DataGrid>
         <Frame Grid.Row="1" Visibility="Hidden" x:Name="FrameFromNavigation"/>
         <Grid Grid.Row="0">
-            <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
                 <TextBlock Text="ID:" FontSize="20" VerticalAlignment="Center"/>
                 <TextBox x:Name="IdDriverTbox" Width="30" Margin="3"/>
-                <Viewbox>
-                    <Menu>
-                        <MenuItem><MenuItem.Header>fdg</MenuItem.Header></MenuItem>
-                        <MenuItem><MenuItem.Header>fdg</MenuItem.Header></MenuItem>
-                        <MenuItem><MenuItem.Header>fdg</MenuItem.Header></MenuItem>
-                        <MenuItem><MenuItem.Header>fdg</MenuItem.Header></MenuItem>
-                        <MenuItem><MenuItem.Header>fdg</MenuItem.Header></MenuItem>
-                        <MenuItem><MenuItem.Header>fdg</MenuItem.Header></MenuItem>
-                        <MenuItem><MenuItem.Header>fdg</MenuItem.Header></MenuItem>
-                        <MenuItem><MenuItem.Header>fdg</MenuItem.Header></MenuItem>
-                            
+                
+                    <Menu Background="Transparent" >
+                        <MenuItem Header="Посмотр" Click="OpenPeopleInfo_Click">
+                            <MenuItem.Icon>
+                                <Image x:Name="Image_View"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Header="Создать" Click="CreateDriver_Click">
+                           
+                            <MenuItem.Icon>
+                                <Image x:Name="Image_Create"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+
+                        <MenuItem Header="Обновить" Click="UpdateDriverInfo_Click">
+                            <MenuItem.Icon>
+                                <Image x:Name="Image_Update"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Header="Поиск" Click="SerchDriver_Click">
+                            <MenuItem.Icon>
+                                <Image x:Name="Image_Serch"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
                     </Menu>
-                </Viewbox>
+                
             </StackPanel>
         </Grid>
     </Grid>

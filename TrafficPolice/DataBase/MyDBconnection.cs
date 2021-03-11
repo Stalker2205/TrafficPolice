@@ -28,6 +28,7 @@ namespace TrafficPolice
         public virtual DbSet<Sertification> Sertifications { get; set; }
         public virtual DbSet<Rank> Ranks { get; set; }
         public virtual DbSet<DriversLicense> DriversLicenses { get; set; }
+        public virtual DbSet<DriverKategoryLicence> DriverKategoryLicences { get; set; }
         // Добавьте DbSet для каждого типа сущности, который требуется включить в модель. Дополнительные сведения 
         // о настройке и использовании модели Code First см. в статье http://go.microsoft.com/fwlink/?LinkId=390109.
 

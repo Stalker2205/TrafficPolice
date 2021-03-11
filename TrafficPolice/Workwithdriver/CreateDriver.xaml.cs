@@ -28,7 +28,6 @@ namespace TrafficPolice
             InitializeComponent();
             BitmapImage bitmapImage = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "\\Image\\Additionally\\Photo.png", UriKind.Absolute)); ;
             Photo.Source = bitmapImage;
-            PhotoButton.Width = bitmapImage.Width;
         }
         bool key = false;
         string photoName;
@@ -36,34 +35,21 @@ namespace TrafficPolice
         {
             #region Check number and Series
             int PasSer, PasNum, LicSer, LicNum;
-            if (PassSeries.Text.Length == 0 || PassSeries.Text.Length != 4) { MessageBox.Show("Серия паспорта состоит из 4-х цифр"); return; }
-            else { try { PasSer = Convert.ToInt32(PassSeries.Text); } catch { MessageBox.Show("Серия паспорта состоит из 4-х цифр"); return; } }
+            if (TextBox_PassportSeries.Text.Length == 0 || TextBox_PassportSeries.Text.Length != 4) { MessageBox.Show("Серия паспорта состоит из 4-х цифр"); return; }
+            else { try { PasSer = Convert.ToInt32(TextBox_PassportSeries.Text); } catch { MessageBox.Show("Серия паспорта состоит из 4-х цифр"); return; } }
 
-            if (DriverLicenseSeries.Text.Length == 0 || DriverLicenseSeries.Text.Length != 4) { MessageBox.Show("Серия прав состоит из 4-х цифр"); return; }
-            else { try { LicSer = Convert.ToInt32(DriverLicenseSeries.Text); } catch { MessageBox.Show("Серия прав состоит из 4-х цифр"); return; } }
+            if (TextBox_DriverLicenseSeries.Text.Length == 0 || TextBox_DriverLicenseSeries.Text.Length != 4) { MessageBox.Show("Серия прав состоит из 4-х цифр"); return; }
+            else { try { LicSer = Convert.ToInt32(TextBox_DriverLicenseSeries.Text); } catch { MessageBox.Show("Серия прав состоит из 4-х цифр"); return; } }
 
-            if (PassNumber.Text.Length == 0 || PassNumber.Text.Length != 6) { MessageBox.Show("Номер паспорта состоит из 6 цифр"); return; }
-            else { try { PasNum = Convert.ToInt32(PassNumber.Text); } catch { MessageBox.Show("Номер паспорта состоит из 6 цифр"); return; } }
+            if (TextBox_PassportNumber.Text.Length == 0 || TextBox_PassportNumber.Text.Length != 6) { MessageBox.Show("Номер паспорта состоит из 6 цифр"); return; }
+            else { try { PasNum = Convert.ToInt32(TextBox_PassportNumber.Text); } catch { MessageBox.Show("Номер паспорта состоит из 6 цифр"); return; } }
 
-            if (DriverLicenceNumber.Text.Length == 0 || DriverLicenceNumber.Text.Length != 6) { MessageBox.Show("Номер прав состоит из 6 цифр"); return; }
-            else { try { PasNum = Convert.ToInt32(DriverLicenceNumber.Text); } catch { MessageBox.Show("Номер прав состоит из 6 цифр"); return; } }
+            if (TextBox_DriverLicenseNumber.Text.Length == 0 || TextBox_DriverLicenseNumber.Text.Length != 6) { MessageBox.Show("Номер прав состоит из 6 цифр"); return; }
+            else { try { PasNum = Convert.ToInt32(TextBox_DriverLicenseNumber.Text); } catch { MessageBox.Show("Номер прав состоит из 6 цифр"); return; } }
             #endregion
             #region Check datetime
-            if (StartDate.SelectedDate.Value.Date.Year < 1900) { MessageBox.Show($"Человеку не может быть {DateTime.Now.Date.Year - StartDate.SelectedDate.Value.Date.Year} лет"); return; }
-            if (Vidali.SelectedDate.Value.Date.Year < 1900) { MessageBox.Show($"Человеку не может быть {DateTime.Now.Date.Year - StartDate.SelectedDate.Value.Date.Year} лет"); return; }
-            if ((FinishDate.SelectedDate.Value.Date.Year - StartDate.SelectedDate.Value.Date.Year) > 150) { MessageBox.Show($"На данный момент, человек не может прожить больше 150 лет"); return; }
-
-            #endregion
-            #region Kanegory Mass
-            string[] kategory = new string[16];
-            kategory[0] = "A"; kategory[1] = "A1";
-            kategory[2] = "B"; kategory[3] = "B1";
-            kategory[4] = "C"; kategory[5] = "C1";
-            kategory[6] = "D"; kategory[7] = "D1";
-            kategory[8] = "BE"; kategory[9] = "CE";
-            kategory[10] = "C1E"; kategory[11] = "DE";
-            kategory[12] = "D1E"; kategory[13] = "M";
-            kategory[14] = "Tm"; kategory[15] = "Tb";
+            if (DatePicker_DateOfIssue.SelectedDate.Value.Date.Year < 1900) { MessageBox.Show($"Человеку не может быть {DateTime.Now.Date.Year - DatePicker_DateOfIssue.SelectedDate.Value.Date.Year} лет"); return; }
+            if ((DatePicker_FinishDate.SelectedDate.Value.Date.Year - DatePicker_StartDate.SelectedDate.Value.Date.Year) < 0) { MessageBox.Show("Дата окончания должна быть больше даты выдачи");return; }
             #endregion
             #region add Driver,Passport,DriverLicence
             if (!key) { MessageBox.Show("Необходимо выбрать фото!"); return; }
@@ -75,16 +61,16 @@ namespace TrafficPolice
 
                 db.Passports.Load();
                 db.DriversLicenses.Load();
-                var pas1 = db.Passports.Local.Where(x => x.PassportNumber == Convert.ToInt32(PassNumber.Text) && x.PassportSeries == Convert.ToInt32(PassSeries.Text));
+                var pas1 = db.Passports.Local.Where(x => x.PassportNumber == Convert.ToInt32(TextBox_PassportNumber.Text) && x.PassportSeries == Convert.ToInt32(TextBox_PassportSeries.Text));
                 foreach (Passport passport in pas1) { passID = passport.PassportID; }
                 if (passID != null) { MessageBox.Show("Такой паспорт уже есть в системе"); return; }
-                var drad = db.DriversLicenses.Local.Where(x => x.DriversLicenseNumber == Convert.ToInt32(DriverLicenceNumber.Text) && x.DriversLicenseSeries == Convert.ToInt32(DriverLicenseSeries.Text));
+                var drad = db.DriversLicenses.Local.Where(x => x.DriversLicenseNumber == Convert.ToInt32(TextBox_DriverLicenseNumber.Text) && x.DriversLicenseSeries == Convert.ToInt32(TextBox_DriverLicenseSeries.Text));
                 foreach (DriversLicense dl in drad) { LicenceID = dl.DriversLicenseID; }
                 if (LicenceID != null) { MessageBox.Show("Такие права уже существуют"); return; }
                 Driver driver = new Driver();
-                driver.FirstName = FirstName.Text;
-                driver.LastName = LastName.Text;
-                driver.Patronymic = Patronimic.Text;
+                driver.FirstName = TextBox_FirstName.Text;
+                driver.LastName = TextBox_LastName.Text;
+                driver.Patronymic = TextBox_Patronimic.Text;
                 driver.Photo = photoName;
                 db.Drivers.Add(driver);
                 db.SaveChanges();
@@ -93,18 +79,18 @@ namespace TrafficPolice
                 foreach (Driver dr in driv) { driverId = dr.DriverID; }
                 Passport pass = new Passport();
                 pass.PassportID = driverId;
-                pass.PassportNumber = Convert.ToInt32(PassNumber.Text);
-                pass.PassportSeries = Convert.ToInt32(PassSeries.Text);
-                pass.PassportAdress = Adress.Text;
-                pass.DateOfIssue = Vidali.DisplayDate.Date;
+                pass.PassportNumber = Convert.ToInt32(TextBox_PassportNumber.Text);
+                pass.PassportSeries = Convert.ToInt32(TextBox_PassportSeries.Text);
+                pass.PassportAdress = TextBox_Adress.Text;
+                pass.DateOfIssue = DatePicker_DateOfIssue.DisplayDate.Date;
                 db.Passports.Add(pass);
                 DriversLicense driversLicense = new DriversLicense();
                 driversLicense.DriverID = driverId;
-                driversLicense.DriversLicenseNumber = Convert.ToInt32(DriverLicenceNumber.Text);
-                driversLicense.DriversLicenseSeries = Convert.ToInt32(DriverLicenseSeries.Text);
-                driversLicense.Category = Kategory.Text;
-                driversLicense.DateStart = StartDate.DisplayDate.Date;
-                driversLicense.DateEnd = FinishDate.DisplayDate.Date;
+                driversLicense.DriversLicenseNumber = Convert.ToInt32(TextBox_DriverLicenseNumber.Text);
+                driversLicense.DriversLicenseSeries = Convert.ToInt32(TextBox_DriverLicenseSeries.Text);
+               // driversLicense.Category = Kategory.Text;
+                driversLicense.DateStart = DatePicker_StartDate.DisplayDate.Date;
+                driversLicense.DateEnd = DatePicker_FinishDate.DisplayDate.Date;
                 db.DriversLicenses.Add(driversLicense);
                 db.SaveChanges();
             }

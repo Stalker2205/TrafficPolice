@@ -19,5 +19,6 @@ namespace TrafficPolice
         public DateTime DateEnd { get; set; }
         public int DriverID { get; set; }
         public Driver Driver { get; set; }
+        public List<DriverKategoryLicence> DriverKategory { get; set; }
     }
 }

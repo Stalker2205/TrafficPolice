@@ -67,7 +67,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="AvtoClass.cs" />
+    <Compile Include="DifferentClasses\AvtoClass.cs" />
+    <Compile Include="DataBase\DriverKategoryLicence.cs" />
     <Compile Include="Migrations\202103021015303_fixbd1.cs" />
     <Compile Include="Migrations\202103021015303_fixbd1.designer.cs">
       <DependentUpon>202103021015303_fixbd1.cs</DependentUpon>

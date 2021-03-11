@@ -30,7 +30,10 @@ namespace TrafficPolice
             //    db.Passports.Load();
             //    DriverGrid.ItemsSource = db.Drivers.Local;
             //
-            //WiewImage.Source = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "\\actions32\\fileopen.png")); 
+            Image_Create.Source = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "\\actions32\\filenew.ico"));
+            Image_View.Source = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "\\actions32\\fileopen.ico"));
+            Image_Update.Source = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "\\actions32\\fileUpdate.ico"));
+            Image_Serch.Source = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "\\actions32\\find.ico"));
 
         }
 
