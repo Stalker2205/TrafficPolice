@@ -108,6 +108,10 @@
       <DependentUpon>202103021126373_byte.cs</DependentUpon>
     </Compile>
     <Compile Include="DataBase\Statement.cs" />
+    <Compile Include="Migrations\202103120837264_driverkategory.cs" />
+    <Compile Include="Migrations\202103120837264_driverkategory.designer.cs">
+      <DependentUpon>202103120837264_driverkategory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Workwithdriver\UpdateDriver.xaml.cs">
       <DependentUpon>UpdateDriver.xaml</DependentUpon>
     </Compile>
@@ -258,6 +262,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202103021126373_byte.resx">
       <DependentUpon>202103021126373_byte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103120837264_driverkategory.resx">
+      <DependentUpon>202103120837264_driverkategory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -314,3 +314,4 @@ C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\TrafficPolice.M
 C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\TrafficPolice.Migrations.CreateCTC.resources
 C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\TrafficPolice.Migrations.CreateInspectionStatments.resources
 C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\TrafficPolice.Migrations._byte.resources
+C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\TrafficPolice.Migrations.driverkategory.resources
