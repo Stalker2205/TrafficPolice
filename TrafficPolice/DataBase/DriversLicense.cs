@@ -14,7 +14,6 @@ namespace TrafficPolice
         public int DriversLicenseID { get; set; }
         public int DriversLicenseNumber { get; set; }
         public int DriversLicenseSeries { get; set; }
-        public string Category { get; set; }
         public DateTime DateStart { get; set; }
         public DateTime DateEnd { get; set; }
         public int DriverID { get; set; }

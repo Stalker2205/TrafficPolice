@@ -67,6 +67,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="UpdateDriverfirst.xaml.cs">
+      <DependentUpon>UpdateDriverfirst.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DataBase\Ctc.cs" />
     <Compile Include="DataBase\Car.cs" />
     <Compile Include="DataBase\Driver.cs" />
@@ -111,6 +114,10 @@
     <Compile Include="Migrations\202103120837264_driverkategory.cs" />
     <Compile Include="Migrations\202103120837264_driverkategory.designer.cs">
       <DependentUpon>202103120837264_driverkategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103121050516_fixDriverLicence.cs" />
+    <Compile Include="Migrations\202103121050516_fixDriverLicence.designer.cs">
+      <DependentUpon>202103121050516_fixDriverLicence.cs</DependentUpon>
     </Compile>
     <Compile Include="Workwithdriver\UpdateDriver.xaml.cs">
       <DependentUpon>UpdateDriver.xaml</DependentUpon>
@@ -157,6 +164,10 @@
     <Compile Include="WorkWithTheAvto.xaml.cs">
       <DependentUpon>WorkWithTheAvto.xaml</DependentUpon>
     </Compile>
+    <Page Include="UpdateDriverfirst.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Workwithdriver\UpdateDriver.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -265,6 +276,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202103120837264_driverkategory.resx">
       <DependentUpon>202103120837264_driverkategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103121050516_fixDriverLicence.resx">
+      <DependentUpon>202103121050516_fixDriverLicence.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

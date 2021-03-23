@@ -315,3 +315,6 @@ C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\TrafficPolice.M
 C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\TrafficPolice.Migrations.CreateInspectionStatments.resources
 C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\TrafficPolice.Migrations._byte.resources
 C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\TrafficPolice.Migrations.driverkategory.resources
+C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\TrafficPolice.Migrations.fixDriverLicence.resources
+C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\UpdateDriverfirst.g.cs
+C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\UpdateDriverfirst.baml
