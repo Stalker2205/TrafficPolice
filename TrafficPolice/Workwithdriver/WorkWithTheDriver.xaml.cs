@@ -102,7 +102,7 @@ namespace TrafficPolice
                 if (DriverClass.DriverID == null) { MessageBox.Show("Нет водителя с таким ID"); return; }
                 DriverGrid.Visibility = Visibility.Hidden;
                 FrameFromNavigation.Visibility = Visibility.Visible;
-                FrameFromNavigation.Navigate(new ViewDriver());
+                FrameFromNavigation.Navigate(new OpenDriverInfo());
             }
         }
 

@@ -28,6 +28,7 @@ namespace TrafficPolice
             InitializeComponent();
             BitmapImage bitmapImage = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "\\Image\\Additionally\\Photo.png", UriKind.Absolute)); ;
             Photo.Source = bitmapImage;
+            Kategoryes.Clear();
             AddCategories();
 
         }

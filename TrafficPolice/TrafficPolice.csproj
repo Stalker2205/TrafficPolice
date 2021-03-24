@@ -67,7 +67,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="UpdateDriverfirst.xaml.cs">
+    <Compile Include="AllDriverLicense.xaml.cs">
+      <DependentUpon>AllDriverLicense.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Workwithdriver\OpenDriverInfo.xaml.cs">
+      <DependentUpon>OpenDriverInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Workwithdriver\UpdateDriverfirst.xaml.cs">
       <DependentUpon>UpdateDriverfirst.xaml</DependentUpon>
     </Compile>
     <Compile Include="DataBase\Ctc.cs" />
@@ -119,12 +125,6 @@
     <Compile Include="Migrations\202103121050516_fixDriverLicence.designer.cs">
       <DependentUpon>202103121050516_fixDriverLicence.cs</DependentUpon>
     </Compile>
-    <Compile Include="Workwithdriver\UpdateDriver.xaml.cs">
-      <DependentUpon>UpdateDriver.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Workwithdriver\ViewDriver.xaml.cs">
-      <DependentUpon>ViewDriver.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Workwithdriver\CreateDriver.xaml.cs">
       <DependentUpon>CreateDriver.xaml</DependentUpon>
     </Compile>
@@ -164,15 +164,15 @@
     <Compile Include="WorkWithTheAvto.xaml.cs">
       <DependentUpon>WorkWithTheAvto.xaml</DependentUpon>
     </Compile>
-    <Page Include="UpdateDriverfirst.xaml">
+    <Page Include="AllDriverLicense.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Workwithdriver\OpenDriverInfo.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Workwithdriver\UpdateDriver.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Workwithdriver\ViewDriver.xaml">
+    <Page Include="Workwithdriver\UpdateDriverfirst.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
