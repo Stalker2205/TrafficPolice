@@ -48,27 +48,35 @@
                 <TextBox x:Name="IdDriverTbox" Width="30" Margin="3"/>
 
                 <Menu Background="Transparent" >
-                    <MenuItem Header="Посмотр" Click="OpenPeopleInfo_Click">
-                        <MenuItem.Icon>
-                            <Image x:Name="Image_View"/>
-                        </MenuItem.Icon>
-                    </MenuItem>
-                    <MenuItem Header="Создать" Click="CreateDriver_Click">
 
-                        <MenuItem.Icon>
-                            <Image x:Name="Image_Create"/>
-                        </MenuItem.Icon>
+                    <MenuItem Header="Водитель">
+                        <MenuItem Header="Посмотр" Click="OpenPeopleInfo_Click">
+                            <MenuItem.Icon>
+                                <Image x:Name="Image_View"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Header="Создать" Click="CreateDriver_Click">
+                            <MenuItem.Icon>
+                                <Image x:Name="Image_Create"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Header="Обновить" Click="UpdateDriverInfo_Click">
+                            <MenuItem.Icon>
+                                <Image x:Name="Image_Update"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Header="Поиск" Click="SerchDriver_Click">
+                            <MenuItem.Icon>
+                                <Image x:Name="Image_Serch"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
                     </MenuItem>
-
-                    <MenuItem Header="Обновить" Click="UpdateDriverInfo_Click">
-                        <MenuItem.Icon>
-                            <Image x:Name="Image_Update"/>
-                        </MenuItem.Icon>
-                    </MenuItem>
-                    <MenuItem Header="Поиск" Click="SerchDriver_Click">
-                        <MenuItem.Icon>
-                            <Image x:Name="Image_Serch"/>
-                        </MenuItem.Icon>
+                    <MenuItem Header="Права">
+                        <MenuItem Header="Выдать" Click="mcCreateDriverLIcence" >
+                            <MenuItem.Icon>
+                                <Image x:Name="Image_Create1"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
                     </MenuItem>
                 </Menu>
 

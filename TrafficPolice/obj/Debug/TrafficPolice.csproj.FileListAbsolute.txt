@@ -314,7 +314,9 @@ C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\TrafficPolice.M
 C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\TrafficPolice.Migrations.fixDriverLicence.resources
 C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\Workwithdriver\UpdateDriverfirst.g.cs
 C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\Workwithdriver\UpdateDriverfirst.baml
-C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\AllDriverLicense.g.cs
 C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\Workwithdriver\OpenDriverInfo.g.cs
-C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\AllDriverLicense.baml
 C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\Workwithdriver\OpenDriverInfo.baml
+C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\CreateDriverLicence.g.cs
+C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\Workwithdriver\AllDriverLicense.g.cs
+C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\CreateDriverLicence.baml
+C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\Workwithdriver\AllDriverLicense.baml

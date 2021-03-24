@@ -127,6 +127,13 @@ namespace TrafficPolice
                 FrameFromNavigation.Navigate(new UpdateDriverfirst());
             }
         }
+
+        private void mcCreateDriverLIcence(object sender, RoutedEventArgs e)
+        {
+            DriverGrid.Visibility = Visibility.Hidden;
+            FrameFromNavigation.Visibility = Visibility.Visible;
+            FrameFromNavigation.Navigate(new CreateDriverLicence());
+        }
     }
 }
 

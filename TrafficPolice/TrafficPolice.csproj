@@ -67,7 +67,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="AllDriverLicense.xaml.cs">
+    <Compile Include="CreateDriverLicence.xaml.cs">
+      <DependentUpon>CreateDriverLicence.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Workwithdriver\AllDriverLicense.xaml.cs">
       <DependentUpon>AllDriverLicense.xaml</DependentUpon>
     </Compile>
     <Compile Include="Workwithdriver\OpenDriverInfo.xaml.cs">
@@ -164,7 +167,11 @@
     <Compile Include="WorkWithTheAvto.xaml.cs">
       <DependentUpon>WorkWithTheAvto.xaml</DependentUpon>
     </Compile>
-    <Page Include="AllDriverLicense.xaml">
+    <Page Include="CreateDriverLicence.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Workwithdriver\AllDriverLicense.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
