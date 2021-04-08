@@ -53,8 +53,8 @@ namespace TrafficPolice
                     bitmap.EndInit();
                     Photo.Source = bitmap;
                 }
-                gbDriverLicence.DataContext = db.DriversLicenses.Local.Where(x => x.DriverID == DriverClass.DriverID).First();
-                DriversLicense dv = db.DriversLicenses.Local.Where(x => x.DriverID == DriverClass.DriverID).Last();
+                gbDriverLicence.DataContext = db.DriversLicenses.Local.Where(x => x.DriverID == DriverClass.DriverID).LastOrDefault();
+                DriversLicense dv = db.DriversLicenses.Local.Where(x => x.DriverID == DriverClass.DriverID).LastOrDefault();
 
                 var Licences = db.DriversLicenses.Local.Where(x => x.DriversLicenseID == dv.DriversLicenseID);
                 int LicenseID = 0;

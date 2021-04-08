@@ -16,12 +16,21 @@
             <RowDefinition Height="0.07*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <DataGrid Grid.Row="1" Background="Gray" IsReadOnly="True" x:Name="DriverGrid" Visibility="Visible" AutoGenerateColumns="False">
+        <DataGrid Grid.Row="1" Background="Gray" IsReadOnly="True" x:Name="DriverGrid" Visibility="Visible" AutoGenerateColumns="False" SelectionUnit="Cell" SelectionMode="Single">
             <DataGrid.Columns>
                 <DataGridTemplateColumn Header="DriverID">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <TextBlock Text="{Binding DriverID}"/>
+                            <Menu VerticalAlignment="Center" HorizontalAlignment="Center">
+                                <MenuItem Header="{Binding DriverID}" SubmenuOpened="MenuItem_SubmenuOpened">
+                                    <MenuItem Header="Просмотр" Click="OpenPeopleInfo_Click"/>
+                                    <MenuItem Header="Обновить" Click="UpdateDriverInfo_Click"/>
+                                    <MenuItem Header="Права">
+                                        <MenuItem Header="Просмотр"/>
+                                        <MenuItem Header="Выдать" Click="mcCreateDriverLIcence"/>
+                                    </MenuItem>
+                                </MenuItem>
+                            </Menu>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
@@ -50,32 +59,16 @@
                 <Menu Background="Transparent" >
 
                     <MenuItem Header="Водитель">
-                        <MenuItem Header="Посмотр" Click="OpenPeopleInfo_Click">
-                            <MenuItem.Icon>
-                                <Image x:Name="Image_View"/>
-                            </MenuItem.Icon>
-                        </MenuItem>
+                        <MenuItem Header="All" Click="MenuItem_Click"/>
                         <MenuItem Header="Создать" Click="CreateDriver_Click">
-                            <MenuItem.Icon>
-                                <Image x:Name="Image_Create"/>
-                            </MenuItem.Icon>
-                        </MenuItem>
-                        <MenuItem Header="Обновить" Click="UpdateDriverInfo_Click">
-                            <MenuItem.Icon>
-                                <Image x:Name="Image_Update"/>
-                            </MenuItem.Icon>
                         </MenuItem>
                         <MenuItem Header="Поиск" Click="SerchDriver_Click">
-                            <MenuItem.Icon>
-                                <Image x:Name="Image_Serch"/>
-                            </MenuItem.Icon>
                         </MenuItem>
                     </MenuItem>
                     <MenuItem Header="Права">
+                        <MenuItem Header="Просмотр">
+                        </MenuItem>
                         <MenuItem Header="Выдать" Click="mcCreateDriverLIcence" >
-                            <MenuItem.Icon>
-                                <Image x:Name="Image_Create1"/>
-                            </MenuItem.Icon>
                         </MenuItem>
                     </MenuItem>
                 </Menu>

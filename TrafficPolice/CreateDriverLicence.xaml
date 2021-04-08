@@ -24,7 +24,7 @@
                 <ColumnDefinition/>
                 <ColumnDefinition Width="0.4*"/>
             </Grid.ColumnDefinitions>
-            <Grid Grid.Column="0">
+            <Grid Grid.Column="0" x:Name="MainGrid">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
@@ -32,18 +32,6 @@
                 <Grid Grid.Column="0">
                     <GroupBox Header="Водитель">
                         <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="0.1*"/>
-                                <RowDefinition/>
-                            </Grid.RowDefinitions>
-                            <Grid Grid.Row="0">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition/>
-                                    <ColumnDefinition/>
-                                </Grid.ColumnDefinitions>
-                                <TextBlock Grid.Column="0" Text="Id Водителя:" VerticalAlignment="Center"/>
-                                <ComboBox Grid.Column="1" Margin="5" x:Name="cbDriverID" DropDownClosed="cbDriverID_DropDownClosed"/>
-                            </Grid>
                             <Grid Grid.Row="1">
                                 <GroupBox Grid.Row="1" Header="Паспортные данные">
                                     <Grid>
@@ -64,9 +52,9 @@
                                             <TextBlock Grid.Column="0" Grid.Row="0" Text="Фамилия" VerticalAlignment="Center"/>
                                             <TextBlock Grid.Column="0" Grid.Row="1" Text="Имя" VerticalAlignment="Center"/>
                                             <TextBlock Grid.Column="0" Grid.Row="2" Text="Отчество" VerticalAlignment="Center"/>
-                                            <TextBox Text="{Binding LastName}" Grid.Column="1" Grid.Row="0" Margin="5" IsEnabled="False"/>
-                                            <TextBox Text="{Binding FirstName}" Grid.Column="1" Grid.Row="1" Margin="5" IsEnabled="False"/>
-                                            <TextBox Text="{Binding Patronymic}" Grid.Column="1" Grid.Row="2" Margin="5" IsEnabled="False"/>
+                                            <TextBox x:Name="tb_LastName" Text="{Binding LastName}" Grid.Column="1" Grid.Row="0" Margin="5" IsEnabled="False"/>
+                                            <TextBox x:Name="tb_Name" Text="{Binding FirstName}" Grid.Column="1" Grid.Row="1" Margin="5" IsEnabled="False"/>
+                                            <TextBox x:Name="tb_Patronimyc" Text="{Binding Patronymic}" Grid.Column="1" Grid.Row="2" Margin="5" IsEnabled="False"/>
                                         </Grid>
                                         <Grid Grid.Row="1" x:Name="grPassport">
                                             <Grid.ColumnDefinitions>
@@ -85,10 +73,10 @@
                                             <TextBlock Grid.Column="0" Grid.Row="1" Text="Номер" VerticalAlignment="Center"/>
                                             <TextBlock Grid.Column="0" Grid.Row="2" Text="Адрес" VerticalAlignment="Center"/>
                                             <TextBlock Grid.Column="0" Grid.Row="3" Text="Дата выдачи" VerticalAlignment="Center"/>
-                                            <TextBox Text="{Binding PassportSeries}" Grid.Column="1" Grid.Row="0" Margin="5" IsEnabled="False"/>
-                                            <TextBox Text="{Binding PassportNumber}" Grid.Column="1" Grid.Row="1" Margin="5" IsEnabled="False"/>
-                                            <TextBox Text="{Binding PassportAdress}" Grid.Column="1" Grid.Row="2" Margin="5" IsEnabled="False"/>
-                                            <TextBox Text="{Binding DateOfIssue}" Grid.Column="1" Grid.Row="3" Margin="5" IsEnabled="False"/>
+                                            <TextBox x:Name="tb_PasSeries" Text="{Binding PassportSeries}" Grid.Column="1" Grid.Row="0" Margin="5" IsEnabled="False"/>
+                                            <TextBox x:Name="tb_PasNumber" Text="{Binding PassportNumber}" Grid.Column="1" Grid.Row="1" Margin="5" IsEnabled="False"/>
+                                            <TextBox x:Name="tb_PasAdress" Text="{Binding PassportAdress}" Grid.Column="1" Grid.Row="2" Margin="5" IsEnabled="False"/>
+                                            <TextBox x:Name="tb_PasDateOfIssue" Text="{Binding DateOfIssue}" Grid.Column="1" Grid.Row="3" Margin="5" IsEnabled="False"/>
 
 
                                         </Grid>
@@ -254,8 +242,8 @@
                 <Image Grid.Row="0" x:Name="imPhoto" Margin="5,0,0,0"></Image>
                 <StackPanel Grid.Row="1">
                 <Button Grid.Row="1" VerticalAlignment="Top" Content="Выдать права" Margin="5,0,0,0" x:Name="btCreateDriverLicence" Click="btCreateDriverLicence_Click"/>
-                <Button Grid.Row="1" VerticalAlignment="Top" Content="Сохранить как документ" Margin="5,0,0,0"/>
-                <Button Grid.Row="1" VerticalAlignment="Top" Content="Отпраить на печать" Margin="5,0,0,0"/>
+                    <Button Grid.Row="1" VerticalAlignment="Top" Content="Сохранить как документ" Margin="5,0,0,0" x:Name="SaveAsDocument" Click="SaveAsDocument_Click"/>
+                <Button Grid.Row="1" VerticalAlignment="Top" Content="Отправить на печать" Margin="5,0,0,0" x:Name="btPrintDialog" Click="btPrintDialog_Click"/>
                 </StackPanel>
             </Grid>
         </Grid>

@@ -320,3 +320,4 @@ C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\CreateDriverLic
 C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\Workwithdriver\AllDriverLicense.g.cs
 C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\CreateDriverLicence.baml
 C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\Workwithdriver\AllDriverLicense.baml
+C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\PrintBY.g.cs
