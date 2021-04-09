@@ -35,7 +35,9 @@ namespace TrafficPolice
         }
         public CreateDriverLicence()
         {
+            DriverLicenceClass._Date.Clear();
             InitializeComponent();
+            DriverLicenceClass._Date.Clear();
             AddCategories();
             Kategoryes.Clear();
             List<int> DriverList = new List<int>();
@@ -191,9 +193,7 @@ namespace TrafficPolice
             {
                 db.Drivers.Load();
                 db.Passports.Load();
-
                 var driver = db.Passports.Local.Where(x => x.PassportID == DriverClass.DriverID).FirstOrDefault();
-
                 DriverLicenceClass._name = tb_Name.Text;
                 DriverLicenceClass._lastname = tb_LastName.Text;
                 DriverLicenceClass._patronimyc = tb_Patronimyc.Text;
@@ -202,8 +202,9 @@ namespace TrafficPolice
                 DriverLicenceClass._series = Convert.ToInt32(tbLicSeries.Text);
                 DriverLicenceClass._number = Convert.ToInt32(tbLicNumber.Text);
                 DriverLicenceClass._kategory = Kategoryes;
-
             }
+            PrintBY pr = new PrintBY();
+            pr.ShowDialog();
         }
     }
 }

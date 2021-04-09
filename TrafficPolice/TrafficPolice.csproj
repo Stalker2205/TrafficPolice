@@ -67,11 +67,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="CreateDriverLicence.xaml.cs">
+    <Compile Include="Workwithdriver\DriverLicence\ViewDriverLicence.xaml.cs">
+      <DependentUpon>ViewDriverLicence.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Workwithdriver\DriverLicence\CreateDriverLicence.xaml.cs">
       <DependentUpon>CreateDriverLicence.xaml</DependentUpon>
     </Compile>
     <Compile Include="DifferentClasses\DriverLicenceClass.cs" />
-    <Compile Include="PrintBY.xaml.cs">
+    <Compile Include="Workwithdriver\DriverLicence\PrintBY.xaml.cs">
       <DependentUpon>PrintBY.xaml</DependentUpon>
     </Compile>
     <Compile Include="Workwithdriver\AllDriverLicense.xaml.cs">
@@ -171,11 +174,15 @@
     <Compile Include="WorkWithTheAvto.xaml.cs">
       <DependentUpon>WorkWithTheAvto.xaml</DependentUpon>
     </Compile>
-    <Page Include="CreateDriverLicence.xaml">
+    <Page Include="Workwithdriver\DriverLicence\ViewDriverLicence.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Workwithdriver\DriverLicence\CreateDriverLicence.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PrintBY.xaml">
+    <Page Include="Workwithdriver\DriverLicence\PrintBY.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

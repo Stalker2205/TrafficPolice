@@ -17,7 +17,7 @@ namespace TrafficPolice
         public static int _series;
         public static int _number;
         public static Dictionary<string, bool> _kategory;
-        public static Dictionary<string, DateTime> _Date;
+        public static Dictionary<string, DateTime> _Date = new Dictionary<string, DateTime>();
         public static byte[] _photo;
         // Kategoryes.Add("A1", false);
         // Kategoryes.Add("B1", false);
