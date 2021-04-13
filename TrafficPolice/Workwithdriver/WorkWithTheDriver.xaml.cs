@@ -113,6 +113,12 @@ namespace TrafficPolice
                 DriverGrid.ItemsSource = db.Drivers.Local;
             }
         }
+        private void View_Click(object sender, RoutedEventArgs e)
+        {
+            DriverGrid.Visibility = Visibility.Hidden;
+            FrameFromNavigation.Visibility = Visibility.Visible;
+            FrameFromNavigation.Navigate(new ViewDriverLicence());
+        }
     }
 }
 

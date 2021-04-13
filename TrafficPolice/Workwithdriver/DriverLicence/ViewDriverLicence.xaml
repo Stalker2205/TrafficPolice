@@ -62,20 +62,20 @@
                                                 <ColumnDefinition/>
                                             </Grid.ColumnDefinitions>
                                             <Grid.RowDefinitions>
-                                                <RowDefinition/>
-                                                <RowDefinition/>
-                                                <RowDefinition/>
-                                                <RowDefinition/>
-                                                <RowDefinition/>
-                                                <RowDefinition/>
+                                                <RowDefinition Height="41*"/>
+                                                <RowDefinition Height="41*"/>
+                                                <RowDefinition Height="67*"/>
+                                                <RowDefinition Height="41*"/>
+                                                <RowDefinition Height="12*"/>
+                                                <RowDefinition Height="40*"/>
                                             </Grid.RowDefinitions>
-                                            <TextBlock Grid.Column="0" Grid.Row="0" Text="Серия" VerticalAlignment="Center"/>
-                                            <TextBlock Grid.Column="0" Grid.Row="1" Text="Номер" VerticalAlignment="Center"/>
-                                            <TextBlock Grid.Column="0" Grid.Row="2" Text="Адрес" VerticalAlignment="Center"/>
-                                            <TextBlock Grid.Column="0" Grid.Row="3" Text="Дата выдачи" VerticalAlignment="Center"/>
+                                            <TextBlock Grid.Column="0" Grid.Row="0" Text="Серия" VerticalAlignment="Center" Height="19" Margin="0,11"/>
+                                            <TextBlock Grid.Column="0" Grid.Row="1" Text="Номер" VerticalAlignment="Center" Height="19" Margin="0,11"/>
+                                            <TextBlock Grid.Column="0" Grid.Row="2" Text="Адрес" VerticalAlignment="Center" Height="18" Margin="0,20,0,29"/>
+                                            <TextBlock Grid.Column="0" Grid.Row="3" Text="Дата выдачи" VerticalAlignment="Center" Height="20" Margin="0,7,0,14"/>
                                             <TextBox x:Name="tb_PasSeries" Text="{Binding PassportSeries}" Grid.Column="1" Grid.Row="0" Margin="5" IsEnabled="False"/>
                                             <TextBox x:Name="tb_PasNumber" Text="{Binding PassportNumber}" Grid.Column="1" Grid.Row="1" Margin="5" IsEnabled="False"/>
-                                            <TextBox x:Name="tb_PasAdress" Text="{Binding PassportAdress}" Grid.Column="1" Grid.Row="2" Margin="5" IsEnabled="False"/>
+                                            <TextBox TextWrapping="Wrap" x:Name="tb_PasAdress" Text="{Binding PassportAdress}" Grid.Column="1" Grid.Row="2" Margin="5" IsEnabled="False"/>
                                             <TextBox x:Name="tb_PasDateOfIssue" Text="{Binding DateOfIssue}" Grid.Column="1" Grid.Row="3" Margin="5" IsEnabled="False"/>
 
 
@@ -87,7 +87,7 @@
                     </GroupBox>
                 </Grid>
                 <Grid Grid.Column="1">
-                    <GroupBox Header="Новое водительское удостоверение" IsEnabled="False">
+                    <GroupBox Header="Водительское удостоверение" x:Name="gbDriverLicence" IsEnabled="False">
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="0.3*"/>
@@ -96,7 +96,8 @@
                             <Grid Grid.Row="0">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="86*"/>
-                                    <ColumnDefinition Width="171*"/>
+                                    <ColumnDefinition Width="9*"/>
+                                    <ColumnDefinition Width="162*"/>
                                 </Grid.ColumnDefinitions>
                                 <Grid.RowDefinitions>
                                     <RowDefinition/>
@@ -106,9 +107,9 @@
                                 <TextBlock Grid.Column="0" Grid.Row="0" Text="Серия:" VerticalAlignment="Center" Margin="0,6,0,5"/>
                                 <TextBlock Grid.Column="0" Grid.Row="1" Text="Номер:" VerticalAlignment="Center" Margin="0,6,0,5"/>
                                 <TextBlock Grid.Column="0" Grid.Row="2" Text="Окончание:" VerticalAlignment="Center" Margin="0,5"/>
-                                <TextBox x:Name="tbLicSeries" Grid.Column="1" Grid.Row="0" Margin="5,5,10,5" IsEnabled="False"/>
-                                <TextBox x:Name="tbLicNumber" Grid.Column="1" Grid.Row="1" Margin="5,5,10,5" IsEnabled="False"/>
-                                <DatePicker Grid.Column="1" Grid.Row="2" x:Name="dpDateofIssue" Margin="0,0,10,0"/>
+                                <TextBox x:Name="tbLicSeries" Text="{Binding DriversLicenseSeries}" Grid.Column="1" Grid.Row="0" Margin="5,5,10,5" IsEnabled="False" Grid.ColumnSpan="2"/>
+                                <TextBox x:Name="tbLicNumber" Grid.Column="1" Text="{Binding DriversLicenseNumber}" Grid.Row="1" Margin="5,5,10,5" IsEnabled="False" Grid.ColumnSpan="2"/>
+                                <DatePicker DisplayDate="{Binding DateEnd}" Grid.Column="1" Grid.Row="2" x:Name="dpDateofIssue" Margin="0,0,10,0" Grid.ColumnSpan="2"/>
                             </Grid>
                             <Grid Grid.Row="1">
                                 <GroupBox x:Name="gbCategory" Grid.Column="1" Header="Категории">

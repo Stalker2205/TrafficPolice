@@ -35,29 +35,38 @@ namespace TrafficPolice
         }
         public ViewDriverLicence()
         {
+            Kategoryes.Clear();
             DriverLicenceClass._Date.Clear();
             InitializeComponent();
             DriverLicenceClass._Date.Clear();
             AddCategories();
-            //Kategoryes.Clear();
             using (MyDBconnection db = new MyDBconnection())
             {
                 db.Drivers.Load();
                 db.Passports.Load();
                 db.DriversLicenses.Load();
                 db.DriverKategoryLicences.Load();
-                var driver = db.Drivers.Local.Where(x => x.DriverID == DriverClass.DriverID).FirstOrDefault();
-                db.Drivers.Load();
-                db.Passports.Load();
-                grDriver.DataContext = db.Drivers.Local.Where(x => x.DriverID == DriverClass.DriverID);
-                grPassport.DataContext = db.Passports.Local.Where(x => x.PassportID == DriverClass.DriverID);
+                grPassport.DataContext = db.Passports.Local.Where(x => x.PassportID == DriverClass.DriverID).First();
+                var driverLic = db.DriversLicenses.Local.Where(x => x.DriverID == DriverClass.DriverID).Last();
+                gbDriverLicence.DataContext = driverLic;
+                dpDateofIssue.Text = driverLic.DateEnd.Date.ToString() ;
+                var Kateg = db.DriverKategoryLicences.Local.Where(x => x.DriversLicenseID == driverLic.DriversLicenseID);
+                grDriver.DataContext = db.Drivers.Local.Where(x => x.DriverID == DriverClass.DriverID).First();
+                foreach (var item in Kateg)
+                {
+                    Kategoryes[item.Kategory] = true;
+                    ((CheckBox)gbCategory.FindName($"cb{item.Kategory}")).IsChecked = true;
+                    ((DatePicker)gbCategory.FindName($"dp{item.Kategory}")).Text = item.DateExpiration.ToString();
+                    DriverLicenceClass._Date.Add(item.Kategory,item.DateExpiration);
+                }
+                #region Photo
                 byte[] by = DriverLicenceClass._photo = db.Drivers.Local.Where(x => x.DriverID == DriverClass.DriverID).First().Photo;
                 BitmapImage bitmap = new BitmapImage();
                 bitmap.BeginInit();
                 bitmap.StreamSource = new MemoryStream(by);
                 bitmap.EndInit();
                 imPhoto.Source = bitmap;
-
+                #endregion
             }
         }
         static Dictionary<string, bool> Kategoryes = new Dictionary<string, bool>();
@@ -70,12 +79,12 @@ namespace TrafficPolice
             {
                 if (((CheckBox)gbCategory.FindName($"cb{item.Key}")).IsChecked == true)
                 {
-                    kategorii += $"{item.Key} - {((DateTime)gbCategory.FindName($"dp{item.Key}")).Date.ToString()}\r\n";
-                    Kategoryes[item.Key] = true;
+                    kategorii += $"{item.Key} - {((DatePicker)gbCategory.FindName($"dp{item.Key}")).Text}\r\n";
+
                 }
             }
             string fileinfo =
-                $"ID {DriverClass.DriverID.ToString()}" +
+                $"ID {DriverClass.DriverID.ToString()}\r\n" +
                 $"Паспортные данные:\r\n" +
                 $"{tb_LastName.Text} {tb_Name.Text} {tb_Patronimyc.Text}\r\n" +
                 $"{tb_PasNumber.Text}|{tb_PasSeries.Text}\r\n" +
@@ -99,7 +108,11 @@ namespace TrafficPolice
             {
                 db.Drivers.Load();
                 db.Passports.Load();
+                db.DriversLicenses.Load();
+                var Lic = db.DriversLicenses.Local.Where(x => x.DriversLicenseNumber == Convert.ToInt32(tbLicNumber.Text)
+                && x.DriversLicenseSeries == Convert.ToInt32(tbLicSeries.Text)).FirstOrDefault();
                 var driver = db.Passports.Local.Where(x => x.PassportID == DriverClass.DriverID).FirstOrDefault();
+                DriverLicenceClass._datestart = Lic.DateStart.ToString();
                 DriverLicenceClass._name = tb_Name.Text;
                 DriverLicenceClass._lastname = tb_LastName.Text;
                 DriverLicenceClass._patronimyc = tb_Patronimyc.Text;
@@ -107,7 +120,7 @@ namespace TrafficPolice
                 DriverLicenceClass._dateEnd = tb_PasDateOfIssue.Text;
                 DriverLicenceClass._series = Convert.ToInt32(tbLicSeries.Text);
                 DriverLicenceClass._number = Convert.ToInt32(tbLicNumber.Text);
-                DriverLicenceClass._kategory = Kategoryes;
+                
             }
             PrintBY pr = new PrintBY();
             pr.ShowDialog();

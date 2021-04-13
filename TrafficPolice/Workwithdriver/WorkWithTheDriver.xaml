@@ -26,7 +26,7 @@
                                     <MenuItem Header="Просмотр" Click="OpenPeopleInfo_Click"/>
                                     <MenuItem Header="Обновить" Click="UpdateDriverInfo_Click"/>
                                     <MenuItem Header="Права">
-                                        <MenuItem Header="Просмотр"/>
+                                        <MenuItem Header="Просмотр" x:Name="View" Click="View_Click"/>
                                         <MenuItem Header="Выдать" Click="mcCreateDriverLIcence"/>
                                     </MenuItem>
                                 </MenuItem>

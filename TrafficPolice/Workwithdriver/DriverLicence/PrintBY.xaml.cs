@@ -31,81 +31,53 @@ namespace TrafficPolice
             tb_LastName.Text = DriverLicenceClass._lastname;
             tb_Name.Text = DriverLicenceClass._name;
             tb_Patronimyc.Text = DriverLicenceClass._patronimyc;
-            tb_DateOfIssue.Text = DriverLicenceClass._dateofIssue;
-            tb_DateStart.Text = DriverLicenceClass._datestart;
-            tb_DateEnd.Text = DriverLicenceClass._dateEnd;
+            tb_DateOfIssue.Text = DriverLicenceClass._dateofIssue.Substring(0, 10);
+            tb_DateStart.Text = DriverLicenceClass._datestart.Substring(0, 10);
+            tb_DateEnd.Text = DriverLicenceClass._dateEnd.Substring(0, 10);
             tb_numberSeries.Text = $"{DriverLicenceClass._number}  {DriverLicenceClass._series}";
-            foreach (var item in DriverLicenceClass._kategory)
+            foreach (var item in DriverLicenceClass._Date)
             {
-                if (item.Value == true)
+                if (item.Key.Length == 1)//1 - A B C D M
                 {
-                    if (item.Key.Length == 1)
+                    if (item.Key == "M")
                     {
-                        if (item.Key == "M")
+                        tbOrgA.Text += item.Key;
+                        if (tbDateStartA.Text.Length == 0)
                         {
-                            tb_dateOgrA.Text += item.Key;
-                            tb_dateStartA.Text = DriverLicenceClass._datestart; 
+                            tbDateStartA.Text = DriverLicenceClass._datestart.Substring(0,10);
+                            tbDateEndA.Text = item.Value.ToString().Substring(0, 10);
                         }
-                        foreach (var item1 in DriverLicenceClass._Date)
-                        {
-                            if (item1.Key == item.Key && item1.Key != "M")
-                            {
-                                ((TextBlock)PrintGrid.FindName($"tb_dateStart{item.Key}")).Text = DriverLicenceClass._datestart;
-                                ((TextBlock)PrintGrid.FindName($"tb_dateEnd{item.Key}")).Text = item1.Value.Date.ToString();
-                            }
-                        }
+
                     }
-                    else if (item.Key.Length == 2)
+                    else
                     {
-                        if (item.Key == "Tm")
-                        {
-                            tb_dateStartTm.Text = DriverLicenceClass._datestart;
-                            foreach (var item3 in DriverLicenceClass._Date)
-                            {
-                                if (item3.Key == "Tm")
-                                {
-                                    tb_dateEndTm.Text = item3.Value.Date.ToString();
+                        ((TextBlock)grCategory.FindName($"tbDateStart{item.Key}")).Text = DriverLicenceClass._datestart.Substring(0, 10);
+                        ((TextBlock)grCategory.FindName($"tbDateEnd{item.Key}")).Text = item.Value.ToString().Substring(0, 10);
 
-                                }
-                            }
-
-                        }
-                        if (item.Key == "Tb")
-                        {
-                            tb_dateStartTd.Text = DriverLicenceClass._datestart;
-                            foreach (var item3 in DriverLicenceClass._Date)
-                            {
-                                if (item3.Key == "Tb")
-                                {
-                                    tb_dateEndTd.Text = item3.Value.Date.ToString();
-
-                                }
-                            }
-
-                        }
-                        if (item.Key[1] == 'E')
-                        {
-                            foreach (var item2 in DriverLicenceClass._Date)
-                            {
-
-                                if (item.Key == item2.Key)
-                                {
-                                    ((TextBlock)PrintGrid.FindName($"tb_dateStart{item.Key}")).Text = DriverLicenceClass._datestart;
-                                    ((TextBlock)PrintGrid.FindName($"tb_dateEnd{item.Key}")).Text = item2.Value.Date.ToString();
-                                }
-                            }
-                        }
-                        else if (item.Key[1] == '1')
-                        {
-                            ((TextBlock)PrintGrid.FindName($"tb_dateOgr{item.Key[0].ToString()}")).Text += item.Key;
-                        }
-                    }
-                    else if (item.Key.Length == 3)
-                    {
-                        ((TextBlock)PrintGrid.FindName($"tb_dateOgr{item.Key[0]}")).Text += item.Key;
                     }
                 }
-
+                else if (item.Key.Length == 2)//(BE CE DE) 2 A1 B1 C1 D1  Tm Tb
+                {
+                    if (item.Key == "Tm" || item.Key == "Tb")
+                    {
+                        ((TextBlock)grCategory.FindName($"tbDateStart{item.Key}")).Text = DriverLicenceClass._datestart.Substring(0, 10);
+                        ((TextBlock)grCategory.FindName($"tbDateEnd{item.Key}")).Text = item.Value.ToString().Substring(0, 10);
+                    }
+                    else
+                    {
+                        ((TextBlock)grCategory.FindName($"tbOrg{item.Key[0].ToString()}")).Text += item.Key;
+                        if (((TextBlock)grCategory.FindName($"tbDateStart{item.Key[0].ToString()}")).Text.Length == 0)
+                        {
+                            ((TextBlock)grCategory.FindName($"tbDateEnd{item.Key[0].ToString()}")).Text = item.Value.ToString().Substring(0, 10);
+                        }
+                    }
+                }
+                else//3 C1E D1E 
+                {
+                    ((TextBlock)grCategory.FindName($"tbOrg{item.Key[0].ToString()}{item.Key[2].ToString()}")).Text = item.Key;
+                    ((TextBlock)grCategory.FindName($"tbDateStart{item.Key[0].ToString()}{item.Key[2].ToString()}")).Text = DriverLicenceClass._datestart.Substring(0, 10);
+                    ((TextBlock)grCategory.FindName($"tbDateEnd{item.Key[0].ToString()}{item.Key[2].ToString()}")).Text = item.Value.ToString().Substring(0, 10);
+                }
             }
 
         }

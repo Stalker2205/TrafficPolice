@@ -5,54 +5,71 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TrafficPolice"
         mc:Ignorable="d"
-        Title="PrintBY" Height="551" Width="400" ResizeMode="NoResize" >
+        Title="PrintBY" Height="810.5" Width="583" ResizeMode="NoResize" >
     <Grid x:Name="PrintGrid">
         <StackPanel Margin="8">
             <Grid>
                 <Image Source="MainVY1.png"/>
-                <Image x:Name="Photo" HorizontalAlignment="Left" Height="137" Margin="40,57,0,0" VerticalAlignment="Top" Width="106" RenderTransformOrigin="1.609,1.7"/>
+                <Image  x:Name="Photo" HorizontalAlignment="Left" Height="209" Margin="57,82,0,0" VerticalAlignment="Top" Width="165"/>
+                <Grid HorizontalAlignment="Left" Height="239" Margin="190,417,0,0" VerticalAlignment="Top" Width="338" x:Name="grCategory">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="44*"/>
+                        <ColumnDefinition Width="62*"/>
+                        <ColumnDefinition Width="63*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBlock x:Name="tbDateStartA" Grid.Row="0" Grid.Column="0"/>
+                    <TextBlock x:Name="tbDateStartB" Grid.Row="1" Grid.Column="0"/>
+                    <TextBlock x:Name="tbDateStartC" Grid.Row="2" Grid.Column="0"/>
+                    <TextBlock x:Name="tbDateStartD" Grid.Row="3" Grid.Column="0"/>
+                    <TextBlock x:Name="tbDateStartBE" Grid.Row="4" Grid.Column="0"/>
+                    <TextBlock x:Name="tbDateStartCE" Grid.Row="5" Grid.Column="0"/>
+                    <TextBlock x:Name="tbDateStartDE" Grid.Row="6" Grid.Column="0"/>
+                    <TextBlock x:Name="tbDateStartTm" Grid.Row="7" Grid.Column="0"/>
+                    <TextBlock x:Name="tbDateStartTb" Grid.Row="8" Grid.Column="0"/>
+
+                    <TextBlock x:Name="tbDateEndA" Grid.Row="0" Grid.Column="1"/>
+                    <TextBlock x:Name="tbDateEndB" Grid.Row="1" Grid.Column="1"/>
+                    <TextBlock x:Name="tbDateEndC" Grid.Row="2" Grid.Column="1"/>
+                    <TextBlock x:Name="tbDateEndD" Grid.Row="3" Grid.Column="1"/>
+                    <TextBlock x:Name="tbDateEndBE" Grid.Row="4" Grid.Column="1"/>
+                    <TextBlock x:Name="tbDateEndCE" Grid.Row="5" Grid.Column="1"/>
+                    <TextBlock x:Name="tbDateEndDE" Grid.Row="6" Grid.Column="1"/>
+                    <TextBlock x:Name="tbDateEndTm" Grid.Row="7" Grid.Column="1"/>
+                    <TextBlock x:Name="tbDateEndTb" Grid.Row="8" Grid.Column="1"/>
+
+
+                    <TextBlock x:Name="tbOrgA" Grid.Row="0" Grid.Column="2"/>
+                    <TextBlock x:Name="tbOrgB" Grid.Row="1" Grid.Column="2"/>
+                    <TextBlock x:Name="tbOrgC" Grid.Row="2" Grid.Column="2"/>
+                    <TextBlock x:Name="tbOrgD" Grid.Row="3" Grid.Column="2"/>
+                    <TextBlock x:Name="tbOrgBE" Grid.Row="4" Grid.Column="2"/>
+                    <TextBlock x:Name="tbOrgCE" Grid.Row="5" Grid.Column="2"/>
+                    <TextBlock x:Name="tbOrgDE" Grid.Row="6" Grid.Column="2"/>
+                    <TextBlock x:Name="tbOrgTm" Grid.Row="7" Grid.Column="2"/>
+                    <TextBlock x:Name="tbOrgTb" Grid.Row="8" Grid.Column="2"/>
+
+                </Grid>
+                <TextBlock HorizontalAlignment="Left" Margin="358,95,0,0" Height="25" x:Name="tb_LastName"  VerticalAlignment="Top" Width="160"/>
+                <TextBlock HorizontalAlignment="Left" Margin="358,120,0,0" Height="25" x:Name="tb_Name"  VerticalAlignment="Top" Width="160"/>
+                <TextBlock HorizontalAlignment="Left" Margin="358,145,0,0" Height="25" x:Name="tb_Patronimyc" VerticalAlignment="Top" Width="160"/>
+                <TextBlock HorizontalAlignment="Left" Margin="287,188,0,0" Height="25" x:Name="tb_DateOfIssue" VerticalAlignment="Top" Width="231"/>
+                <TextBlock HorizontalAlignment="Left" Margin="287,244,0,0" Height="25" x:Name="tb_DateStart" VerticalAlignment="Top" Width="95"/>
+                <TextBlock HorizontalAlignment="Left" Margin="387,244,0,0" Height="25" x:Name="tb_DateEnd" VerticalAlignment="Top" Width="131"/>
+                <TextBlock HorizontalAlignment="Right" Margin="0,657,6,0" FontSize="30" Height="44" x:Name="tb_numberSeries" VerticalAlignment="Top" Width="231"/>
             </Grid>
             <Button Content="Печатать" x:Name="bt_Print" Click="bt_Print_Click"/>
         </StackPanel>
-        <TextBlock HorizontalAlignment="Left" Margin="252,69,0,433" FontSize="12" TextWrapping="Wrap" x:Name="tb_LastName" TextAlignment="Left" Width="107"/>
-        <TextBlock HorizontalAlignment="Left" Margin="226,89,0,420" FontSize="12" TextWrapping="Wrap" x:Name="tb_Name" TextAlignment="Left" Width="133"/>
-        <TextBlock HorizontalAlignment="Left" Margin="250,105,0,400" FontSize="12" TextWrapping="Wrap" x:Name="tb_Patronimyc" TextAlignment="Left" Width="109"/>
-        <TextBlock HorizontalAlignment="Left" Margin="201,134,0,369" FontSize="12" TextWrapping="Wrap" x:Name="tb_DateOfIssue" TextAlignment="Left" Width="158"/>
-        <TextBlock HorizontalAlignment="Left" Margin="201,171,0,331" FontSize="12" TextWrapping="Wrap" x:Name="tb_DateStart" TextAlignment="Left" Width="54"/>
-        <TextBlock HorizontalAlignment="Left" Margin="279,171,0,331" FontSize="12" TextWrapping="Wrap" x:Name="tb_DateEnd" TextAlignment="Left" Width="80"/>
-        <TextBlock HorizontalAlignment="Left" Margin="201,196,0,296" FontSize="12" TextWrapping="Wrap" x:Name="tb_Kategory" TextAlignment="Left" Width="158"/>
-
-        <TextBlock HorizontalAlignment="Left" Margin="137,290,0,216" FontSize="12" TextWrapping="Wrap" x:Name="tb_dateStartA" TextAlignment="Left" Width="57"/>
-        <TextBlock HorizontalAlignment="Left" Margin="137,306,0,196" FontSize="12" TextWrapping="Wrap" x:Name="tb_dateStartB" TextAlignment="Left" Width="57"/>
-        <TextBlock HorizontalAlignment="Left" Margin="137,326,0,179" FontSize="12" TextWrapping="Wrap" x:Name="tb_dateStartC" TextAlignment="Left" Width="57"/>
-        <TextBlock HorizontalAlignment="Left" Margin="137,343,0,162" FontSize="12" TextWrapping="Wrap" x:Name="tb_dateStartD" TextAlignment="Left" Width="57"/>
-        <TextBlock HorizontalAlignment="Left" Margin="137,360,0,144" FontSize="12" TextWrapping="Wrap" x:Name="tb_dateStartBE" TextAlignment="Left" Width="57"/>
-        <TextBlock HorizontalAlignment="Left" Margin="137,378,0,126" FontSize="12" TextWrapping="Wrap" x:Name="tb_dateStartCE" TextAlignment="Left" Width="57"/>
-        <TextBlock HorizontalAlignment="Left" Margin="137,396,0,110" FontSize="12" TextWrapping="Wrap" x:Name="tb_dateStartDE" TextAlignment="Left" Width="57"/>
-        <TextBlock HorizontalAlignment="Left" Margin="137,412,0,90" FontSize="12" TextWrapping="Wrap" x:Name="tb_dateStartTm" TextAlignment="Left" Width="57"/>
-        <TextBlock HorizontalAlignment="Left" Margin="137,432,0,73" FontSize="12" TextWrapping="Wrap" x:Name="tb_dateStartTd" TextAlignment="Left" Width="57"/>
-
-
-        <TextBlock HorizontalAlignment="Left" Margin="194,290,0,216" FontSize="12" TextWrapping="Wrap" x:Name="tb_dateEndA" TextAlignment="Left" Width="84"/>
-        <TextBlock HorizontalAlignment="Left" Margin="194,306,0,196" FontSize="12" TextWrapping="Wrap" x:Name="tb_dateEndB" TextAlignment="Left" Width="84"/>
-        <TextBlock HorizontalAlignment="Left" Margin="194,326,0,179" FontSize="12" TextWrapping="Wrap" x:Name="tb_dateEndC" TextAlignment="Left" Width="84"/>
-        <TextBlock HorizontalAlignment="Left" Margin="194,343,0,162" FontSize="12" TextWrapping="Wrap" x:Name="tb_dateEndD" TextAlignment="Left" Width="84"/>
-        <TextBlock HorizontalAlignment="Left" Margin="194,360,0,144" FontSize="12" TextWrapping="Wrap" x:Name="tb_dateEndBE" TextAlignment="Left" Width="84"/>
-        <TextBlock HorizontalAlignment="Left" Margin="194,396,0,110" FontSize="12" TextWrapping="Wrap" x:Name="tb_dateEndCE" TextAlignment="Left" Width="84"/>
-        <TextBlock HorizontalAlignment="Left" Margin="194,396,0,110" FontSize="12" TextWrapping="Wrap" x:Name="tb_dateEndDE" TextAlignment="Left" Width="84"/>
-        <TextBlock HorizontalAlignment="Left" Margin="194,412,0,90" FontSize="12" TextWrapping="Wrap" x:Name="tb_dateEndTm" TextAlignment="Left" Width="84"/>
-        <TextBlock HorizontalAlignment="Left" Margin="194,432,0,73" FontSize="12" TextWrapping="Wrap" x:Name="tb_dateEndTd" TextAlignment="Left" Width="84"/>
-
-        <TextBlock HorizontalAlignment="Left" Margin="279,290,0,216" FontSize="12" TextWrapping="Wrap" x:Name="tb_dateOgrA" TextAlignment="Left" Width="84"/>
-        <TextBlock HorizontalAlignment="Left" Margin="279,306,0,196" FontSize="12" TextWrapping="Wrap" x:Name="tb_dateOgrB" TextAlignment="Left" Width="84"/>
-        <TextBlock HorizontalAlignment="Left" Margin="279,326,0,179" FontSize="12" TextWrapping="Wrap" x:Name="tb_dateOgrC" TextAlignment="Left" Width="84"/>
-        <TextBlock HorizontalAlignment="Left" Margin="279,343,0,162" FontSize="12" TextWrapping="Wrap" x:Name="tb_dateOgrD" TextAlignment="Left" Width="84"/>
-        <TextBlock HorizontalAlignment="Left" Margin="279,360,0,144" FontSize="12" TextWrapping="Wrap" x:Name="tb_dateOgrBE" TextAlignment="Left" Width="84"/>
-        <TextBlock HorizontalAlignment="Left" Margin="279,378,0,126" FontSize="12" TextWrapping="Wrap" x:Name="tb_dateOgrCE" TextAlignment="Left" Width="84"/>
-        <TextBlock HorizontalAlignment="Left" Margin="279,396,0,110" FontSize="12" TextWrapping="Wrap" x:Name="tb_dateOgrDE" TextAlignment="Left" Width="84"/>
-        <TextBlock HorizontalAlignment="Left" Margin="279,412,0,90" FontSize="12" TextWrapping="Wrap" x:Name="tb_dateOgrTm" TextAlignment="Left" Width="84"/>
-        <TextBlock HorizontalAlignment="Left" Margin="279,432,0,73" FontSize="12" TextWrapping="Wrap" x:Name="tb_dateOgrTd" TextAlignment="Left" Width="84"/>
-        <TextBlock HorizontalAlignment="Left" Margin="194,454,0,48" FontSize="12" TextWrapping="Wrap" x:Name="tb_numberSeries" TextAlignment="Left" Width="169"/>
 
     </Grid>
 </Window>

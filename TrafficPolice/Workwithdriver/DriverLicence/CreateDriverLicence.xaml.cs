@@ -189,22 +189,29 @@ namespace TrafficPolice
 
         private void btPrintDialog_Click(object sender, RoutedEventArgs e)
         {
-            using (MyDBconnection db = new MyDBconnection())
+            if (key)
             {
-                db.Drivers.Load();
-                db.Passports.Load();
-                var driver = db.Passports.Local.Where(x => x.PassportID == DriverClass.DriverID).FirstOrDefault();
-                DriverLicenceClass._name = tb_Name.Text;
-                DriverLicenceClass._lastname = tb_LastName.Text;
-                DriverLicenceClass._patronimyc = tb_Patronimyc.Text;
-                DriverLicenceClass._dateofIssue = driver.DateOfIssue.ToString();
-                DriverLicenceClass._dateEnd = tb_PasDateOfIssue.Text;
-                DriverLicenceClass._series = Convert.ToInt32(tbLicSeries.Text);
-                DriverLicenceClass._number = Convert.ToInt32(tbLicNumber.Text);
-                DriverLicenceClass._kategory = Kategoryes;
+                using (MyDBconnection db = new MyDBconnection())
+                {
+                    db.Drivers.Load();
+                    db.Passports.Load();
+                    var driver = db.Passports.Local.Where(x => x.PassportID == DriverClass.DriverID).FirstOrDefault();
+                    DriverLicenceClass._name = tb_Name.Text;
+                    DriverLicenceClass._lastname = tb_LastName.Text;
+                    DriverLicenceClass._patronimyc = tb_Patronimyc.Text;
+                    DriverLicenceClass._dateofIssue = driver.DateOfIssue.ToString();
+                    DriverLicenceClass._dateEnd = tb_PasDateOfIssue.Text;
+                    DriverLicenceClass._series = Convert.ToInt32(tbLicSeries.Text);
+                    DriverLicenceClass._number = Convert.ToInt32(tbLicNumber.Text);
+                }
+                PrintBY pr = new PrintBY();
+                pr.ShowDialog();
             }
-            PrintBY pr = new PrintBY();
-            pr.ShowDialog();
+            else
+            {
+                MessageBox.Show("Для печати, необхходимо выдать права!"); return;
+            }
+
         }
     }
 }
