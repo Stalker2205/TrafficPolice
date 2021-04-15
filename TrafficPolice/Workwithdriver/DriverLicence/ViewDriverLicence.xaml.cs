@@ -4,16 +4,9 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace TrafficPolice
 {
@@ -49,7 +42,7 @@ namespace TrafficPolice
                 grPassport.DataContext = db.Passports.Local.Where(x => x.PassportID == DriverClass.DriverID).First();
                 var driverLic = db.DriversLicenses.Local.Where(x => x.DriverID == DriverClass.DriverID).Last();
                 gbDriverLicence.DataContext = driverLic;
-                dpDateofIssue.Text = driverLic.DateEnd.Date.ToString() ;
+                dpDateofIssue.Text = driverLic.DateEnd.Date.ToString();
                 var Kateg = db.DriverKategoryLicences.Local.Where(x => x.DriversLicenseID == driverLic.DriversLicenseID);
                 grDriver.DataContext = db.Drivers.Local.Where(x => x.DriverID == DriverClass.DriverID).First();
                 foreach (var item in Kateg)
@@ -57,7 +50,7 @@ namespace TrafficPolice
                     Kategoryes[item.Kategory] = true;
                     ((CheckBox)gbCategory.FindName($"cb{item.Kategory}")).IsChecked = true;
                     ((DatePicker)gbCategory.FindName($"dp{item.Kategory}")).Text = item.DateExpiration.ToString();
-                    DriverLicenceClass._Date.Add(item.Kategory,item.DateExpiration);
+                    DriverLicenceClass._Date.Add(item.Kategory, item.DateExpiration);
                 }
                 #region Photo
                 byte[] by = DriverLicenceClass._photo = db.Drivers.Local.Where(x => x.DriverID == DriverClass.DriverID).First().Photo;
@@ -120,7 +113,7 @@ namespace TrafficPolice
                 DriverLicenceClass._dateEnd = tb_PasDateOfIssue.Text;
                 DriverLicenceClass._series = Convert.ToInt32(tbLicSeries.Text);
                 DriverLicenceClass._number = Convert.ToInt32(tbLicNumber.Text);
-                
+
             }
             PrintBY pr = new PrintBY();
             pr.ShowDialog();

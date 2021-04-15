@@ -1,18 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace TrafficPolice
 {
@@ -63,7 +53,7 @@ namespace TrafficPolice
                 var cra = db.Cars.Local.Where(x => x.CarID == car);
                 foreach (Car car1 in cra) { RequestsClass.PackageDocuments = car1.CarID; }
                 if (RequestsClass.PackageDocuments == null) { MessageBox.Show("Нет такого ТС"); return; }
-               // db.Ptcs.Load();
+                // db.Ptcs.Load();
                 //DatagridFirst.ItemsSource = db.Ptcs.Local.Where(x => x.PtcID == RequestsClass.PackageDocuments);
             }
         }
@@ -84,13 +74,13 @@ namespace TrafficPolice
             using (MyDBconnection db = new MyDBconnection())
             {
                 db.Cars.Load();
-              //  db.Insurances.Load();
+                //  db.Insurances.Load();
 
                 var cra = db.Cars.Local.Where(x => x.CarID == car);
                 foreach (Car car1 in cra) { RequestsClass.PackageDocuments = car1.CarID; }
                 if (RequestsClass.PackageDocuments == null) { MessageBox.Show("Нет такого ТС"); return; }
 
-               // DatagridFirst.ItemsSource = db.Insurances.Local.Where(x => x.InsuranceID == RequestsClass.PackageDocuments);
+                // DatagridFirst.ItemsSource = db.Insurances.Local.Where(x => x.InsuranceID == RequestsClass.PackageDocuments);
             }
         }
 

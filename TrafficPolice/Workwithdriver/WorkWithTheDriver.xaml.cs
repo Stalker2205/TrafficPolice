@@ -1,18 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace TrafficPolice
 {
@@ -21,17 +12,15 @@ namespace TrafficPolice
     /// </summary>
     public partial class WorkWithTheDriver : Page
     {
-        string _id;
+        private string _id;
         public WorkWithTheDriver()
         {
             InitializeComponent();
-            //using (MyDBconnection db = new MyDBconnection())
-            //{
-            //    db.Drivers.Load();
-            //    db.Passports.Load();
-            //    DriverGrid.ItemsSource = db.Drivers.Local;
-            //
-
+            using (MyDBconnection db = new MyDBconnection())
+            {
+                db.Drivers.Load();
+                DriverGrid.ItemsSource = db.Drivers.Local;
+            }
         }
 
         private void CreateDriver_Click(object sender, RoutedEventArgs e)
@@ -45,33 +34,15 @@ namespace TrafficPolice
         {
             DriverGrid.Visibility = Visibility.Visible;
             FrameFromNavigation.Visibility = Visibility.Hidden;
-            int DriverID;
+            SerchDriverID serchDriverID = new SerchDriverID();
+            serchDriverID.ShowDialog();
+            if (RequestsClass.Driver == null) return;
+            using (MyDBconnection db = new MyDBconnection())
+            {
+                db.Drivers.Load();
+                DriverGrid.ItemsSource = db.Drivers.Local.Where(x => x.DriverID == RequestsClass.Driver);
+            }
 
-            if (IdDriverTbox.Text.Length != 0)
-            {
-                try
-                {
-                    DriverID = Convert.ToInt32(IdDriverTbox.Text);
-                }
-                catch { MessageBox.Show("ID должно быть числом!"); return; }
-                using (MyDBconnection db = new MyDBconnection())
-                {
-                    db.Drivers.Load();
-                    DriverGrid.ItemsSource = db.Drivers.Local.Where(x => x.DriverID == DriverID);
-                }
-            }
-            else
-            {
-                SerchDriverID serchDriverID = new SerchDriverID();
-                serchDriverID.ShowDialog();
-                if (RequestsClass.Driver == null) return;
-                using (MyDBconnection db = new MyDBconnection())
-                {
-                    db.Drivers.Load();
-                    DriverGrid.ItemsSource = db.Drivers.Local.Where(x => x.DriverID == RequestsClass.Driver);
-                }
-                IdDriverTbox.Text = RequestsClass.Driver.ToString();
-            }
         }
 
         private void OpenPeopleInfo_Click(object sender, RoutedEventArgs e)
@@ -83,9 +54,9 @@ namespace TrafficPolice
 
         private void UpdateDriverInfo_Click(object sender, RoutedEventArgs e)
         {
-                DriverGrid.Visibility = Visibility.Hidden;
-                FrameFromNavigation.Visibility = Visibility.Visible;
-                FrameFromNavigation.Navigate(new UpdateDriverfirst());
+            DriverGrid.Visibility = Visibility.Hidden;
+            FrameFromNavigation.Visibility = Visibility.Visible;
+            FrameFromNavigation.Navigate(new UpdateDriverfirst());
         }
 
         private void mcCreateDriverLIcence(object sender, RoutedEventArgs e)
@@ -118,6 +89,12 @@ namespace TrafficPolice
             DriverGrid.Visibility = Visibility.Hidden;
             FrameFromNavigation.Visibility = Visibility.Visible;
             FrameFromNavigation.Navigate(new ViewDriverLicence());
+        }
+
+        private void ViewAll_Click(object sender, RoutedEventArgs e)
+        {
+            AllDriverLicense all = new AllDriverLicense();
+            all.ShowDialog();
         }
     }
 }

@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TrafficPolice
 {
@@ -13,7 +9,7 @@ namespace TrafficPolice
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int DriverID { get; set; }
-       // public string Photo { get; set; }
+        // public string Photo { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Patronymic { get; set; }

@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 
 namespace TrafficPolice
@@ -123,11 +120,11 @@ namespace TrafficPolice
             }
             using (MyDBconnection db = new MyDBconnection())
             {
-               // db.Ctcs.Load();
+                // db.Ctcs.Load();
                 db.Drivers.Load();
                 db.Cars.Load();
-               // var ins = db.Ctcs.Local.Where(x => x.CtcSeries == series && x.CtcNumber == num);
-               // foreach (Ctc ctc in ins) { PackageDocuments = ctc.CtcID; Driver = ctc.Owner; }
+                // var ins = db.Ctcs.Local.Where(x => x.CtcSeries == series && x.CtcNumber == num);
+                // foreach (Ctc ctc in ins) { PackageDocuments = ctc.CtcID; Driver = ctc.Owner; }
             }
             keySerch = true;
         }
@@ -146,7 +143,7 @@ namespace TrafficPolice
             }
             using (MyDBconnection db = new MyDBconnection())
             {
-               // db.Ptcs.Load();
+                // db.Ptcs.Load();
                 db.Drivers.Load();
                 db.Cars.Load();
                 //var ins = db.Ptcs.Local.Where(x => x.PtcSeries == series && x.PtcNumber == num);

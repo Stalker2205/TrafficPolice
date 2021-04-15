@@ -1,8 +1,7 @@
 ﻿namespace TrafficPolice.Migrations
 {
-    using System;
     using System.Data.Entity.Migrations;
-    
+
     public partial class CreateStaffSerificationRank1 : DbMigration
     {
         public override void Up()
@@ -10,48 +9,48 @@
             CreateTable(
                 "dbo.Ranks",
                 c => new
-                    {
-                        RankID = c.Int(nullable: false, identity: true),
-                        RankName = c.String(),
-                        RankPhoto = c.String(),
-                    })
+                {
+                    RankID = c.Int(nullable: false, identity: true),
+                    RankName = c.String(),
+                    RankPhoto = c.String(),
+                })
                 .PrimaryKey(t => t.RankID);
-            
+
             CreateTable(
                 "dbo.Staffs",
                 c => new
-                    {
-                        StaffID = c.Int(nullable: false, identity: true),
-                        FirstName = c.String(),
-                        Lastname = c.String(),
-                        Photo = c.String(),
-                        Education = c.String(),
-                        Login = c.String(),
-                        Password = c.String(),
-                        SertificationID = c.Int(),
-                        RankID = c.Int(nullable: false),
-                    })
+                {
+                    StaffID = c.Int(nullable: false, identity: true),
+                    FirstName = c.String(),
+                    Lastname = c.String(),
+                    Photo = c.String(),
+                    Education = c.String(),
+                    Login = c.String(),
+                    Password = c.String(),
+                    SertificationID = c.Int(),
+                    RankID = c.Int(nullable: false),
+                })
                 .PrimaryKey(t => t.StaffID)
                 .ForeignKey("dbo.Ranks", t => t.RankID, cascadeDelete: true)
                 .Index(t => t.RankID);
-            
+
             CreateTable(
                 "dbo.Sertifications",
                 c => new
-                    {
-                        SertificationID = c.Int(nullable: false, identity: true),
-                        SertificationNumber = c.Int(nullable: false),
-                        SertificationSeries = c.Int(nullable: false),
-                        SertificationPosition = c.String(),
-                        ValidUnit = c.DateTime(nullable: false),
-                        Staff_StaffID = c.Int(),
-                    })
+                {
+                    SertificationID = c.Int(nullable: false, identity: true),
+                    SertificationNumber = c.Int(nullable: false),
+                    SertificationSeries = c.Int(nullable: false),
+                    SertificationPosition = c.String(),
+                    ValidUnit = c.DateTime(nullable: false),
+                    Staff_StaffID = c.Int(),
+                })
                 .PrimaryKey(t => t.SertificationID)
                 .ForeignKey("dbo.Staffs", t => t.Staff_StaffID)
                 .Index(t => t.Staff_StaffID);
-            
+
         }
-        
+
         public override void Down()
         {
             DropForeignKey("dbo.Staffs", "RankID", "dbo.Ranks");

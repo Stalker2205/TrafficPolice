@@ -1,40 +1,75 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using System.IO;
-using Microsoft.Win32;
 
 namespace TrafficPolice
 {
     /// <summary>
     /// Логика взаимодействия для CreateDriver.xaml
     /// </summary>
-    public partial class CreateDriver : Page
+    public partial class UpdateDriverfirst : Page
     {
-        public CreateDriver()
+        int drivID = 0;
+        int licId = 0;
+        public UpdateDriverfirst()
         {
             InitializeComponent();
             BitmapImage bitmapImage = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "\\Image\\Additionally\\Photo.png", UriKind.Absolute)); ;
             Photo.Source = bitmapImage;
             Kategoryes.Clear();
             AddCategories();
+            using (MyDBconnection db = new MyDBconnection())
+            {
+                db.DriverKategoryLicences.Load();
+                db.Drivers.Load();
+                db.DriversLicenses.Load();
+                db.Passports.Load();
+                gbPassport.DataContext = db.Passports.Local.Where(x => x.PassportID == DriverClass.DriverID);
+                var driver = db.Drivers.Local.Where(x => x.DriverID == DriverClass.DriverID);
+                drivID = Convert.ToInt32(DriverClass.DriverID);
+                foreach (var item in driver)
+                {
+                    TextBox_FirstName.Text = item.FirstName;
+                    TextBox_LastName.Text = item.LastName;
+                    TextBox_Patronimic.Text = item.Patronymic;
+                    byte[] by = item.Photo;
+                    BitmapImage bitmap = new BitmapImage();
+                    bitmap.BeginInit();
+                    bitmap.StreamSource = new MemoryStream(by);
+                    bitmap.EndInit();
+                    Photo.Source = bitmap;
+                }
+                gbDriverLicence.DataContext = db.DriversLicenses.Local.Where(x => x.DriverID == DriverClass.DriverID).First();
+                DriversLicense dv = db.DriversLicenses.Local.Where(x => x.DriverID == DriverClass.DriverID).Last();
+
+                var Licences = db.DriversLicenses.Local.Where(x => x.DriversLicenseID == dv.DriversLicenseID);
+                int LicenseID = 0;
+                foreach (var item in Licences)
+                {
+                    licId = LicenseID = item.DriversLicenseID;
+                }
+                var Kategory = db.DriverKategoryLicences.Local.Where(x => x.DriversLicenseID == LicenseID);
+                foreach (var item in Kategory)
+                {
+                    CheckBox cb = (CheckBox)gbCategory.FindName($"cb{item.Kategory}");
+                    DatePicker dp = (DatePicker)gbCategory.FindName($"dp{item.Kategory}");
+                    cb.IsChecked = true;
+                    dp.Text = item.DateOfAssignment.ToString();
+                }
+            }
 
         }
         Dictionary<string, bool> Cat = DriverClass.LoadCategory();
 
+#pragma warning disable CS0414 // Полю "UpdateDriverfirst.key" присвоено значение, но оно ни разу не использовано.
         bool key = false;
+#pragma warning restore CS0414 // Полю "UpdateDriverfirst.key" присвоено значение, но оно ни разу не использовано.
         byte[] ImageByte;
         private void CreateDriverButton_Click(object sender, RoutedEventArgs e)
         {
@@ -50,7 +85,9 @@ namespace TrafficPolice
                 }
             }
             #region Check number and Series
+#pragma warning disable CS0168 // Переменная "LicNum" объявлена, но ни разу не использована.
             int PasSer, PasNum, LicSer, LicNum;
+#pragma warning restore CS0168 // Переменная "LicNum" объявлена, но ни разу не использована.
             if (TextBox_PassportSeries.Text.Length == 0 || TextBox_PassportSeries.Text.Length != 4) { MessageBox.Show("Серия паспорта состоит из 4-х цифр"); return; }
             else { try { PasSer = Convert.ToInt32(TextBox_PassportSeries.Text); } catch { MessageBox.Show("Серия паспорта состоит из 4-х цифр"); return; } }
 
@@ -65,83 +102,24 @@ namespace TrafficPolice
             #endregion
             #region Check datetime
             if (DatePicker_DateOfIssue.SelectedDate.Value.Date.Year < 1900) { MessageBox.Show($"Человеку не может быть {DateTime.Now.Date.Year - DatePicker_DateOfIssue.SelectedDate.Value.Date.Year} лет"); return; }
-            if ((DatePicker_FinishDate.SelectedDate.Value.Date.Year - DatePicker_StartDate.SelectedDate.Value.Date.Year) < 0) { MessageBox.Show("Дата окончания должна быть больше даты выдачи"); return; }
+            //   if ((DatePicker_FinishDate.SelectedDate.Value.Date.Year - DatePicker_StartDate.SelectedDate.Value.Date.Year) < 0) { MessageBox.Show("Дата окончания должна быть больше даты выдачи"); return; }
             #endregion
-            #region add Driver,Passport,DriverLicence,LicenceKategory
-            if (!key) { MessageBox.Show("Необходимо выбрать фото!"); return; }
-            int driverId = 0;
-            int? passID = null;
-            int? LicenceID = null;
+
             using (MyDBconnection db = new MyDBconnection())
             {
-                #region load Table
-                db.Passports.Load();
+                db.Drivers.Load();
                 db.DriversLicenses.Load();
+                db.Passports.Load();
                 db.DriverKategoryLicences.Load();
-                db.DriverKategoryLicences.Load();
-                #endregion
-                #region Serch passport and Driver licence 
-                var pas1 = db.Passports.Local.Where(x => x.PassportNumber == Convert.ToInt32(TextBox_PassportNumber.Text) && x.PassportSeries == Convert.ToInt32(TextBox_PassportSeries.Text));
-                foreach (Passport passport in pas1) { passID = passport.PassportID; }
-                if (passID != null) { MessageBox.Show("Такой паспорт уже есть в системе"); return; }
-                var drad = db.DriversLicenses.Local.Where(x => x.DriversLicenseNumber == Convert.ToInt32(TextBox_DriverLicenseNumber.Text) && x.DriversLicenseSeries == Convert.ToInt32(TextBox_DriverLicenseSeries.Text));
-                foreach (DriversLicense dl in drad) { LicenceID = dl.DriversLicenseID; }
-                if (LicenceID != null) { MessageBox.Show("Такие права уже существуют"); return; }
-                #endregion
-                #region create Driver
-                Driver driver = new Driver();
+                var driver = db.Drivers.Local.Where(x => x.DriverID == drivID).FirstOrDefault();
                 driver.FirstName = TextBox_FirstName.Text;
                 driver.LastName = TextBox_LastName.Text;
                 driver.Patronymic = TextBox_Patronimic.Text;
                 driver.Photo = ImageByte;
-                db.Drivers.Add(driver);
                 db.SaveChanges();
-                db.Drivers.Load();
-                #endregion
-                #region Create Passport
-                var driv = db.Drivers.Local.Where(x => x.Photo == ImageByte);
-                foreach (Driver dr in driv) { driverId = dr.DriverID; }
-                Passport pass = new Passport();
-                pass.PassportID = driverId;
-                pass.PassportNumber = Convert.ToInt32(TextBox_PassportNumber.Text);
-                pass.PassportSeries = Convert.ToInt32(TextBox_PassportSeries.Text);
-                pass.PassportAdress = TextBox_Adress.Text;
-                pass.DateOfIssue = DatePicker_DateOfIssue.DisplayDate.Date;
-                db.Passports.Add(pass);
-                #endregion
-                #region Create Driver Licence
-                DriversLicense driversLicense = new DriversLicense();
-                driversLicense.DriverID = driverId;
-                driversLicense.DriversLicenseNumber = Convert.ToInt32(TextBox_DriverLicenseNumber.Text);
-                driversLicense.DriversLicenseSeries = Convert.ToInt32(TextBox_DriverLicenseSeries.Text);
-                driversLicense.DateStart = DatePicker_StartDate.DisplayDate.Date;
-                driversLicense.DateEnd = DatePicker_FinishDate.DisplayDate.Date;
-                db.DriversLicenses.Add(driversLicense);
-                db.SaveChanges();
-                #endregion
-                #region Add Licences Category
-                int driverLicenceID = 0;
-                var Licence = db.DriversLicenses.Local.Where(x => x.DriversLicenseNumber == Convert.ToInt32(TextBox_DriverLicenseNumber.Text) &&
-                x.DriversLicenseSeries == Convert.ToInt32(TextBox_DriverLicenseSeries.Text));
-                foreach (var item1 in Licence) { driverLicenceID = item1.DriversLicenseID; }
-                foreach (var item in Kategoryes)
-                {
-                    if (item.Value)
-                    {
-                        DatePicker dp = (DatePicker)gbCategory.FindName($"dp{item.Key}");
-                        DriverKategoryLicence driverKategory = new DriverKategoryLicence();
-                        driverKategory.DateExpiration = dp.DisplayDate.Date;
-                        driverKategory.Kategory = item.Key;
-                        driverKategory.DateOfAssignment = dp.DisplayDate.Date;
-                        driverKategory.DriversLicenseID = driverLicenceID;
-                        db.DriverKategoryLicences.Add(driverKategory);
-                        db.SaveChanges();
-                    }
-                }
-                #endregion
+
             }
-            #endregion
-            MessageBox.Show("Водитель успешно создан!"); return;
+            MessageBox.Show("Водитель успешно Обновлен!"); return;
         }
 
 
@@ -176,6 +154,7 @@ namespace TrafficPolice
             CheckBox check = (CheckBox)sender;
             string kat = check.Name;
             Kategoryes[kat.Remove(0, 2)] = true;
+
         }
 
         private void cbA_Unchecked(object sender, RoutedEventArgs e)
