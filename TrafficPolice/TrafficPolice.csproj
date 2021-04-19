@@ -67,6 +67,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="CreateInsurances.xaml.cs">
+      <DependentUpon>CreateInsurances.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WorkWithTheAvto\CreateCar.xaml.cs">
+      <DependentUpon>CreateCar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WorkWithTheAvto\CreateCTC.xaml.cs">
+      <DependentUpon>CreateCTC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DifferentClasses\CarClass.cs" />
     <Compile Include="Migrations\202104151157537_FixCars.cs" />
     <Compile Include="Migrations\202104151157537_FixCars.designer.cs">
@@ -176,9 +185,21 @@
     <Compile Include="Workwithdriver\WorkWithTheDriver.xaml.cs">
       <DependentUpon>WorkWithTheDriver.xaml</DependentUpon>
     </Compile>
-    <Compile Include="WorkWithTheAvto.xaml.cs">
+    <Compile Include="WorkWithTheAvto\WorkWithTheAvto.xaml.cs">
       <DependentUpon>WorkWithTheAvto.xaml</DependentUpon>
     </Compile>
+    <Page Include="CreateInsurances.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WorkWithTheAvto\CreateCar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WorkWithTheAvto\CreateCTC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Workwithdriver\DriverLicence\AllDriverLicense.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -259,7 +280,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="WorkWithTheAvto.xaml">
+    <Page Include="WorkWithTheAvto\WorkWithTheAvto.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -326,9 +347,7 @@
   <ItemGroup>
     <Resource Include="Workwithdriver\DriverLicence\MainVY1.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="WorkWithTheAvto\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

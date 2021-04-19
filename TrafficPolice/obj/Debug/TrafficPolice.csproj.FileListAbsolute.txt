@@ -296,10 +296,8 @@ C:\Users\олимп\Desktop\RafikPolice\TrafficPolice\obj\Debug\TrafficPolice.Mi
 C:\Users\олимп\Desktop\RafikPolice\TrafficPolice\obj\Debug\TrafficPolice.csprojAssemblyReference.cache
 C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\Workwithdriver\SerchDriverID.g.cs
 C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\Workwithdriver\WorkWithTheDriver.g.cs
-C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\WorkWithTheAvto.g.cs
 C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\Workwithdriver\SerchDriverID.baml
 C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\Workwithdriver\WorkWithTheDriver.baml
-C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\WorkWithTheAvto.baml
 C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\TrafficPolice.Migrations.CreateCarDriverDriverLicencePassport.resources
 C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\TrafficPolice.Migrations.CreateStaffSerificationRank.resources
 C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\TrafficPolice.Migrations.CreateStaffSerificationRank1.resources
@@ -325,3 +323,11 @@ C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\TrafficPolice.c
 C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\Workwithdriver\DriverLicence\AllDriverLicense.g.cs
 C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\Workwithdriver\DriverLicence\AllDriverLicense.baml
 C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\TrafficPolice.Migrations.FixCars.resources
+C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\WorkWithTheAvto\WorkWithTheAvto.g.cs
+C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\WorkWithTheAvto\WorkWithTheAvto.baml
+C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\CreateInsurances.g.cs
+C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\WorkWithTheAvto\CreateCar.g.cs
+C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\WorkWithTheAvto\CreateCTC.g.cs
+C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\CreateInsurances.baml
+C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\WorkWithTheAvto\CreateCar.baml
+C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\WorkWithTheAvto\CreateCTC.baml
