@@ -67,18 +67,28 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="CreateInsurances.xaml.cs">
+    <Compile Include="CreateInspections.xaml.cs">
+      <DependentUpon>CreateInspections.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WorkWithTheAvto\Create\CreatePTC.xaml.cs">
+      <DependentUpon>CreatePTC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DifferentClasses\StatementsClass.cs" />
+    <Compile Include="WorkWithTheAvto\Create\CreateInsurances.xaml.cs">
       <DependentUpon>CreateInsurances.xaml</DependentUpon>
     </Compile>
-    <Compile Include="WorkWithTheAvto\CreateCar.xaml.cs">
+    <Compile Include="WorkWithTheAvto\Create\CreateStatements.xaml.cs">
+      <DependentUpon>CreateStatements.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WorkWithTheAvto\Create\CreateCar.xaml.cs">
       <DependentUpon>CreateCar.xaml</DependentUpon>
     </Compile>
-    <Compile Include="WorkWithTheAvto\CreateCTC.xaml.cs">
+    <Compile Include="WorkWithTheAvto\Create\CreateCTC.xaml.cs">
       <DependentUpon>CreateCTC.xaml</DependentUpon>
     </Compile>
     <Compile Include="DifferentClasses\CarClass.cs" />
-    <Compile Include="Migrations\202104151157537_FixCars.cs" />
-    <Compile Include="Migrations\202104151157537_FixCars.designer.cs">
+    <Compile Include="DifferentClasses\Migrations\202104151157537_FixCars.cs" />
+    <Compile Include="DifferentClasses\Migrations\202104151157537_FixCars.designer.cs">
       <DependentUpon>202104151157537_FixCars.cs</DependentUpon>
     </Compile>
     <Compile Include="Workwithdriver\DriverLicence\AllDriverLicense.xaml.cs">
@@ -107,46 +117,46 @@
     <Compile Include="DataBase\Insurance.cs" />
     <Compile Include="DataBase\DriverKategoryLicence.cs" />
     <Compile Include="DataBase\Inspection.cs" />
-    <Compile Include="Migrations\202103021054161_CreateCarDriverDriverLicencePassport.cs" />
-    <Compile Include="Migrations\202103021054161_CreateCarDriverDriverLicencePassport.designer.cs">
+    <Compile Include="DifferentClasses\Migrations\202103021054161_CreateCarDriverDriverLicencePassport.cs" />
+    <Compile Include="DifferentClasses\Migrations\202103021054161_CreateCarDriverDriverLicencePassport.designer.cs">
       <DependentUpon>202103021054161_CreateCarDriverDriverLicencePassport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202103021105298_CreateStaffSerificationRank.cs" />
-    <Compile Include="Migrations\202103021105298_CreateStaffSerificationRank.designer.cs">
+    <Compile Include="DifferentClasses\Migrations\202103021105298_CreateStaffSerificationRank.cs" />
+    <Compile Include="DifferentClasses\Migrations\202103021105298_CreateStaffSerificationRank.designer.cs">
       <DependentUpon>202103021105298_CreateStaffSerificationRank.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202103021107421_CreateStaffSerificationRank1.cs" />
-    <Compile Include="Migrations\202103021107421_CreateStaffSerificationRank1.designer.cs">
+    <Compile Include="DifferentClasses\Migrations\202103021107421_CreateStaffSerificationRank1.cs" />
+    <Compile Include="DifferentClasses\Migrations\202103021107421_CreateStaffSerificationRank1.designer.cs">
       <DependentUpon>202103021107421_CreateStaffSerificationRank1.cs</DependentUpon>
     </Compile>
     <Compile Include="DataBase\Passport.cs" />
     <Compile Include="DataBase\Rank.cs" />
     <Compile Include="DataBase\Sertification.cs" />
     <Compile Include="DataBase\Staff.cs" />
-    <Compile Include="Migrations\202103021115070_CreateInsurancePtc.cs" />
-    <Compile Include="Migrations\202103021115070_CreateInsurancePtc.designer.cs">
+    <Compile Include="DifferentClasses\Migrations\202103021115070_CreateInsurancePtc.cs" />
+    <Compile Include="DifferentClasses\Migrations\202103021115070_CreateInsurancePtc.designer.cs">
       <DependentUpon>202103021115070_CreateInsurancePtc.cs</DependentUpon>
     </Compile>
     <Compile Include="DataBase\Ptc.cs" />
-    <Compile Include="Migrations\202103021117225_CreateCTC.cs" />
-    <Compile Include="Migrations\202103021117225_CreateCTC.designer.cs">
+    <Compile Include="DifferentClasses\Migrations\202103021117225_CreateCTC.cs" />
+    <Compile Include="DifferentClasses\Migrations\202103021117225_CreateCTC.designer.cs">
       <DependentUpon>202103021117225_CreateCTC.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202103021122482_CreateInspectionStatments.cs" />
-    <Compile Include="Migrations\202103021122482_CreateInspectionStatments.designer.cs">
+    <Compile Include="DifferentClasses\Migrations\202103021122482_CreateInspectionStatments.cs" />
+    <Compile Include="DifferentClasses\Migrations\202103021122482_CreateInspectionStatments.designer.cs">
       <DependentUpon>202103021122482_CreateInspectionStatments.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202103021126373_byte.cs" />
-    <Compile Include="Migrations\202103021126373_byte.designer.cs">
+    <Compile Include="DifferentClasses\Migrations\202103021126373_byte.cs" />
+    <Compile Include="DifferentClasses\Migrations\202103021126373_byte.designer.cs">
       <DependentUpon>202103021126373_byte.cs</DependentUpon>
     </Compile>
     <Compile Include="DataBase\Statement.cs" />
-    <Compile Include="Migrations\202103120837264_driverkategory.cs" />
-    <Compile Include="Migrations\202103120837264_driverkategory.designer.cs">
+    <Compile Include="DifferentClasses\Migrations\202103120837264_driverkategory.cs" />
+    <Compile Include="DifferentClasses\Migrations\202103120837264_driverkategory.designer.cs">
       <DependentUpon>202103120837264_driverkategory.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202103121050516_fixDriverLicence.cs" />
-    <Compile Include="Migrations\202103121050516_fixDriverLicence.designer.cs">
+    <Compile Include="DifferentClasses\Migrations\202103121050516_fixDriverLicence.cs" />
+    <Compile Include="DifferentClasses\Migrations\202103121050516_fixDriverLicence.designer.cs">
       <DependentUpon>202103121050516_fixDriverLicence.cs</DependentUpon>
     </Compile>
     <Compile Include="Workwithdriver\Driver\CreateDriver.xaml.cs">
@@ -188,15 +198,27 @@
     <Compile Include="WorkWithTheAvto\WorkWithTheAvto.xaml.cs">
       <DependentUpon>WorkWithTheAvto.xaml</DependentUpon>
     </Compile>
-    <Page Include="CreateInsurances.xaml">
+    <Page Include="CreateInspections.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="WorkWithTheAvto\CreateCar.xaml">
+    <Page Include="WorkWithTheAvto\Create\CreatePTC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="WorkWithTheAvto\CreateCTC.xaml">
+    <Page Include="WorkWithTheAvto\Create\CreateInsurances.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WorkWithTheAvto\Create\CreateStatements.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WorkWithTheAvto\Create\CreateCar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WorkWithTheAvto\Create\CreateCTC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -286,7 +308,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="DifferentClasses\Migrations\Configuration.cs" />
     <Compile Include="DataBase\MyDBconnection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -301,34 +323,34 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Migrations\202103021054161_CreateCarDriverDriverLicencePassport.resx">
+    <EmbeddedResource Include="DifferentClasses\Migrations\202103021054161_CreateCarDriverDriverLicencePassport.resx">
       <DependentUpon>202103021054161_CreateCarDriverDriverLicencePassport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202103021105298_CreateStaffSerificationRank.resx">
+    <EmbeddedResource Include="DifferentClasses\Migrations\202103021105298_CreateStaffSerificationRank.resx">
       <DependentUpon>202103021105298_CreateStaffSerificationRank.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202103021107421_CreateStaffSerificationRank1.resx">
+    <EmbeddedResource Include="DifferentClasses\Migrations\202103021107421_CreateStaffSerificationRank1.resx">
       <DependentUpon>202103021107421_CreateStaffSerificationRank1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202103021115070_CreateInsurancePtc.resx">
+    <EmbeddedResource Include="DifferentClasses\Migrations\202103021115070_CreateInsurancePtc.resx">
       <DependentUpon>202103021115070_CreateInsurancePtc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202103021117225_CreateCTC.resx">
+    <EmbeddedResource Include="DifferentClasses\Migrations\202103021117225_CreateCTC.resx">
       <DependentUpon>202103021117225_CreateCTC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202103021122482_CreateInspectionStatments.resx">
+    <EmbeddedResource Include="DifferentClasses\Migrations\202103021122482_CreateInspectionStatments.resx">
       <DependentUpon>202103021122482_CreateInspectionStatments.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202103021126373_byte.resx">
+    <EmbeddedResource Include="DifferentClasses\Migrations\202103021126373_byte.resx">
       <DependentUpon>202103021126373_byte.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202103120837264_driverkategory.resx">
+    <EmbeddedResource Include="DifferentClasses\Migrations\202103120837264_driverkategory.resx">
       <DependentUpon>202103120837264_driverkategory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202103121050516_fixDriverLicence.resx">
+    <EmbeddedResource Include="DifferentClasses\Migrations\202103121050516_fixDriverLicence.resx">
       <DependentUpon>202103121050516_fixDriverLicence.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104151157537_FixCars.resx">
+    <EmbeddedResource Include="DifferentClasses\Migrations\202104151157537_FixCars.resx">
       <DependentUpon>202104151157537_FixCars.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

@@ -28,6 +28,13 @@ namespace TrafficPolice
             _id = ((MenuItem)sender).Header.ToString();
             CarClass.ID = Convert.ToInt32(_id);
         }
+
+        private void bt_registredCar_Click(object sender, RoutedEventArgs e)
+        {
+            FrameFromNavigation.Visibility = Visibility.Visible;
+            FrameFromNavigation.Navigate(new CreateCar());
+            dgCar.Visibility = Visibility.Hidden;
+        }
     }
 }
 

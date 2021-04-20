@@ -21,9 +21,21 @@ namespace TrafficPolice
     /// </summary>
     public partial class CreateCar : Page
     {
+        Dictionary<int, string> list = new Dictionary<int, string>();
         public CreateCar()
         {
+            list.Clear();
             InitializeComponent();
+            using (MyDBconnection db = new MyDBconnection())
+            {
+                db.Drivers.Load();
+                var driver = db.Drivers.Local;
+                foreach (var item in driver)
+                {
+                    list.Add(item.DriverID, $"{item.FirstName} {item.LastName} {item.Patronymic}");
+                }
+            }
+            cb_Driver.ItemsSource = list;
         }
         public static bool Proverka(Grid group)
         {
@@ -36,7 +48,7 @@ namespace TrafficPolice
                 using (MyDBconnection db = new MyDBconnection())
                 {
                     db.Cars.Load();
-                    if (string.IsNullOrEmpty(db.Cars.Local.Where(x => x.Vin == ((TextBox)group.FindName("tb_Vin")).Text).Count().ToString()))
+                    if (!string.IsNullOrEmpty(db.Cars.Local.Where(x => x.Vin == ((TextBox)group.FindName("tb_Vin")).Text).Count().ToString()))
                     {
 
                     }
@@ -69,18 +81,36 @@ namespace TrafficPolice
             {
                 MessageBox.Show("Регистрационный номер состоит из 6 символов"); return false;
             }
-            if (string.IsNullOrWhiteSpace(((TextBox)group.FindName("tb_bodyNomber")).Text) || ((TextBox)group.FindName("tb_bodyNomber")).Text.Length < 9 || ((TextBox)group.FindName("tb_bodyNomber")).Text.Length > 12)
+            else
+            {
+                try
+                {
+                    int.Parse(((TextBox)group.FindName("tb_ChossingNumber")).Text);
+                }
+                catch
+                {
+                    MessageBox.Show("Регистрационный номер состоит из 6 символов"); return false;
+                }
+            }
+            if (string.IsNullOrWhiteSpace(((TextBox)group.FindName("tb_bodyNomber")).Text))
             {
 
                 MessageBox.Show("Номер кузова состоит от 6 до 9 цифр"); return false;
             }
             else
             {
-                try
+                if (((TextBox)group.FindName("tb_bodyNomber")).Text.Length >= 6 && ((TextBox)group.FindName("tb_bodyNomber")).Text.Length <= 9)
                 {
-                    int.Parse(((TextBox)group.FindName("tb_bodyNomber")).Text);
+                    try
+                    {
+                        int.Parse(((TextBox)group.FindName("tb_bodyNomber")).Text);
+                    }
+                    catch { MessageBox.Show("Номер кузова состоит из цифр"); return false; }
                 }
-                catch { MessageBox.Show("Номер кузова состоит из цифр"); return false; }
+                else
+                {
+                    MessageBox.Show("Номер кузова состоит из цифр"); return false;
+                }
             }
 
             if (string.IsNullOrWhiteSpace(((TextBox)group.FindName("tb_Color")).Text))
@@ -98,23 +128,25 @@ namespace TrafficPolice
 
             using (MyDBconnection db = new MyDBconnection())
             {
+                object di = ((ComboBox)group.FindName("cb_Driver")).SelectedItem;
+                KeyValuePair<int, string> valuePair = (KeyValuePair<int, string>)di;
                 db.Cars.Load();
-                db.Drivers.Load();
-                var driver = db.Drivers.Local.Where(x => x.DriverID == int.Parse(((ComboBox)group.FindName("cb_Driver")).Text)).First();
+                int id = valuePair.Key;
                 Car car = new Car();
                 car.Vin = ((TextBox)group.FindName("tb_Vin")).Text;
                 car.VenhicleType = ((TextBox)group.FindName("tb_CarType")).Text;
                 car.EngineNumber = int.Parse(((TextBox)group.FindName("tb_EngineNumber")).Text);
                 car.BodyNumber = int.Parse(((TextBox)group.FindName("tb_bodyNomber")).Text);
+                car.ChossisNumber = int.Parse(((TextBox)group.FindName("tb_ChossingNumber")).Text);
                 car.Color = ((TextBox)group.FindName("tb_Color")).Text;
                 car.MaxVeigh = int.Parse(((TextBox)group.FindName("tb_MaxWeight")).Text);
                 car.Status = "Не зарегестрированно";
-                car.DriverID = driver.DriverID;
+                car.DriverID =id;
                 db.Cars.Add(car);
                 db.SaveChanges();
                 var car1 = db.Cars.Local.Where(x => x.Vin == ((TextBox)group.FindName("tb_Vin")).Text).First();
                 CarClass.ID = car.CarID;
-                DriverClass.DriverID = driver.DriverID;
+                DriverClass.DriverID = id;
             }
             return true;
         }
@@ -171,7 +203,7 @@ namespace TrafficPolice
 
         private void bt_createCTC_Click(object sender, RoutedEventArgs e)
         {
-
+            DriverClass.DriverDictinary = cb_Driver.Text;
             CreateCTC cr = new CreateCTC();
             cr.ShowDialog();
             ProvDoc(CarClass.ID);
@@ -180,6 +212,29 @@ namespace TrafficPolice
         private void bt_insurance_Click(object sender, RoutedEventArgs e)
         {
             CreateInsurances cr = new CreateInsurances();
+            cr.ShowDialog();
+            ProvDoc(CarClass.ID);
+        }
+
+        private void bt_Statements_Click(object sender, RoutedEventArgs e)
+        {
+            DriverClass.DriverDictinary = cb_Driver.Text;
+            StatementsClass.Code = 0;
+            CreateStatements cr = new CreateStatements();
+            cr.ShowDialog();
+            ProvDoc(CarClass.ID);
+        }
+
+        private void tb_createPTC_Click(object sender, RoutedEventArgs e)
+        {
+            CreatePTC pt = new CreatePTC();
+            pt.ShowDialog();
+            ProvDoc(CarClass.ID);
+        }
+
+        private void bt_createInspections_Click(object sender, RoutedEventArgs e)
+        {
+            CreateInspections cr = new CreateInspections();
             cr.ShowDialog();
             ProvDoc(CarClass.ID);
         }

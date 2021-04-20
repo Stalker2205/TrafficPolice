@@ -78,10 +78,10 @@
                 <TextBlock Grid.Column="1" Grid.Row="4" Text="Заявление" VerticalAlignment="Center"/>
 
                 <Button Grid.Column="2" Grid.Row="0" Content="Создать" Margin="5" x:Name="bt_createCTC" Click="bt_createCTC_Click"/>
-                <Button Grid.Column="2" Grid.Row="1" Content="Создать" Margin="5"/>
+                <Button Grid.Column="2" Grid.Row="1" Content="Создать" Margin="5" x:Name="tb_createPTC" Click="tb_createPTC_Click"/>
                 <Button Grid.Column="2" Grid.Row="2" Content="Создать" Margin="5" x:Name="bt_insurance" Click="bt_insurance_Click"/>
-                <Button Grid.Column="2" Grid.Row="3" Content="Создать" Margin="5"/>
-                <Button Grid.Column="2" Grid.Row="4" Content="Создать" Margin="5"/>
+                <Button Grid.Column="2" Grid.Row="3" Content="Создать" Margin="5" x:Name="bt_createInspections" Click="bt_createInspections_Click"/>
+                <Button Grid.Column="2" Grid.Row="4" Content="Создать" Margin="5" x:Name="bt_Statements" Click="bt_Statements_Click"/>
                 <Button Grid.Column="3" Grid.Row="4" Content="Прикрепить" Margin="5"/>
                 <Button Grid.Column="3" Grid.Row="3" Content="Прикрепить" Margin="5"/>
             </Grid>

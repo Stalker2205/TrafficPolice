@@ -20,14 +20,21 @@ namespace TrafficPolice
     /// </summary>
     public partial class CreateCTC : Window
     {
+        Dictionary<int, string> list = new Dictionary<int, string>();
         public CreateCTC()
         {
+            list.Clear();
             InitializeComponent();
-            using(MyDBconnection db = new MyDBconnection())
+            using (MyDBconnection db = new MyDBconnection())
             {
                 db.Drivers.Load();
-                cb_Owner.ItemsSource = db.Drivers.Local;
-                cb_Owner.Text = CarClass.ID.ToString();
+                var driver = db.Drivers.Local;
+                foreach (var item in driver)
+                {
+                    list.Add(item.DriverID, $"{item.FirstName} {item.LastName} {item.Patronymic}");
+                }
+                cb_Owner.ItemsSource = list;
+                cb_Owner.Text = DriverClass.DriverDictinary;
             }
         }
 
@@ -65,15 +72,20 @@ namespace TrafficPolice
             {
                 MessageBox.Show("Выберите корректную дату"); return false;
             }
-            using(MyDBconnection db = new MyDBconnection())
+            using (MyDBconnection db = new MyDBconnection())
             {
+                Dictionary<int, string> ob = (Dictionary<int, string>)((ComboBox)grid.FindName("cb_Owner")).SelectedItem;
+
                 db.Ctcs.Load();
                 Ctc ctc = new Ctc();
                 ctc.CtcID = CarClass.ID;
                 ctc.CtcNumber = int.Parse(((TextBox)grid.FindName("tb_Number")).Text);
                 ctc.CtcSeries = ((TextBox)grid.FindName("tb_Series")).Text;
                 ctc.DateOfIssue = ((DatePicker)grid.FindName("dp_DateOfIssue")).SelectedDate.Value;
-                ctc.Owner =int.Parse( ((ComboBox)grid.FindName("cb_Owner")).Text);
+                foreach (var item in ob)
+                {
+                    ctc.Owner = item.Key ;
+                }
                 db.Ctcs.Add(ctc);
                 db.SaveChanges();
             }

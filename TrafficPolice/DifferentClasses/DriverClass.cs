@@ -17,7 +17,8 @@ namespace TrafficPolice
             Category.Add("Tb", false);
             return Category;
         }
-        public static int? DriverID = null;
+        public static int? DriverID = 1;
+        public static string DriverDictinary = string.Empty;
         public static bool key = false;
 
 

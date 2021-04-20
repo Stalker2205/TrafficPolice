@@ -1,5 +1,9 @@
 ﻿
 FC:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\App.xaml;;
+FC:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\WorkWithTheAvto\Create\CreateInsurances.xaml;;
+FC:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\WorkWithTheAvto\Create\CreateStatements.xaml;;
+FC:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\WorkWithTheAvto\Create\CreateCar.xaml;;
+FC:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\WorkWithTheAvto\Create\CreateCTC.xaml;;
 FC:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\Workwithdriver\DriverLicence\AllDriverLicense.xaml;;
 FC:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\Workwithdriver\DriverLicence\ViewDriverLicence.xaml;;
 FC:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\Workwithdriver\DriverLicence\CreateDriverLicence.xaml;;
@@ -19,7 +23,6 @@ FC:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\SerchavtoALL\SerchInCars
 FC:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\Workwithdriver\SerchDriverID.xaml;;
 FC:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\Workwithdriver\WorkWithTheDriver.xaml;;
 FC:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\WorkWithTheAvto\WorkWithTheAvto.xaml;;
-FC:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\CreateInsurances.xaml;;
-FC:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\WorkWithTheAvto\CreateCar.xaml;;
-FC:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\WorkWithTheAvto\CreateCTC.xaml;;
+FC:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\CreateInspections.xaml;;
+FC:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\WorkWithTheAvto\Create\CreatePTC.xaml;;
 

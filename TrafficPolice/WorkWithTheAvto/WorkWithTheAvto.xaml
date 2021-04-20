@@ -80,7 +80,7 @@
 
                 <Menu Background="Transparent" >
                     <MenuItem Header="Отобразить все авто"/>
-                    <MenuItem Header="зарегистрировать"/>
+                    <MenuItem Header="зарегистрировать" x:Name="bt_registredCar" Click="bt_registredCar_Click"/>
                     <MenuItem Header="Найти"/>
                 </Menu>
             </StackPanel>

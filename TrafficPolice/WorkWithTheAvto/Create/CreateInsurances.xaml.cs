@@ -82,6 +82,8 @@ namespace TrafficPolice
         private void bt_createInsurants_Click(object sender, RoutedEventArgs e)
         {
             proverk(InsurancesGrid);
+            MessageBox.Show("Успешно!");
+            Close();
         }
     }
 }
