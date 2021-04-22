@@ -24,11 +24,11 @@ namespace TrafficPolice
         {
             InitializeComponent();
         }
-        public static void proverk(Grid grid)
+        public static bool proverk(Grid grid)
         {
             if (string.IsNullOrWhiteSpace(((TextBox)grid.FindName("tb_Number")).Text) || ((TextBox)grid.FindName("tb_Number")).Text.Length != 4)
             {
-                MessageBox.Show("Номер страховки состоит из 4-х цифр!"); return;
+                MessageBox.Show("Номер страховки состоит из 4-х цифр!"); return false;
             }
             else
             {
@@ -36,11 +36,11 @@ namespace TrafficPolice
                 {
                     int.Parse(((TextBox)grid.FindName("tb_Number")).Text);
                 }
-                catch { MessageBox.Show("Номер страховки состоит из 4-х цифр!"); return; }
+                catch { MessageBox.Show("Номер страховки состоит из 4-х цифр!"); return false; }
             }
             if (string.IsNullOrWhiteSpace(((TextBox)grid.FindName("tb_Series")).Text) || ((TextBox)grid.FindName("tb_Series")).Text.Length != 6)
             {
-                MessageBox.Show("Серия страховки состоит из 6 цифр!"); return;
+                MessageBox.Show("Серия страховки состоит из 6 цифр!"); return false;
             }
             else
             {
@@ -48,22 +48,22 @@ namespace TrafficPolice
                 {
                     int.Parse(((TextBox)grid.FindName("tb_Series")).Text);
                 }
-                catch { MessageBox.Show("Номер страховки состоит из 6 цифр!"); return; }
+                catch { MessageBox.Show("Номер страховки состоит из 6 цифр!"); return false; }
             }
             if (!((DatePicker)grid.FindName("dp_DateStart")).SelectedDate.HasValue || ((DatePicker)grid.FindName("dp_DateStart")).SelectedDate > DateTime.Now)
             {
-                MessageBox.Show("Дата начала должна быть выбрана и не может быть в будущем"); return;
+                MessageBox.Show("Дата начала должна быть выбрана и не может быть в будущем"); return false;
 
             }
             if (!((DatePicker)grid.FindName("db_DateEnd")).SelectedDate.HasValue || ((DatePicker)grid.FindName("dp_DateStart")).SelectedDate > ((DatePicker)grid.FindName("db_DateEnd")).SelectedDate)
             {
-                MessageBox.Show("Дата конца должна быть выбрана и не может быть раньше даты начала"); return;
+                MessageBox.Show("Дата конца должна быть выбрана и не может быть раньше даты начала"); return false;
             }
             if (string.IsNullOrWhiteSpace(((TextBox)grid.FindName("cb_Insurant")).Text))
             {
-                MessageBox.Show("Страхователь не может быть Null");return;
+                MessageBox.Show("Страхователь не может быть Null"); return false;
             }
-            using(MyDBconnection db = new MyDBconnection())
+            using (MyDBconnection db = new MyDBconnection())
             {
                 db.Insurances.Load();
                 Insurance ins = new Insurance();
@@ -76,14 +76,16 @@ namespace TrafficPolice
                 db.Insurances.Add(ins);
                 db.SaveChanges();
             }
-            return;
+            return true;
         }
 
         private void bt_createInsurants_Click(object sender, RoutedEventArgs e)
         {
-            proverk(InsurancesGrid);
-            MessageBox.Show("Успешно!");
-            Close();
+            if (proverk(InsurancesGrid))
+            {
+                MessageBox.Show("Успешно!");
+                Close();
+            }
         }
     }
 }

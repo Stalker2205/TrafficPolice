@@ -24,11 +24,11 @@ namespace TrafficPolice
         {
             InitializeComponent();
         }
-        public static void Proverki(Grid grid)
+        public static bool Proverki(Grid grid)
         {
             if (string.IsNullOrWhiteSpace(((TextBox)grid.FindName("tb_Number")).Text) || ((TextBox)grid.FindName("tb_Number")).Text.Length != 6)
             {
-                MessageBox.Show("Номер состоит из 6 цифр"); return;
+                MessageBox.Show("Номер состоит из 6 цифр"); return false;
             }
             else
             {
@@ -36,11 +36,11 @@ namespace TrafficPolice
                 {
                     int.Parse(((TextBox)grid.FindName("tb_Number")).Text);
                 }
-                catch { MessageBox.Show("Номер состоит из 6 цифр"); return; }
+                catch { MessageBox.Show("Номер состоит из 6 цифр"); return false; }
             }
-            if (string.IsNullOrWhiteSpace(((TextBox)grid.FindName("tb_Series")).Text) || ((TextBox)grid.FindName("tb_Series")).Text.Length != 6)
+            if (string.IsNullOrWhiteSpace(((TextBox)grid.FindName("tb_Series")).Text) || ((TextBox)grid.FindName("tb_Series")).Text.Length != 4)
             {
-                MessageBox.Show("Номер состоит из 2-х цифр и 2-х букв"); return;
+                MessageBox.Show("Серия состоит из 2-х цифр и 2-х букв"); return false;
             }
             else
             {
@@ -49,11 +49,11 @@ namespace TrafficPolice
                     int.Parse(((TextBox)grid.FindName("tb_Series")).Text[0].ToString());
                     int.Parse(((TextBox)grid.FindName("tb_Series")).Text[1].ToString());
                 }
-                catch { MessageBox.Show("Номер состоит из 2-х цифр и 2-х букв"); return; }
+                catch { MessageBox.Show("Серия состоит из 2-х цифр и 2-х букв"); return false; }
             }
             if (string.IsNullOrWhiteSpace(((TextBox)grid.FindName("tb_YearOfManufacture")).Text) || ((TextBox)grid.FindName("tb_YearOfManufacture")).Text.Length != 4)
             {
-                MessageBox.Show("Год состоит из 4-х цифр"); return;
+                MessageBox.Show("Год состоит из 4-х цифр"); return false;
             }
             else
             {
@@ -61,11 +61,11 @@ namespace TrafficPolice
                 {
                     int.Parse(((TextBox)grid.FindName("tb_YearOfManufacture")).Text);
                 }
-                catch { MessageBox.Show("Год состоит из 4-х цифр"); return; }
+                catch { MessageBox.Show("Год состоит из 4-х цифр"); return false; }
             }
             if (string.IsNullOrWhiteSpace(((TextBox)grid.FindName("tb_EngineVolume")).Text))
             {
-                MessageBox.Show("Объем двигателя не может быть null");return;
+                MessageBox.Show("Объем двигателя не может быть null"); return false;
             }
             else
             {
@@ -73,29 +73,30 @@ namespace TrafficPolice
                 {
                     int.Parse(((TextBox)grid.FindName("tb_EngineVolume")).Text);
                 }
-                catch { MessageBox.Show("Объем двигателя должен быть числом");return; }
+                catch { MessageBox.Show("Объем двигателя должен быть числом"); return false; }
             }
             if (string.IsNullOrWhiteSpace(((TextBox)grid.FindName("tb_EngineType")).Text))
             {
-                MessageBox.Show("Тип двигателя не может быть Null");return;
+                MessageBox.Show("Тип двигателя не может быть Null"); return false;
             }
             if (string.IsNullOrWhiteSpace(((TextBox)grid.FindName("tb_EcoClass")).Text))
             {
-                MessageBox.Show("Эко класс не может быть Null"); return;
+                MessageBox.Show("Эко класс не может быть Null"); return false;
             }
             if (string.IsNullOrWhiteSpace(((TextBox)grid.FindName("tb_Manufacture")).Text))
             {
-                MessageBox.Show("Производитель не может быть Null"); return;
+                MessageBox.Show("Производитель не может быть Null"); return false;
             }
             if (!((DatePicker)grid.FindName("tb_DateOut")).SelectedDate.HasValue)
             {
-                MessageBox.Show("Дата выдачи не может быть Null"); return;
+                MessageBox.Show("Дата выдачи не может быть Null"); return false;
             }
+            return true;
         }
 
         public static void CreatePtc(Grid grid)
         {
-            using(MyDBconnection db = new MyDBconnection())
+            using (MyDBconnection db = new MyDBconnection())
             {
                 db.Ptcs.Load();
                 Ptc pt = new Ptc();
@@ -116,10 +117,12 @@ namespace TrafficPolice
 
         private void bt_CreatePTC_Click(object sender, RoutedEventArgs e)
         {
-            Proverki(grid_Maingrid);
-            CreatePtc(grid_Maingrid);
-            MessageBox.Show("Успешно");
-            Close();
+            if (Proverki(grid_Maingrid))
+            {
+                CreatePtc(grid_Maingrid);
+                MessageBox.Show("Успешно");
+                Close();
+            }
         }
     }
 }

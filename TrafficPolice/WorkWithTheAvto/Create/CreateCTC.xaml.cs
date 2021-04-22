@@ -40,9 +40,9 @@ namespace TrafficPolice
 
         public static bool Proverk(Grid grid)
         {
-            if (string.IsNullOrWhiteSpace(((TextBox)grid.FindName("tb_Series")).Text))
+            if (string.IsNullOrWhiteSpace(((TextBox)grid.FindName("tb_Series")).Text) || ((TextBox)grid.FindName("tb_Series")).Text.Length != 6) 
             {
-                MessageBox.Show("Серия не должна быть Null"); return false;
+                MessageBox.Show("Серия состоит из 6 цифр"); return false;
             }
             else
             {
@@ -52,7 +52,7 @@ namespace TrafficPolice
                 }
                 catch { MessageBox.Show("Серия должна быть числом"); return false; }
             }
-            if (string.IsNullOrWhiteSpace(((TextBox)grid.FindName("tb_Series")).Text))
+            if (string.IsNullOrWhiteSpace(((TextBox)grid.FindName("tb_Number")).Text)|| ((TextBox)grid.FindName("tb_Number")).Text.Length != 4)
             {
                 MessageBox.Show("Номер не должен быть Null"); return false;
             }
@@ -68,24 +68,20 @@ namespace TrafficPolice
             {
                 MessageBox.Show("Выберите владельца"); return false;
             }
-            if (((DatePicker)grid.FindName("dp_DateOfIssue")).SelectedDate.HasValue || ((DatePicker)grid.FindName("dp_DateOfIssue")).DisplayDate > DateTime.Now)
+            if (!(((DatePicker)grid.FindName("dp_DateOfIssue")).SelectedDate.HasValue) || ((DatePicker)grid.FindName("dp_DateOfIssue")).DisplayDate > DateTime.Now)
             {
                 MessageBox.Show("Выберите корректную дату"); return false;
             }
             using (MyDBconnection db = new MyDBconnection())
             {
-                Dictionary<int, string> ob = (Dictionary<int, string>)((ComboBox)grid.FindName("cb_Owner")).SelectedItem;
-
+                KeyValuePair<int, string> keyValue = (KeyValuePair<int, string>)((ComboBox)grid.FindName("cb_Owner")).SelectedItem;
                 db.Ctcs.Load();
                 Ctc ctc = new Ctc();
                 ctc.CtcID = CarClass.ID;
                 ctc.CtcNumber = int.Parse(((TextBox)grid.FindName("tb_Number")).Text);
                 ctc.CtcSeries = ((TextBox)grid.FindName("tb_Series")).Text;
                 ctc.DateOfIssue = ((DatePicker)grid.FindName("dp_DateOfIssue")).SelectedDate.Value;
-                foreach (var item in ob)
-                {
-                    ctc.Owner = item.Key ;
-                }
+                ctc.Owner = keyValue.Key;
                 db.Ctcs.Add(ctc);
                 db.SaveChanges();
             }

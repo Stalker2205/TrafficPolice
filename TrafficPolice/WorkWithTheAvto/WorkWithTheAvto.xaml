@@ -26,11 +26,12 @@
                         <DataTemplate>
                             <Menu VerticalAlignment="Center" HorizontalAlignment="Center">
                                 <MenuItem Header="{Binding CarID}" SubmenuOpened="MenuItem_SubmenuOpened_1">
-                                    <MenuItem Header="СТС"/>
-                                    <MenuItem Header="ПТС"/>
-                                    <MenuItem Header="Страховка"/>
-                                    <MenuItem Header="Тех.Осмотр"/>
-                                    <MenuItem Header="Заявления"/>
+                                    <MenuItem Header="Просмотр" x:Name="bt_openInfoWithAvto" Click="bt_openInfoWithAvto_Click"/>
+                                    <MenuItem Header="СТС" x:Name="bt_OpenCTC" Click="bt_OpenCTC_Click"/>
+                                    <MenuItem Header="ПТС" x:Name="tb_OpenPTC" Click="tb_OpenPTC_Click"/>
+                                    <MenuItem Header="Страховка" x:Name="bt_OpenInsurance" Click="bt_OpenInsurance_Click"/>
+                                    <MenuItem Header="Тех.Осмотр" x:Name="tb_OpenInspections" Click="tb_OpenInspections_Click"/>
+                                    <MenuItem Header="Заявления" x:Name="bt_OpenStatement" Click="bt_OpenStatement_Click"/>
                                 </MenuItem>
                             </Menu>
                         </DataTemplate>
@@ -79,7 +80,7 @@
             <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
 
                 <Menu Background="Transparent" >
-                    <MenuItem Header="Отобразить все авто"/>
+                    <MenuItem Header="Отобразить все авто" x:Name="bt_WiewAllCars" Click="bt_WiewAllCars_Click"/>
                     <MenuItem Header="зарегистрировать" x:Name="bt_registredCar" Click="bt_registredCar_Click"/>
                     <MenuItem Header="Найти"/>
                 </Menu>

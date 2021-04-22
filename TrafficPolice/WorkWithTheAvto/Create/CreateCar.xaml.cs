@@ -43,23 +43,6 @@ namespace TrafficPolice
             {
                 MessageBox.Show($"Vin состоит из 17 символов, вы ввели {((TextBox)group.FindName("tb_Vin")).Text.Length} "); return false;
             }
-            else
-            {
-                using (MyDBconnection db = new MyDBconnection())
-                {
-                    db.Cars.Load();
-                    if (!string.IsNullOrEmpty(db.Cars.Local.Where(x => x.Vin == ((TextBox)group.FindName("tb_Vin")).Text).Count().ToString()))
-                    {
-
-                    }
-                    else
-                    {
-                        MessageBox.Show("Такой vin уже существует");
-                        return false;
-                    }
-
-                }
-            }
 
             if (string.IsNullOrWhiteSpace(((TextBox)group.FindName("tb_CarType")).Text))
             {
@@ -128,9 +111,28 @@ namespace TrafficPolice
 
             using (MyDBconnection db = new MyDBconnection())
             {
+                db.Cars.Load();
+                if (db.Cars.Local.Where(x => x.Vin == ((TextBox)group.FindName("tb_Vin")).Text).Count() != 0)
+                {
+                    MessageBox.Show("Такой Vin уже существует"); return false;
+                }
+                if (db.Cars.Local.Where(x => x.EngineNumber == int.Parse(((TextBox)group.FindName("tb_EngineNumber")).Text)).Count() != 0)
+                {
+                    MessageBox.Show("Такой Номер двигателя уже существует"); return false;
+                }
+                if (db.Cars.Local.Where(x => x.ChossisNumber == int.Parse(((TextBox)group.FindName("tb_ChossingNumber")).Text)).Count() != 0)
+                {
+                    MessageBox.Show("Такой Регистрационный номер уже существует"); return false;
+                }
+
+                if (db.Cars.Local.Where(x => x.BodyNumber == int.Parse(((TextBox)group.FindName("tb_bodyNomber")).Text)).Count() != 0)
+                {
+                    MessageBox.Show("Такой номер кузова уже существует"); return false;
+                }
+
+                #region Creating
                 object di = ((ComboBox)group.FindName("cb_Driver")).SelectedItem;
                 KeyValuePair<int, string> valuePair = (KeyValuePair<int, string>)di;
-                db.Cars.Load();
                 int id = valuePair.Key;
                 Car car = new Car();
                 car.Vin = ((TextBox)group.FindName("tb_Vin")).Text;
@@ -141,12 +143,16 @@ namespace TrafficPolice
                 car.Color = ((TextBox)group.FindName("tb_Color")).Text;
                 car.MaxVeigh = int.Parse(((TextBox)group.FindName("tb_MaxWeight")).Text);
                 car.Status = "Не зарегестрированно";
-                car.DriverID =id;
+                car.DriverID = id;
                 db.Cars.Add(car);
                 db.SaveChanges();
                 var car1 = db.Cars.Local.Where(x => x.Vin == ((TextBox)group.FindName("tb_Vin")).Text).First();
                 CarClass.ID = car.CarID;
+                CarClass.ChossisNumber = int.Parse(((TextBox)group.FindName("tb_ChossingNumber")).Text);
+                CarClass.BodyNumber =int.Parse( ((TextBox)group.FindName("tb_bodyNomber")).Text);
+                CarClass.Vin = ((TextBox)group.FindName("tb_Vin")).Text;
                 DriverClass.DriverID = id;
+                #endregion
             }
             return true;
         }

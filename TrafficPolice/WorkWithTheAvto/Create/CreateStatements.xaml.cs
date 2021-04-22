@@ -80,6 +80,15 @@ namespace TrafficPolice
                 cb_Cause.ItemsSource = registr;
                 tb_car.Text = CarClass.ID.ToString();
             }
+            else if (StatementsClass.Code == 1)
+            {
+                cb_Aplicant.IsEnabled = false;
+                cb_Aplicant.Text = DriverClass.DriverDictinary;
+                cb_Cause.IsEnabled = true;
+                cb_Cause.ItemsSource = registr;
+                tb_car.Text = CarClass.ID.ToString();
+                tb_car.IsEnabled = false;
+            }
         }
 
         private void cb_Act_DropDownClosed(object sender, EventArgs e)

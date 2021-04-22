@@ -1,11 +1,11 @@
-﻿<Window x:Class="TrafficPolice.CreateInspections"
+﻿<Window x:Class="TrafficPolice.OpenInspections"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TrafficPolice"
         mc:Ignorable="d"
-        Title="CreateInspections" Height="450" Width="800" ResizeMode="NoResize">
+        Title="OpenInspections" Height="450" Width="800" ResizeMode="NoResize">
     <Grid Background="Gray">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.02*"/>
@@ -17,7 +17,7 @@
             <RowDefinition/>
             <RowDefinition Height="0.05*"/>
         </Grid.RowDefinitions>
-        <Grid Grid.Column="1" Grid.Row="1" x:Name="grid_main">
+        <Grid Grid.Column="1" Grid.Row="1" x:Name="grid_main" IsEnabled="False">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
@@ -47,14 +47,14 @@
                 <TextBlock Grid.Column="0" Grid.Row="6" Text="Место осмотра" VerticalAlignment="Center" />
                 <TextBlock Grid.Column="0" Grid.Row="7" Text="Разрешена ли эксплуатация" VerticalAlignment="Center" />
 
-                <TextBox Grid.Column="1" Grid.Row="0" Margin="5" x:Name="tb_RegistrationNumber"/>
-                <DatePicker VerticalAlignment="Center" Grid.Column="1" Grid.Row="1" Margin="5" x:Name="tb_EndDate"/>
-                <TextBox Grid.Column="1" Grid.Row="2" Margin="5" x:Name="tb_Vin"/>
-                <TextBox Grid.Column="1" Grid.Row="3" Margin="5" x:Name="tb_ChossisNumber"/>
-                <TextBox Grid.Column="1" Grid.Row="4" Margin="5" x:Name="tb_BodyNumber"/>
-                <TextBox Grid.Column="1" Grid.Row="5" Margin="5" x:Name="tb_Model"/>
-                <TextBox Grid.Column="1" Grid.Row="6" Margin="5" x:Name="tb_PlaceOfInspaction"/>
-                <CheckBox VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="7" Margin="5" x:Name="cb_Expl"/>
+                <TextBox Grid.Column="1" Grid.Row="0" Margin="5" x:Name="tb_RegistrationNumber" Text="{Binding RegistrationNumber}"/>
+                <TextBox Grid.Column="1" Grid.Row="1" Margin="5" x:Name="tb_EndDate" Text="{Binding EndDate}"/>
+                <TextBox Grid.Column="1" Grid.Row="2" Margin="5" x:Name="tb_Vin" Text="{Binding Vin}"/>
+                <TextBox Grid.Column="1" Grid.Row="3" Margin="5" x:Name="tb_ChossisNumber" Text="{Binding ChossisNumber}"/>
+                <TextBox Grid.Column="1" Grid.Row="4" Margin="5" x:Name="tb_BodyNumber" Text="{Binding BodyNumber}"/>
+                <TextBox Grid.Column="1" Grid.Row="5" Margin="5" x:Name="tb_Model" Text="{Binding Model}"/>
+                <TextBox Grid.Column="1" Grid.Row="6" Margin="5" x:Name="tb_PlaceOfInspaction" Text="{Binding PlaceOfInspaction}"/>
+                <CheckBox VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="7" Margin="5" x:Name="cb_Expl" IsChecked="{Binding UsingCar}"/>
             </Grid>
             <Grid Grid.Column="1">
                 <Grid.RowDefinitions>
@@ -67,9 +67,8 @@
                         <RowDefinition/>
                     </Grid.RowDefinitions>
                     <TextBlock Text="Неисправности" VerticalAlignment="Center" TextAlignment="Center"/>
-                    <TextBox Grid.Row="1" Background="LightGray" Margin="5,0,0,5" x:Name="tb_Malfunctions"/>
+                    <TextBox Grid.Row="1" Background="LightGray" Margin="5,0,0,5" x:Name="tb_Malfunctions" Text="{Binding Malfunctions}"/>
                 </Grid>
-                <Button Grid.Row="1" Margin="5,0,0,0" Content="Создать" VerticalContentAlignment="Center" x:Name="bt_CreateINspection" Click="bt_CreateINspection_Click"/>
             </Grid>
         </Grid>
     </Grid>

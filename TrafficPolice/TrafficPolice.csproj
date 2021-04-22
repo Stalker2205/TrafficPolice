@@ -67,7 +67,25 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="CreateInspections.xaml.cs">
+    <Compile Include="WorkWithTheAvto\Open\OpenInsurances.xaml.cs">
+      <DependentUpon>OpenInsurances.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WorkWithTheAvto\Open\OpenStatements.xaml.cs">
+      <DependentUpon>OpenStatements.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WorkWithTheAvto\Open\OpenInspections.xaml.cs">
+      <DependentUpon>OpenInspections.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WorkWithTheAvto\Open\OpenPTC.xaml.cs">
+      <DependentUpon>OpenPTC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WorkWithTheAvto\Open\OpenCTC.xaml.cs">
+      <DependentUpon>OpenCTC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WorkWithTheAvto\Open\OpenCarInfo.xaml.cs">
+      <DependentUpon>OpenCarInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WorkWithTheAvto\Create\CreateInspections.xaml.cs">
       <DependentUpon>CreateInspections.xaml</DependentUpon>
     </Compile>
     <Compile Include="WorkWithTheAvto\Create\CreatePTC.xaml.cs">
@@ -198,7 +216,31 @@
     <Compile Include="WorkWithTheAvto\WorkWithTheAvto.xaml.cs">
       <DependentUpon>WorkWithTheAvto.xaml</DependentUpon>
     </Compile>
-    <Page Include="CreateInspections.xaml">
+    <Page Include="WorkWithTheAvto\Open\OpenInsurances.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WorkWithTheAvto\Open\OpenStatements.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WorkWithTheAvto\Open\OpenInspections.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WorkWithTheAvto\Open\OpenPTC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WorkWithTheAvto\Open\OpenCTC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WorkWithTheAvto\Open\OpenCarInfo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WorkWithTheAvto\Create\CreateInspections.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
