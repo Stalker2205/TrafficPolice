@@ -18,6 +18,8 @@ namespace TrafficPolice
         public List<Sertification> Sertifications { get; set; }
         public int? SertificationID { get; set; }
         public int RankID { get; set; }
+        List<Raports> Raports { get; set; }
+        List<Dtp> Dtps { get; set; }
 
     }
 }
