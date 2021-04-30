@@ -69,6 +69,9 @@
     </ApplicationDefinition>
     <Compile Include="Dtp.cs" />
     <Compile Include="DtpCar.cs" />
+    <Compile Include="MainInfo.xaml.cs">
+      <DependentUpon>MainInfo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\202104291025220_ADDRaports.cs" />
     <Compile Include="Migrations\202104291025220_ADDRaports.designer.cs">
       <DependentUpon>202104291025220_ADDRaports.cs</DependentUpon>
@@ -227,6 +230,10 @@
     <Compile Include="WorkWithTheAvto\WorkWithTheAvto.xaml.cs">
       <DependentUpon>WorkWithTheAvto.xaml</DependentUpon>
     </Compile>
+    <Page Include="MainInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="WorkWithTheAvto\Open\OpenInsurances.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

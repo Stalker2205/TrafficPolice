@@ -15,6 +15,7 @@ namespace TrafficPolice
             InitializeComponent();
             LoginF loginF = new LoginF();
             loginF.ShowDialog();
+            FormPage.Navigate(new MainInfo());
 
             //#region Login
             //if (!LoginClass.key) { Close(); }

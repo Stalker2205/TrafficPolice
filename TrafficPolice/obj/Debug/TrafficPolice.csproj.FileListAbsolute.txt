@@ -351,3 +351,5 @@ C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\WorkWithTheAvto
 C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\WorkWithTheAvto\Open\OpenInsurances.baml
 C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\TrafficPolice.Migrations.ADDRaports.resources
 C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\TrafficPolice.Migrations.addDTPAndDTPCar.resources
+C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\MainInfo.g.cs
+C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\MainInfo.baml
