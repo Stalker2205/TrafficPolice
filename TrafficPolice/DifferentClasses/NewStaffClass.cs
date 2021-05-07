@@ -11,6 +11,7 @@ namespace TrafficPolice
     class NewStaffClass
     {
         public static int id;
+        public static bool key = false;
         public static bool serchID(string login, string password)
         {
             using (MyDBconnection db = new MyDBconnection())

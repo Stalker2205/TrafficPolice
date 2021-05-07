@@ -62,8 +62,11 @@ namespace TrafficPolice
                 sr.SertificationSeries = int.Parse(tb_series.Text);
                 sr.SertificationPosition = tb_Position.Text;
                 sr.ValidUnit = dp_ValidUnit.DisplayDate;
-                
+                sr.StaffID = NewStaffClass.id;
+                db.Sertifications.Add(sr);
+                db.SaveChanges();
             }
+            Close();
         }
     }
 }

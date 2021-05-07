@@ -96,6 +96,15 @@ namespace TrafficPolice
                 db.SaveChanges();
             }
             NewStaffClass.serchID(tb_login.Text, pb_Password.Password);
+            bt_CreateYdost.IsEnabled = true;
+            MessageBox.Show("Создано");
+            bt_SaveStaff.IsEnabled = false;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            CreatwSerificateWindow dd = new CreatwSerificateWindow();
+            dd.ShowDialog();
         }
     }
 }

@@ -67,10 +67,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="CreateStaff.xaml.cs">
+    <Compile Include="ForDutyWork\MenuItemCollection\Staff\CreateStaff.xaml.cs">
       <DependentUpon>CreateStaff.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CreatwSerificateWindow.xaml.cs">
+    <Compile Include="ForDutyWork\MenuItemCollection\Staff\CreatwSerificateWindow.xaml.cs">
       <DependentUpon>CreatwSerificateWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="DataBase\Dtp.cs" />
@@ -101,7 +101,7 @@
     <Compile Include="Migrations\202105071323132_addIDStaff.designer.cs">
       <DependentUpon>202105071323132_addIDStaff.cs</DependentUpon>
     </Compile>
-    <Compile Include="NewStaffClass.cs" />
+    <Compile Include="DifferentClasses\NewStaffClass.cs" />
     <Compile Include="WorkWithTheAvto\Open\OpenInsurances.xaml.cs">
       <DependentUpon>OpenInsurances.xaml</DependentUpon>
     </Compile>
@@ -251,11 +251,11 @@
     <Compile Include="WorkWithTheAvto\WorkWithTheAvto.xaml.cs">
       <DependentUpon>WorkWithTheAvto.xaml</DependentUpon>
     </Compile>
-    <Page Include="CreateStaff.xaml">
+    <Page Include="ForDutyWork\MenuItemCollection\Staff\CreateStaff.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="CreatwSerificateWindow.xaml">
+    <Page Include="ForDutyWork\MenuItemCollection\Staff\CreatwSerificateWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

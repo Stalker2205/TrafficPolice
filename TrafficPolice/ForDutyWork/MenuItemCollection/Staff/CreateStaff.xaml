@@ -69,7 +69,7 @@
                         </Grid.RowDefinitions>
                         <Button Grid.Row="0" Content="Выбрать фото" Width="200" Margin="2" x:Name="bt_serchPhoto" Click="bt_serchPhoto_Click"/>
                         <Button Grid.Row="1" Content="Сохранить" Width="200" Margin="2" x:Name="bt_SaveStaff" Click="bt_SaveStaff_Click"/>
-                        <Button Grid.Row="2" Content="Удостоверение" Width="200" Margin="2"/>
+                        <Button Grid.Row="2" Content="Удостоверение" Width="200" Margin="2" x:Name="bt_CreateYdost" IsEnabled="False" Click="Button_Click"/>
                     </Grid>
                 </Grid>
             </GroupBox>
