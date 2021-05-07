@@ -92,6 +92,7 @@ namespace TrafficPolice
                 st.Login = tb_login.Text;
                 st.Password = pb_Password.Password;
                 st.RankID = db.Ranks.Local.Where(x => x.RankName == cb_Rank.Text).First().RankID;
+                st.Status = "Работает";
                 db.Staffs.Add(st);
                 db.SaveChanges();
             }

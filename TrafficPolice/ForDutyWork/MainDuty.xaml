@@ -28,7 +28,7 @@
             <Menu FontSize="15" Grid.Row="0" Background="Transparent" VerticalAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Center">
                 <MenuItem Header="Дтп"/>
                 <MenuItem Header="Рапорт" Click="MenuItem_Click"/>
-                <MenuItem Header="Отчеты"/>
+                <MenuItem Header="Отчеты" x:Name="bt_Reports" Click="bt_Reports_Click"/>
                 <MenuItem Header="Сотрудники">
                     <MenuItem Header="Отобразить всех" Click="MenuItem_Click_2"/>
                     <MenuItem Header="Прием" Click="MenuItem_Click_1"/>
@@ -41,28 +41,28 @@
                             <DataTemplate>
                                 <Menu VerticalAlignment="Center" HorizontalAlignment="Center">
                                     <MenuItem Header="{Binding StaffID}" SubmenuOpened="MenuItem_SubmenuOpened">
-                                        <MenuItem Header="Удостоверение"/>
-                                        <MenuItem Header="Уволить"/>
+                                        <MenuItem Header="Удостоверение" x:Name="bt_viewSertification" Click="bt_viewSertification_Click"/>
+                                        <MenuItem Header="Уволить" x:Name="bt_YvolStaff" Click="Bt_YvolStaff_Click"/>
                                     </MenuItem>
                                 </Menu>
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
-                    <DataGridTemplateColumn Header="Имя">
+                    <DataGridTemplateColumn Header="Имя" IsReadOnly="True">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding FirstName}"/>
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
-                    <DataGridTemplateColumn Header="Фамилия">
+                    <DataGridTemplateColumn Header="Фамилия" IsReadOnly="True">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding Lastname}"/>
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
-                    <DataGridTemplateColumn Header="Логин">
+                    <DataGridTemplateColumn Header="Логин" IsReadOnly="True">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding Login}"/>

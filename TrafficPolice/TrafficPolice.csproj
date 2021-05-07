@@ -49,6 +49,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -102,8 +103,22 @@
       <DependentUpon>202105071323132_addIDStaff.cs</DependentUpon>
     </Compile>
     <Compile Include="DifferentClasses\NewStaffClass.cs" />
-    <Compile Include="ViewSertificateWindow.xaml.cs">
+    <Compile Include="Migrations\202105072003400_fixStaff.cs" />
+    <Compile Include="Migrations\202105072003400_fixStaff.designer.cs">
+      <DependentUpon>202105072003400_fixStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ForDutyWork\MenuItemCollection\Sertification\ViewSertificateWindow.xaml.cs">
       <DependentUpon>ViewSertificateWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ForDutyWork\Reports\ReportsPage.xaml.cs">
+      <DependentUpon>ReportsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105072057588_fixCarRaports.cs" />
+    <Compile Include="Migrations\202105072057588_fixCarRaports.designer.cs">
+      <DependentUpon>202105072057588_fixCarRaports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportStaffRankPage.xaml.cs">
+      <DependentUpon>ReportStaffRankPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="WorkWithTheAvto\Open\OpenInsurances.xaml.cs">
       <DependentUpon>OpenInsurances.xaml</DependentUpon>
@@ -274,7 +289,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ViewSertificateWindow.xaml">
+    <Page Include="ForDutyWork\MenuItemCollection\Sertification\ViewSertificateWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ForDutyWork\Reports\ReportsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ReportStaffRankPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -469,6 +492,12 @@
     <EmbeddedResource Include="Migrations\202105071323132_addIDStaff.resx">
       <DependentUpon>202105071323132_addIDStaff.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105072003400_fixStaff.resx">
+      <DependentUpon>202105072003400_fixStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105072057588_fixCarRaports.resx">
+      <DependentUpon>202105072057588_fixCarRaports.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -489,8 +518,9 @@
     <Resource Include="GridBorder.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Удостоверение.png" />
+    <Resource Include="ForDutyWork\MenuItemCollection\Sertification\Удостоверение.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

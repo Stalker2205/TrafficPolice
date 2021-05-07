@@ -16,7 +16,5 @@ namespace TrafficPolice
         public string RaportText { get; set; }
         public Staff Staff { get; set; }
         public int StaffID { get; set; }
-        public Car Car { get; set; }
-        public int CarID { get; set; }
     }
 }

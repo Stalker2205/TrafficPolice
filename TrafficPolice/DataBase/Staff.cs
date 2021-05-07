@@ -15,6 +15,7 @@ namespace TrafficPolice
         public string Education { get; set; }
         public string Login { get; set; }
         public string Password { get; set; }
+        public string Status { get; set; }
         public List<Sertification> Sertifications { get; set; }
         public int RankID { get; set; }
         List<Raports> Raports { get; set; }

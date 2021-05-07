@@ -24,7 +24,6 @@ namespace TrafficPolice
         public Ctc Ctc { get; set; }
         public List<Inspection> Inspections { get; set; }
         public List<Statement> Statements { get; set; }
-        public List<Raports> Raports { get; set; }
         public List<DtpCar> DtpCars { get; set; }
     }
 }

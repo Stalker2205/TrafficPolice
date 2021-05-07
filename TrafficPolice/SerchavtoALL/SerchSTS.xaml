@@ -62,7 +62,7 @@
                     <Button Grid.Row="4" Margin="5,5,5,5" Content="Водитель" x:Name="SerchDriver" Click="SerchDriver_Click"/>
                     <Button Grid.Row="5" Margin="5,5,5,5" Content="Авто" x:Name="SerchAvto" Click="SerchAvto_Click"/>
                 </Grid>
-                <DataGrid Grid.Column="0" Margin="0,10,5,0" x:Name="DatagridFirst">
+                <DataGrid Grid.Column="0" Margin="0,10,5,0" x:Name="DatagridFirst" IsReadOnly="True">
 
                 </DataGrid>
             </Grid>
