@@ -310,7 +310,6 @@ C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\TrafficPolice.M
 C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\TrafficPolice.Migrations.addDTPAndDTPCar.resources
 C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\MainInfo.g.cs
 C:\Users\Олимп\Desktop\TraficPolice\TrafficPolice\obj\Debug\MainInfo.baml
-C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\TrafficPolice.csprojAssemblyReference.cache
 C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\MainInfo.g.cs
 C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\WorkWithTheAvto\Open\OpenInsurances.g.cs
 C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\WorkWithTheAvto\Open\OpenStatements.g.cs
@@ -368,10 +367,10 @@ C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\Tra
 C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\ForDutyWork\MainDuty.g.cs
 C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\ForDutyWork\MainDuty.baml
 C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\ForDutyWork\MenuItemCollection\RaportPage.g.cs
-C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\CreateStaff.g.cs
-C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\CreateStaff.baml
 C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\ForDutyWork\MenuItemCollection\RaportPage.baml
 C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\TrafficPolice.Migrations.FixPhotoInStaff.resources
-C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\CreatwSerificateWindow.g.cs
-C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\CreatwSerificateWindow.baml
 C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\TrafficPolice.Migrations.addIDStaff.resources
+C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\ForDutyWork\MenuItemCollection\Staff\CreateStaff.g.cs
+C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\ForDutyWork\MenuItemCollection\Staff\CreatwSerificateWindow.g.cs
+C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\ForDutyWork\MenuItemCollection\Staff\CreateStaff.baml
+C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\ForDutyWork\MenuItemCollection\Staff\CreatwSerificateWindow.baml

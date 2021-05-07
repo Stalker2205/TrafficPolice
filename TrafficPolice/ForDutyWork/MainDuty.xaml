@@ -30,12 +30,47 @@
                 <MenuItem Header="Рапорт" Click="MenuItem_Click"/>
                 <MenuItem Header="Отчеты"/>
                 <MenuItem Header="Сотрудники">
+                    <MenuItem Header="Отобразить всех" Click="MenuItem_Click_2"/>
                     <MenuItem Header="Прием" Click="MenuItem_Click_1"/>
-                    <MenuItem Header="Увольнение"/>
                 </MenuItem>
             </Menu>
-            <DataGrid x:Name="dg_MainGrid" Grid.Row="1" Visibility="Hidden">
-                
+            <DataGrid x:Name="dg_MainGrid" Grid.Row="1" Visibility="Hidden" Width="400" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTemplateColumn Header="ID">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Menu VerticalAlignment="Center" HorizontalAlignment="Center">
+                                    <MenuItem Header="{Binding StaffID}" SubmenuOpened="MenuItem_SubmenuOpened">
+                                        <MenuItem Header="Удостоверение"/>
+                                        <MenuItem Header="Уволить"/>
+                                    </MenuItem>
+                                </Menu>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="Имя">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding FirstName}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="Фамилия">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Lastname}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="Логин">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Login}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    
+                </DataGrid.Columns>
             </DataGrid>
             <Frame Grid.Row="1" x:Name="WorkFrame">
                 
