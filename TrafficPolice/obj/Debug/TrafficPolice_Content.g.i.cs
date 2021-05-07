@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("workwithdriver/driverlicence/mainvy1.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("textfile1.txt")]
 
 
