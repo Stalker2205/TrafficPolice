@@ -11,7 +11,7 @@ namespace TrafficPolice
         public int StaffID { get; set; }
         public string FirstName { get; set; }
         public string Lastname { get; set; }
-        public byte[] Photo { get; set; }
+        public string Photo { get; set; }
         public string Education { get; set; }
         public string Login { get; set; }
         public string Password { get; set; }

@@ -23,10 +23,11 @@
                     StaffID = c.Int(nullable: false, identity: true),
                     FirstName = c.String(),
                     Lastname = c.String(),
-                    Photo = c.Binary(),
+                    Photo = c.String(),
                     Education = c.String(),
                     Login = c.String(),
                     Password = c.String(),
+                    SertificationID = c.Int(),
                     RankID = c.Int(nullable: false),
                 })
                 .PrimaryKey(t => t.StaffID)
@@ -42,11 +43,11 @@
                     SertificationSeries = c.Int(nullable: false),
                     SertificationPosition = c.String(),
                     ValidUnit = c.DateTime(nullable: false),
-                    StaffID = c.Int(),
+                    Staff_StaffID = c.Int(),
                 })
                 .PrimaryKey(t => t.SertificationID)
-                .ForeignKey("dbo.Staffs", t => t.StaffID)
-                .Index(t => t.StaffID);
+                .ForeignKey("dbo.Staffs", t => t.Staff_StaffID)
+                .Index(t => t.Staff_StaffID);
 
         }
 

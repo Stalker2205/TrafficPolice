@@ -63,10 +63,5 @@ namespace TrafficPolice
         {
             FormPage.Navigate(new WorkWithTheAvto());
         }
-
-        private void bt_Duty_Click(object sender, RoutedEventArgs e)
-        {
-            FormPage.Navigate(new MainDuty());
-        }
     }
 }
