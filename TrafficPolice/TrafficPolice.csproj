@@ -73,8 +73,8 @@
     <Compile Include="CreatwSerificateWindow.xaml.cs">
       <DependentUpon>CreatwSerificateWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Dtp.cs" />
-    <Compile Include="DtpCar.cs" />
+    <Compile Include="DataBase\Dtp.cs" />
+    <Compile Include="DataBase\DtpCar.cs" />
     <Compile Include="ForDutyWork\MainDuty.xaml.cs">
       <DependentUpon>MainDuty.xaml</DependentUpon>
     </Compile>
@@ -96,6 +96,10 @@
     <Compile Include="Migrations\202105071025120_FixPhotoInStaff.cs" />
     <Compile Include="Migrations\202105071025120_FixPhotoInStaff.designer.cs">
       <DependentUpon>202105071025120_FixPhotoInStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105071323132_addIDStaff.cs" />
+    <Compile Include="Migrations\202105071323132_addIDStaff.designer.cs">
+      <DependentUpon>202105071323132_addIDStaff.cs</DependentUpon>
     </Compile>
     <Compile Include="NewStaffClass.cs" />
     <Compile Include="WorkWithTheAvto\Open\OpenInsurances.xaml.cs">
@@ -454,6 +458,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105071025120_FixPhotoInStaff.resx">
       <DependentUpon>202105071025120_FixPhotoInStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105071323132_addIDStaff.resx">
+      <DependentUpon>202105071323132_addIDStaff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
