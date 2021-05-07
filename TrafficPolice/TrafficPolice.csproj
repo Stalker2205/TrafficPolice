@@ -67,8 +67,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Dtp.cs" />
-    <Compile Include="DtpCar.cs" />
+    <Compile Include="DataBase\Dtp.cs" />
+    <Compile Include="DataBase\DtpCar.cs" />
     <Compile Include="MainInfo.xaml.cs">
       <DependentUpon>MainInfo.xaml</DependentUpon>
     </Compile>
