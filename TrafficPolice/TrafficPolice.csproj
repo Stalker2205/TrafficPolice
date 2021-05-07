@@ -81,6 +81,14 @@
     <Compile Include="Migrations\202104291111418_addDTPAndDTPCar.designer.cs">
       <DependentUpon>202104291111418_addDTPAndDTPCar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105071141222_fixStaff.cs" />
+    <Compile Include="Migrations\202105071141222_fixStaff.designer.cs">
+      <DependentUpon>202105071141222_fixStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105071143071_fixStaff1.cs" />
+    <Compile Include="Migrations\202105071143071_fixStaff1.designer.cs">
+      <DependentUpon>202105071143071_fixStaff1.cs</DependentUpon>
+    </Compile>
     <Compile Include="WorkWithTheAvto\Open\OpenInsurances.xaml.cs">
       <DependentUpon>OpenInsurances.xaml</DependentUpon>
     </Compile>
@@ -418,6 +426,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104291111418_addDTPAndDTPCar.resx">
       <DependentUpon>202104291111418_addDTPAndDTPCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105071141222_fixStaff.resx">
+      <DependentUpon>202105071141222_fixStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105071143071_fixStaff1.resx">
+      <DependentUpon>202105071143071_fixStaff1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

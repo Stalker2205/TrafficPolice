@@ -13,7 +13,8 @@ namespace TrafficPolice
         public int SertificationSeries { get; set; }
         public string SertificationPosition { get; set; }
         public DateTime ValidUnit { get; set; }
-        public Staff Staff { get; set; }
+        Staff Staff { get; set; }
+        public int StaffID { get; set; }
 
     }
 }
