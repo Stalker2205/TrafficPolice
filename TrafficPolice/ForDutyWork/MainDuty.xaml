@@ -26,7 +26,7 @@
             </Grid.RowDefinitions>
             
             <Menu FontSize="15" Grid.Row="0" Background="Transparent" VerticalAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Center">
-                <MenuItem Header="Дтп"/>
+                <MenuItem Header="Дтп" x:Name="CreateDtp" Click="CreateDtp_Click"/>
                 <MenuItem Header="Рапорт" Click="MenuItem_Click"/>
                 <MenuItem Header="Отчеты" x:Name="bt_Reports" Click="bt_Reports_Click"/>
                 <MenuItem Header="Сотрудники">

@@ -31,5 +31,11 @@ namespace TrafficPolice
             FrameFromReports.Visibility = Visibility.Visible;
             FrameFromReports.Navigate(new ReportStaffRankPage()) ;
         }
+
+        private void bt_Yvolennie_Click(object sender, RoutedEventArgs e)
+        {
+            FrameFromReports.Visibility = Visibility.Visible;
+            FrameFromReports.Navigate(new ReportYvolennPage());
+        }
     }
 }

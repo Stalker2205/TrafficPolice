@@ -379,7 +379,13 @@ C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\For
 C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\ForDutyWork\MenuItemCollection\Sertification\ViewSertificateWindow.baml
 C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\ForDutyWork\Reports\ReportsPage.g.cs
 C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\ForDutyWork\Reports\ReportsPage.baml
-C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\TrafficPolice.csprojAssemblyReference.cache
-C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\ReportStaffRankPage.g.cs
-C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\ReportStaffRankPage.baml
 C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\TrafficPolice.Migrations.fixCarRaports.resources
+C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\ForDutyWork\Reports\ReportStaffRankPage.g.cs
+C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\ForDutyWork\Reports\ReportStaffRankPage.baml
+C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\ForDutyWork\Reports\ReportYvolennPage.g.cs
+C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\ForDutyWork\Reports\ReportYvolennPage.baml
+C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\TrafficPolice.Migrations.FixDtpCars.resources
+C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\TrafficPolice.csprojAssemblyReference.cache
+C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\TrafficPolice.Migrations.addDtpScheme.resources
+C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\ForDutyWork\MenuItemCollection\DTP\DtpEvroPage.g.cs
+C:\Users\Stalker\Desktop\TrafficPolice\TrafficPolice\TrafficPolice\obj\Debug\ForDutyWork\MenuItemCollection\DTP\DtpEvroPage.baml

@@ -16,7 +16,7 @@
         <Menu Grid.Row="0" Background="Gray" HorizontalAlignment="Center">
             <MenuItem Header="О Дтп"/>
             <MenuItem Header="О званиях сотрудников" x:Name="bt_FromStaffRanks" Click="bt_FromStaffRanks_Click"/>
-            <MenuItem Header="Об уволенных"/>
+            <MenuItem Header="Об уволенных" x:Name="bt_Yvolennie" Click="bt_Yvolennie_Click"/>
         </Menu>
         <Frame x:Name="FrameFromReports" Visibility="Hidden" Grid.Row="1"/>
     </Grid>

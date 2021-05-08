@@ -86,5 +86,12 @@ namespace TrafficPolice
             WorkFrame.Visibility = Visibility.Visible;
             WorkFrame.Navigate(new ReportsPage());
         }
+
+        private void CreateDtp_Click(object sender, RoutedEventArgs e)
+        {
+            dg_MainGrid.Visibility = Visibility.Hidden;
+            WorkFrame.Visibility = Visibility.Visible;
+            WorkFrame.Navigate(new DtpEvroPage());
+        }
     }
 }

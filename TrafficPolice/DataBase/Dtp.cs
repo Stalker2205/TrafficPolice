@@ -19,5 +19,6 @@ namespace TrafficPolice
         public Staff Staff { get; set; }
         public int StaffID { get; set; }
         public List<DtpCar> DtpCars { get; set; }
+        public byte[] DtpScheme { get; set; }
     }
 }

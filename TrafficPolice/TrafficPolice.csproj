@@ -47,6 +47,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Windows.Forms" />
@@ -68,6 +69,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ForDutyWork\MenuItemCollection\DTP\DtpEvroPage.xaml.cs">
+      <DependentUpon>DtpEvroPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ForDutyWork\MenuItemCollection\Staff\CreateStaff.xaml.cs">
       <DependentUpon>CreateStaff.xaml</DependentUpon>
     </Compile>
@@ -117,8 +121,19 @@
     <Compile Include="Migrations\202105072057588_fixCarRaports.designer.cs">
       <DependentUpon>202105072057588_fixCarRaports.cs</DependentUpon>
     </Compile>
-    <Compile Include="ReportStaffRankPage.xaml.cs">
+    <Compile Include="ForDutyWork\Reports\ReportStaffRankPage.xaml.cs">
       <DependentUpon>ReportStaffRankPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ForDutyWork\Reports\ReportYvolennPage.xaml.cs">
+      <DependentUpon>ReportYvolennPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105081406348_FixDtpCars.cs" />
+    <Compile Include="Migrations\202105081406348_FixDtpCars.designer.cs">
+      <DependentUpon>202105081406348_FixDtpCars.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105081519040_addDtpScheme.cs" />
+    <Compile Include="Migrations\202105081519040_addDtpScheme.designer.cs">
+      <DependentUpon>202105081519040_addDtpScheme.cs</DependentUpon>
     </Compile>
     <Compile Include="WorkWithTheAvto\Open\OpenInsurances.xaml.cs">
       <DependentUpon>OpenInsurances.xaml</DependentUpon>
@@ -269,6 +284,10 @@
     <Compile Include="WorkWithTheAvto\WorkWithTheAvto.xaml.cs">
       <DependentUpon>WorkWithTheAvto.xaml</DependentUpon>
     </Compile>
+    <Page Include="ForDutyWork\MenuItemCollection\DTP\DtpEvroPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ForDutyWork\MenuItemCollection\Staff\CreateStaff.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -297,7 +316,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ReportStaffRankPage.xaml">
+    <Page Include="ForDutyWork\Reports\ReportStaffRankPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ForDutyWork\Reports\ReportYvolennPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -498,6 +521,12 @@
     <EmbeddedResource Include="Migrations\202105072057588_fixCarRaports.resx">
       <DependentUpon>202105072057588_fixCarRaports.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105081406348_FixDtpCars.resx">
+      <DependentUpon>202105081406348_FixDtpCars.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105081519040_addDtpScheme.resx">
+      <DependentUpon>202105081519040_addDtpScheme.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -520,7 +549,15 @@
   <ItemGroup>
     <Resource Include="ForDutyWork\MenuItemCollection\Sertification\Удостоверение.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="ForDutyWork\MenuItemCollection\DTP\Pero.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ForDutyWork\MenuItemCollection\DTP\eraser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ForDutyWork\MenuItemCollection\DTP\Lasso.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

@@ -18,6 +18,7 @@ namespace TrafficPolice
         public string Voditel { get; set; }
         public Dtp Dtp { get; set; }
         public int DtpID { get; set; }
+        public string Conditions { get; set; }
 
     }
 }
